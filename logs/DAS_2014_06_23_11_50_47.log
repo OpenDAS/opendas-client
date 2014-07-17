@@ -1,0 +1,408 @@
+MessageReceiver: Sujet = 'WS1DASLoader: ok WsConfig object
+DASLoader: WsConfig [configMaterial=[DASConfigMaterial [code=PKB, name=Keyboard1, port=null, workstation=DASWorkstation [code = 1, name = das test 1, force_pdf = false, config_ids = {IndirectList: not instantiated}], material=DASModelMaterial [, code=Keyboard1, name=Keyboard1, modelMaterial=DASModelMaterial [, typeMaterial=DASTypeMaterial [id=49, name=Physical keyboard]]], configTypeMaterial=DASConfigTypeMaterial [code=7, name=7, issimple=true, iscumulative=true, speed=16, parity=0, stop_bit=1, databit=8, dialog=[]]], DASConfigMaterial [code=das6, name=2, port=/dev/ttyUSB0, workstation=DASWorkstation [code = 1, name = das test 1, force_pdf = false, confDASResponseListener: getResponse search : ServerRequest [attachement=1, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getWorkstationWithId, sendedDate=Mon Jun 23 11:50:48 CEST 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=DASWorkstation [code = 1, name = das test 1, force_pdf = false, config_ids = {IndirectList: n...
+DASResponseListener: response received
+DASResponseListener: getResponse search : ServerRequest [attachement=1, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getFctConfigsWithWsId, sendedDate=Mon Jun 23 11:50:48 CEST 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=[DASFunctionalConfig [mask=pointage, function_xml=<?xml version="1.0" encoding="UTF-8"?>
+<fu...
+DASResponseListener: response received
+DASResponseListener: getResponse search : ServerRequest [attachement=1, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getGraphConfigsWithWsId, sendedDate=Mon Jun 23 11:50:48 CEST 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=[DASGraphicalConfig [mask=pointage, graphical_xml=<?xml version="1.0" encoding="UTF-8"?>
+<pa...
+DASResponseListener: response received
+DASResponseListener: Sending message: ServerRequest [attachement=[DASGraphicalConfig [mask=pointage, graphical_xml=<?xml version="1.0" encoding="UTF-8"?>
+<pa...
+DASResponseListener: response received
+DASResponseListener: getResponse search : ServerRequest [attachement=1, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getGraphConfigsWithWsId, sendedDate=Mon Jun 23 11:50:48 CEST 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=[DASDataModel [id=1, name=report5, template=<?xml version="1.0" encoding="UTF-8"?>
+<jasperRe...
+DASResponseListener: response received
+DASResponseListener: getResponse search : ServerRequest [attachement=null, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getListTemplateReport, sendedDate=Mon Jun 23 11:50:49 CEST 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=[], fromUrl=DAS_SERVER, sendUrl=DAS_CLIENT, title=null, sendedDate=Mon Jun 23 11:50:49 CEST 2...
+DASResponseListener: response received
+DASResponseListener: getResponse search : ServerRequest [attachement=null, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getListTemplateSupervision, sendedDate=Mon Jun 23 11:50:49 CEST 2014, previousRequest=null]
+DASResponseListener: getResponse search : ServerRequest [attachement=null, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getListEan128, sendedDate=Mon Jun 23 11:50:49 CEST 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=[], fromUrl=DAS_SERVER, sendUrl=DAS_CLIENT, title=null, sendedDate=Mon Jun 23 11:50:49 CEST 2...
+DASResponseListener: response received
+DASResponseListener: getResponse search : ServerRequest [attachement=1, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getFctConfigsWithWsId, sendedDate=Mon Jun 23 11:50:50 CEST 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=[DASFunctionalConfig [mask=pointage, function_xml=<?xml version="1.0" encoding="UTF-8"?>
+<fu...
+DASResponseListener: response received
+DASResponseListener: Sending message: ServerRequest [attachement=DASDataModel [id=75, name=Personnel, source=das_generic, ctrl=alpha, type=D, fct_name=null, t...
+DASResponseListener: getResponse search : ServerRequest [attachement=persoin, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getDataModelWithId, sendedDate=Mon Jun 23 11:50:55 CEST 2014, previousRequest=null]
+DASResponseListener: response received
+DASResponseListener: getResponse search : ServerRequest [attachement={_workstation=[1], model=persoin}, fromUrl=DAS_CLIENT, sendUrl=TALEND, title=getWsGenericsExt, sendedDate=Mon Jun 23 11:50:55 CEST 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=DASError [code=0, string=OK, object=[DASGeneric [code=EMPL,1000001, name=User1, workstation_i...
+DASResponseListener: response received
+DASResponseListener: Sending message: ServerRequest [attachement=DASDataModel [id=72, name=groups, source=das_generic, ctrl=null, type=D, fct_name=null, type_...
+DASResponseListener: response received
+DASResponseListener: getResponse search : ServerRequest [attachement=groups, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getDataModelWithId, sendedDate=Mon Jun 23 11:50:56 CEST 2014, previousRequest=null]
+DASResponseListener: getResponse search : ServerRequest [attachement={_workstation=[1], model=groups, persoin=[EMPL,1000004]}, fromUrl=DAS_CLIENT, sendUrl=TALEND, title=getWsGenericsExt, sendedDate=Mon Jun 23 11:50:56 CEST 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=DASError [code=0, string=OK, object=[DASGeneric [code=Customer Service, name=Customer Service...
+DASResponseListener: response received
+DASResponseListener: getResponse search : ServerRequest [attachement=null, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getListTemplateReport, sendedDate=Mon Jun 23 11:50:56 CEST 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=[DASDataModel [id=1, name=report5, template=<?xml version="1.0" encoding="UTF-8"?>
+<jasperRe...
+DASResponseListener: response received
+DASResponseListener: Sending message: ServerRequest [attachement=[], fromUrl=DAS_SERVER, sendUrl=DAS_CLIENT, title=null, sendedDate=Mon Jun 23 11:50:56 CEST 2...
+DASResponseListener: response received
+DASResponseListener: getResponse search : ServerRequest [attachement=null, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getListTemplateSupervision, sendedDate=Mon Jun 23 11:50:56 CEST 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=[], fromUrl=DAS_SERVER, sendUrl=DAS_CLIENT, title=null, sendedDate=Mon Jun 23 11:50:56 CEST 2...
+DASResponseListener: response received
+DASResponseListener: getResponse search : ServerRequest [attachement=null, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getListEan128, sendedDate=Mon Jun 23 11:50:56 CEST 2014, previousRequest=null]
+DASResponseListener: getResponse search : ServerRequest [attachement=1, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getFctConfigsWithWsId, sendedDate=Mon Jun 23 11:50:56 CEST 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=[DASFunctionalConfig [mask=pointage, function_xml=<?xml version="1.0" encoding="UTF-8"?>
+<fu...
+DASResponseListener: response received
+DASResponseListener: Sending message: ServerRequest [attachement=[DASDataModel [id=1, name=report5, template=<?xml version="1.0" encoding="UTF-8"?>
+<jasperRe...
+DASResponseListener: response received
+DASResponseListener: getResponse search : ServerRequest [attachement=null, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getListTemplateReport, sendedDate=Mon Jun 23 11:50:57 CEST 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=[], fromUrl=DAS_SERVER, sendUrl=DAS_CLIENT, title=null, sendedDate=Mon Jun 23 11:50:57 CEST 2...
+DASResponseListener: response received
+DASResponseListener: getResponse search : ServerRequest [attachement=null, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getListTemplateSupervision, sendedDate=Mon Jun 23 11:50:57 CEST 2014, previousRequest=null]
+DASResponseListener: getResponse search : ServerRequest [attachement=null, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getListEan128, sendedDate=Mon Jun 23 11:50:57 CEST 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=[], fromUrl=DAS_SERVER, sendUrl=DAS_CLIENT, title=null, sendedDate=Mon Jun 23 11:50:57 CEST 2...
+DASResponseListener: response received
+DASResponseListener: getResponse search : ServerRequest [attachement=1, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getFctConfigsWithWsId, sendedDate=Mon Jun 23 11:50:57 CEST 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=[DASFunctionalConfig [mask=pointage, function_xml=<?xml version="1.0" encoding="UTF-8"?>
+<fu...
+DASResponseListener: response received
+DASResponseListener: Sending message: ServerRequest [attachement=[DASDataModel [id=1, name=report5, template=<?xml version="1.0" encoding="UTF-8"?>
+<jasperRe...
+DASResponseListener: response received
+DASResponseListener: getResponse search : ServerRequest [attachement=null, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getListTemplateReport, sendedDate=Mon Jun 23 11:50:58 CEST 2014, previousRequest=null]
+DASResponseListener: getResponse search : ServerRequest [attachement=null, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getListTemplateSupervision, sendedDate=Mon Jun 23 11:50:58 CEST 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=[], fromUrl=DAS_SERVER, sendUrl=DAS_CLIENT, title=null, sendedDate=Mon Jun 23 11:50:58 CEST 2...
+DASResponseListener: response received
+DASResponseListener: Sending message: ServerRequest [attachement=[], fromUrl=DAS_SERVER, sendUrl=DAS_CLIENT, title=null, sendedDate=Mon Jun 23 11:50:59 CEST 2...
+DASResponseListener: response received
+DASResponseListener: getResponse search : ServerRequest [attachement=null, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getListEan128, sendedDate=Mon Jun 23 11:50:59 CEST 2014, previousRequest=null]
+DASResponseListener: getResponse search : ServerRequest [attachement=1, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getFctConfigsWithWsId, sendedDate=Mon Jun 23 11:50:59 CEST 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=[DASFunctionalConfig [mask=pointage, function_xml=<?xml version="1.0" encoding="UTF-8"?>
+<fu...
+DASResponseListener: response received
+x :TOP_STATE
+DASPanel: Indicator font by default : java.awt.Font[family=Dialog,name=Arial,style=bold,size=18]
+DASPanel: Buttons writing color of the bottom screen by default : java.awt.Color[r=0,g=0,b=0]
+DASPanel: Fields writing color of the bottom screen by default : java.awt.Color[r=0,g=0,b=0]
+DASGuiParams: prefix :BOTTOM_NEXT
+DASPanel: Navigation buttons font by default : java.awt.Font[family=Dialog,name=Arial,style=bold,size=28]
+DASPanel: Navigation buttons background color by default : java.awt.Color[r=255,g=200,b=100]
+DASPanel: Navigation buttons gradation : 1
+DASPanel: Navigation button font color by default : java.awt.Color[r=0,g=0,b=0]
+DASPanel: Font color of the top screen : java.awt.Color[r=255,g=255,b=255]
+DASGuiParams: prefix :TOP_FIELDS
+DASPanel: Fields font of the top screen by default : java.awt.Font[family=Dialog,name=Arial,style=bold,size=18]
+DASPanel: Fields background color of the top screen by default: java.awt.Color[r=238,g=238,b=238]
+DASPanel: Fields font color of the bottom screen by default:java.awt.Color[r=0,g=0,b=0]
+DASPanel: Fields font color of the top screen if error : java.awt.Color[r=255,g=0,b=0]
+DASPanel: Fields font color of the top screen if ok : java.awt.Color[r=0,g=128,b=0]
+DASPanel: Shortcut of button 'Connexion' : 
+DASGuiParams: prefix :TOP_BTN1
+DASPanel: Button font 'Connexion' by default : java.awt.Font[family=Dialog,name=Times New Roman,style=bold,size=18]
+DASPanel: Button writing color 'Connexion' by default: java.awt.Color[r=0,g=0,b=0]
+DASPanel: Button color 'Connexion' by default: java.awt.Color[r=150,g=200,b=255]
+DASPanel: Button text alignment 'Connexion' : center
+DASPanel: Button color'Connexion' when inactive by default : java.awt.Color[r=238,g=238,b=238]
+DASPanel: Navigation buttons gradation : 1
+DASPanel: <html><div align='center'>Connexion</div> <div align='right'></div></html>
+DASPanel: Shortcut of button 'Déconnexion' : 
+DASGuiParams: prefix :TOP_BTN2
+DASPanel: Button font 'Déconnexion' by default : java.awt.Font[family=Dialog,name=Times New Roman,style=bold,size=18]
+DASPanel: Button writing color 'Déconnexion' by default: java.awt.Color[r=0,g=0,b=0]
+DASPanel: Button color 'Déconnexion' by default: java.awt.Color[r=150,g=200,b=255]
+DASPanel: Button text alignment 'Déconnexion' : center
+DASPanel: Button color'Déconnexion' when inactive by default : java.awt.Color[r=238,g=238,b=238]
+DASPanel: Navigation buttons gradation : 1
+DASPanel: <html><div align='center'>Déconnexion</div></html>
+DASPanel: Shortcut of button 'Entrée : scénario2' : 
+DASGuiParams: prefix :TOP_BTN3
+DASPanel: Button font 'Entrée : scénario2' by default : java.awt.Font[family=Dialog,name=Times New Roman,style=bold,size=18]
+DASPanel: Button writing color 'Entrée : scénario2' by default: java.awt.Color[r=0,g=0,b=0]
+DASPanel: Button color 'Entrée : scénario2' by default: java.awt.Color[r=150,g=200,b=255]
+DASPanel: Button text alignment 'Entrée : scénario2' : center
+DASPanel: Button color'Entrée : scénario2' when inactive by default : java.awt.Color[r=238,g=238,b=238]
+DASPanel: Navigation buttons gradation : 1
+DASPanel: <html><div align='center'>Entrée : scénario2</div></html>
+DASPanel: Shortcut of button 'Entrée : scénario3' : 
+DASGuiParams: prefix :TOP_BTN4
+DASPanel: Button font 'Entrée : scénario3' by default : java.awt.Font[family=Dialog,name=Times New Roman,style=bold,size=18]
+DASPanel: Button writing color 'Entrée : scénario3' by default: java.awt.Color[r=0,g=0,b=0]
+DASPanel: Button color 'Entrée : scénario3' by default: java.awt.Color[r=150,g=200,b=255]
+DASPanel: Button text alignment 'Entrée : scénario3' : center
+DASPanel: Button color'Entrée : scénario3' when inactive by default : java.awt.Color[r=238,g=238,b=238]
+DASPanel: Navigation buttons gradation : 1
+DASPanel: <html><div align='center'>Entrée : scénario3</div></html>
+DASPanel: Shortcut of button 'Sortie : scénario2' : 
+DASGuiParams: prefix :TOP_BTN5
+DASPanel: Button font 'Sortie : scénario2' by default : java.awt.Font[family=Dialog,name=Times New Roman,style=bold,size=18]
+DASPanel: Button writing color 'Sortie : scénario2' by default: java.awt.Color[r=0,g=0,b=0]
+DASPanel: Button color 'Sortie : scénario2' by default: java.awt.Color[r=150,g=200,b=255]
+DASPanel: Button text alignment 'Sortie : scénario2' : center
+DASPanel: Button color'Sortie : scénario2' when inactive by default : java.awt.Color[r=238,g=238,b=238]
+DASPanel: Navigation buttons gradation : 1
+DASPanel: <html><div align='center'>Sortie : scénario2</div></html>
+DASPanel: Shortcut of button 'Sortie : scénario3' : 
+DASGuiParams: prefix :TOP_BTN6
+DASPanel: Button font 'Sortie : scénario3' by default : java.awt.Font[family=Dialog,name=Times New Roman,style=bold,size=18]
+DASPanel: Button writing color 'Sortie : scénario3' by default: java.awt.Color[r=0,g=0,b=0]
+DASPanel: Button color 'Sortie : scénario3' by default: java.awt.Color[r=150,g=200,b=255]
+DASPanel: Button text alignment 'Sortie : scénario3' by default : center
+DASPanel: Button color'Sortie : scénario3' when inactive by default : java.awt.Color[r=238,g=238,b=238]
+DASPanel: Navigation buttons gradation by default : 1
+DASPanel: <html><div align='center'>Sortie : scénario3</div></html>
+DASPanel: Shortcut of button 'Pointage : scénario2' : 
+DASGuiParams: prefix :TOP_BTN7
+DASPanel: Button font 'Pointage : scénario2' by default : java.awt.Font[family=Dialog,name=Times New Roman,style=bold,size=18]
+DASPanel: Button writing color 'Pointage : scénario2' by default: java.awt.Color[r=0,g=0,b=0]
+DASPanel: Button color 'Pointage : scénario2' by default: java.awt.Color[r=150,g=200,b=255]
+DASPanel: Button text alignment 'Pointage : scénario2' by default : center
+DASPanel: Button color'Pointage : scénario2' when inactive by default : java.awt.Color[r=238,g=238,b=238]
+DASPanel: Navigation buttons gradation by default : 1
+DASPanel: <html><div align='center'>Pointage : scénario2</div></html>
+DASPanel: Shortcut of button 'Pointage : scénario3' : 
+DASGuiParams: prefix :TOP_BTN8
+DASPanel: Button font 'Pointage : scénario3' by default : java.awt.Font[family=Dialog,name=Times New Roman,style=bold,size=18]
+DASPanel: Button writing color 'Pointage : scénario3' by default: java.awt.Color[r=0,g=0,b=0]
+DASPanel: Button color 'Pointage : scénario3' by default: java.awt.Color[r=150,g=200,b=255]
+DASPanel: Button text alignment 'Pointage : scénario3' by default : center
+DASPanel: Button color'Pointage : scénario3' when inactive by default : java.awt.Color[r=238,g=238,b=238]
+DASPanel: Navigation buttons gradation by default : 1
+DASPanel: <html><div align='center'>Pointage : scénario3</div></html>
+DASController: DASController constructor
+DASEquipments: Pass by recupMaterials
+DASEquipments: *****PKB*****
+DASEquipments: *****das6*****
+DASEquipments: *****ScannerDC*****
+DASEquipments: *****rj3*****
+DASEquipments: *****rj2*****
+DASEquipments: *****rj2bis*****
+DASEquipments: *****das2*****
+DASEquipments: *****rj1*****
+DASEquipments: *****rj4*****
+DASController: DASController initMaterials()
+DASController: [entree, sortie, deconnexion, pointage_scenario2, connexion, sortie_scenario2, entree_scenario3, entree_scenario2, pointage, sortie_scenario3, pointage_scenario3]
+DASController: Insert of ScannerDC in listEcouteurR:
+DASCOMMaterial: RECEPTION DATA OWNER SUR ScannerDCorg.opendas.equipment.DASCOMMaterial
+DASCOMMaterial: port:/dev/ttyUSB0codeReception:PERSOOUT;PERSOIN;PERSO
+|
+
+DASController: Insert of ScannerDC in listEcouteurR:
+DASCOMMaterial: RECEPTION DATA OWNER SUR ScannerDCorg.opendas.equipment.DASCOMMaterial
+DASCOMMaterial: port:/dev/ttyUSB0codeReception:PERSOOUT;PERSOIN;PERSO
+|
+
+ComServer: codeReception :PERSOOUT;PERSOIN;PERSO
+|
+
+DASController: functionContext on DASController :null
+ComServer: codeReception :PERSOOUT;PERSOIN;PERSO
+|
+
+DASController: Passing by initActionBtn
+DASPanel: Passage by cleanPanelBeforeDisplay
+DASPanel: Passage by setVisibleAllPanels
+DASController: checkFunctionLoop : 0
+DASController: Passage par nextActionBtn
+DASPanel: ========================
+DASPanel: ===  Screen Blocked  ===
+DASPanel: ========================
+DASController: current sequence  : connexionactionPositionEnCours : 1
+DASController: functionEnCours :persoin
+DASController: ==== Function en Cours : persoin ====
+DASController: EAN128GETTER : connexion1_EAN128
+DASController: EAN128GETTER : null
+DASController: Passage par functionSelecting 
+DASController: ========================================================================================
+DASController: ********function : persoin
+DASController: ********dataModels :{}
+DASController: ********dataModelEnCours : null
+DASController: ********dataEnCours : {}
+DASController: ********sequenceEnCours : connexion
+DASController: ********actionPositionEnCours : 1
+DASController: ********storeModel :[]
+DASController: ********storeModelList :[[]]
+DASController: ********instruction : null
+DASController: ********subDataEnCours : []
+DASController: ********subDatalist : [[]]
+DASController: ********depEnCours : [[]]
+DASController: ********depEnCoursList : [[]]
+DASController: ********super_context : {_workstation=DASGeneric [code=1, name=1, workstation_id=null, image=null, page=null, position=null, qty_max=0, qty_min=0, das_code_dependency=null, dataModel=null, infos=null], _sequenceEnCours={_value=
+        , _sequence=1, _name=connexion, _childs={2={MODEL=groups, SUPERCONTEXT=_groups, _sequence=2, _name=store, _childs={}, TYPE=erase}, 1={_value=
+           , _sequence=1, _name=persoin, _childs={1={_value=Sélectionnez la personne concernée, _sequence=1, _name=instruction, _childs={}}}}}, DISABLE=(_groups,!=,null)}}
+DASController: ********functional_context : {_function={_value=
+           , _sequence=1, _name=persoin, _childs={1={_value=Sélectionnez la personne concernée, _sequence=1, _name=instruction, _childs={}}}}}
+DASController: ********LoopType : null
+DASController: ========================================================================================
+DASController: UPDATING MODEL
+DASPanel: ========================
+DASPanel: ===  Screen Blocked  ===
+DASPanel: ========================
+DASController: AUTHORIZE DISPLAY
+DASPanel: CONTAINS KEY SWITCH
+DASPanel: Passage by cleanPanelBeforeDisplay
+DASController: generateLastDep
+DASPanel: Passage by cleanPanelBeforeDisplay
+DASPanel: switchGenericsAll : Panel Num => -1
+DASPanel: buildPaneTablerDEP => 0
+DASPanel: switchGenericsAll : Panel Num => 1
+DASPanel: TAILLE GENERICS : 2
+DASPanel:  OGPage
+DASPanel: buildPaneTablerGEN => 1
+DASPanel:  cleanPanel :: numPanel => 1
+DASPanel: genericsButtonsList.sier() => 1
+DASPanel: PageEnCours =>0
+DASPanel: ========================
+DASPanel: === Sreen Unblocked ===
+DASPanel: ========================
+DASPanel: ACTION PERFORMED 2
+DASPanel: CODE SEND NU:1
+DASPanel: CODE SEND NUENCOURS:1
+DASPanel: PANEL GEN(encours:1)
+DASController: receivedData, data = EMPL,1000004, numPanel = 1
+DASController: CHECKDATA : EMPL,1000004, Numpanel :1DEPPANESEL : -2
+DASController: TMPOBJECT :EMPL,1000004
+DASController: NumPanel 1
+DASController: Passage par nextActionBtn
+DASPanel: ========================
+DASPanel: ===  Screen Blocked  ===
+DASPanel: ========================
+DASController: dMEC -> persoin
+DASController: subDataEC -> [EMPL,1000004]
+DASController: current sequence  : connexionactionPositionEnCours : 2
+DASController: functionEnCours :store
+DASController: ==== Function en Cours : store ====
+DASController: EAN128GETTER : connexion2_EAN128
+DASController: EAN128GETTER : null
+DASController: Passage par functionSelecting 
+DASController: ========================================================================================
+DASController: ********function : store
+DASController: ********dataModels :{persoin=DASDataModel [id=75, name=Personnel, source=das_generic, ctrl=alpha, type=D, fct_name=null, type_fct=1, qty_max=-1, qty_min=-1, acquisition_methods=[DASAcquisitionMethod [code=displayScreen, name=null, typeMaterial=null], DASAcquisitionMethod [code=listenTypeMaterial, name=1, typeMaterial=DASTypeMaterial [id=34, name=Lecteurs id-barres]]], parent_id=null, child_ids={IndirectList: not instantiated}, type_select=1]}
+DASController: ********dataModelEnCours : DASDataModel [id=75, name=Personnel, source=das_generic, ctrl=alpha, type=D, fct_name=null, type_fct=1, qty_max=-1, qty_min=-1, acquisition_methods=[DASAcquisitionMethod [code=displayScreen, name=null, typeMaterial=null], DASAcquisitionMethod [code=listenTypeMaterial, name=1, typeMaterial=DASTypeMaterial [id=34, name=Lecteurs id-barres]]], parent_id=null, child_ids={IndirectList: not instantiated}, type_select=1]
+DASController: ********dataEnCours : {persoin=[EMPL,1000004]}
+DASController: ********sequenceEnCours : connexion
+DASController: ********actionPositionEnCours : 2
+DASController: ********storeModel :[]
+DASController: ********storeModelList :[[], []]
+DASController: ********instruction : null
+DASController: ********subDataEnCours : []
+DASController: ********subDatalist : [[EMPL,1000004], []]
+DASController: ********depEnCours : [[[]], []]
+DASController: ********depEnCoursList : [[[]], []]
+DASController: ********super_context : {_workstation=DASGeneric [code=1, name=1, workstation_id=null, image=null, page=null, position=null, qty_max=0, qty_min=0, das_code_dependency=null, dataModel=null, infos=null], _sequenceEnCours={_value=
+        , _sequence=1, _name=connexion, _childs={2={MODEL=groups, SUPERCONTEXT=_groups, _sequence=2, _name=store, _childs={}, TYPE=erase}, 1={_value=
+           , _sequence=1, _name=persoin, _childs={1={_value=Sélectionnez la personne concernée, _sequence=1, _name=instruction, _childs={}}}}}, DISABLE=(_groups,!=,null)}}
+DASController: ********functional_context : {_function={MODEL=groups, SUPERCONTEXT=_groups, _sequence=2, _name=store, _childs={}, TYPE=erase}}
+DASController: ********LoopType : null
+DASController: ========================================================================================
+DASController: ********* type = erase
+DASController: STORE : data exists already, so it jumps the function
+DASPanel: ========================
+DASPanel: ===  Screen Blocked  ===
+DASPanel: ========================
+DASController: current sequence  : connexionactionPositionEnCours : 3
+DASController: functionEnCours :null
+DASController: ==== Function en Cours : null ====
+DASPanel: DISPLAYDOWN
+DASPanel: DISPLAYUP
+DASPanel: Passage by setVisibleAllPanels
+DASController: Passage par resetConf
+DASController: Passage par functionSelecting 
+DASController: ========================================================================================
+DASController: ********function : null
+DASController: ********dataModels :{persoin=DASDataModel [id=75, name=Personnel, source=das_generic, ctrl=alpha, type=D, fct_name=null, type_fct=1, qty_max=-1, qty_min=-1, acquisition_methods=[DASAcquisitionMethod [code=displayScreen, name=null, typeMaterial=null], DASAcquisitionMethod [code=listenTypeMaterial, name=1, typeMaterial=DASTypeMaterial [id=34, name=Lecteurs id-barres]]], parent_id=null, child_ids={IndirectList: not instantiated}, type_select=1], groups=DASDataModel [id=72, name=groups, source=das_generic, ctrl=null, type=D, fct_name=null, type_fct=1, qty_max=-1, qty_min=-1, acquisition_methods=[], parent_id=null, child_ids={IndirectList: not instantiated}, type_select=1]}
+DASController: ********dataModelEnCours : DASDataModel [id=72, name=groups, source=das_generic, ctrl=null, type=D, fct_name=null, type_fct=1, qty_max=-1, qty_min=-1, acquisition_methods=[], parent_id=null, child_ids={IndirectList: not instantiated}, type_select=1]
+DASController: ********dataEnCours : {persoin=[EMPL,1000004]}
+DASController: ********sequenceEnCours : connexion
+DASController: ********actionPositionEnCours : 3
+DASController: ********storeModel :[]
+DASController: ********storeModelList :[[], [], []]
+DASController: ********instruction : null
+DASController: ********subDataEnCours : []
+DASController: ********subDatalist : [[EMPL,1000004], [], []]
+DASController: ********depEnCours : [[[]], [], []]
+DASController: ********depEnCoursList : [[[]], [], []]
+DASController: ********super_context : {_workstation=DASGeneric [code=1, name=1, workstation_id=null, image=null, page=null, position=null, qty_max=0, qty_min=0, das_code_dependency=null, dataModel=null, infos=null], _groups=[DASGeneric [code=Customer Service, name=Customer Service, workstation_id=null, image=null, page=0, position=0, qty_max=0, qty_min=0, das_code_dependency=null, dataModel=DASDataModel [id=72, name=groups, source=das_generic, ctrl=null, type=D, fct_name=null, type_fct=1, qty_max=-1, qty_min=-1, acquisition_methods=[], parent_id=null, child_ids={IndirectList: not instantiated}, type_select=1], infos={id=Customer Service, name=Customer Service, ean13=false}], DASGeneric [code=Employee, name=Employee, workstation_id=null, image=null, page=0, position=0, qty_max=0, qty_min=0, das_code_dependency=null, dataModel=DASDataModel [id=72, name=groups, source=das_generic, ctrl=null, type=D, fct_name=null, type_fct=1, qty_max=-1, qty_min=-1, acquisition_methods=[], parent_id=null, child_ids={IndirectList: not instantiated}, type_select=1], infos={id=Employee, name=Employee, ean13=false}], DASGeneric [code=Logistic, name=Logistic, workstation_id=null, image=null, page=0, position=0, qty_max=0, qty_min=0, das_code_dependency=null, dataModel=DASDataModel [id=72, name=groups, source=das_generic, ctrl=null, type=D, fct_name=null, type_fct=1, qty_max=-1, qty_min=-1, acquisition_methods=[], parent_id=null, child_ids={IndirectList: not instantiated}, type_select=1], infos={id=Logistic, name=Logistic, ean13=false}], DASGeneric [code=userok, name=userok, workstation_id=null, image=null, page=0, position=0, qty_max=0, qty_min=0, das_code_dependency=null, dataModel=DASDataModel [id=72, name=groups, source=das_generic, ctrl=null, type=D, fct_name=null, type_fct=1, qty_max=-1, qty_min=-1, acquisition_methods=[], parent_id=null, child_ids={IndirectList: not instantiated}, type_select=1], infos={id=userok, name=userok}]], _sequenceEnCours={_value=
+        , _sequence=1, _name=connexion, _childs={2={MODEL=groups, SUPERCONTEXT=_groups, _sequence=2, _name=store, _childs={}, TYPE=erase}, 1={_value=
+           , _sequence=1, _name=persoin, _childs={1={_value=Sélectionnez la personne concernée, _sequence=1, _name=instruction, _childs={}}}}}, DISABLE=(_groups,!=,null)}}
+DASController: ********functional_context : {_function=null}
+DASController: ********LoopType : null
+DASController: ========================================================================================
+DASController: function == null
+DASController: else isFunctionloop != true
+DASPanel: DISPLAYDOWN
+DASPanel: DISPLAYUP
+DASPanel: Passage by setVisibleAllPanels
+DASController: Passage par resetConf
+DASPanel: ========================
+DASPanel: === Sreen Unblocked ===
+DASPanel: ========================
+DASController: Passing by initActionBtn
+DASPanel: Passage by cleanPanelBeforeDisplay
+DASPanel: Passage by setVisibleAllPanels
+DASController: checkFunctionLoop : 0
+DASController: Passage par nextActionBtn
+DASPanel: ========================
+DASPanel: ===  Screen Blocked  ===
+DASPanel: ========================
+DASController: current sequence  : deconnexionactionPositionEnCours : 1
+DASController: functionEnCours :clean
+DASController: ==== Function en Cours : clean ====
+DASController: EAN128GETTER : deconnexion1_EAN128
+DASController: EAN128GETTER : null
+DASController: Passage par functionSelecting 
+DASController: ========================================================================================
+DASController: ********function : clean
+DASController: ********dataModels :{}
+DASController: ********dataModelEnCours : null
+DASController: ********dataEnCours : {}
+DASController: ********sequenceEnCours : deconnexion
+DASController: ********actionPositionEnCours : 1
+DASController: ********storeModel :[]
+DASController: ********storeModelList :[[]]
+DASController: ********instruction : null
+DASController: ********subDataEnCours : []
+DASController: ********subDatalist : [[]]
+DASController: ********depEnCours : [[]]
+DASController: ********depEnCoursList : [[]]
+DASController: ********super_context : {_workstation=DASGeneric [code=1, name=1, workstation_id=null, image=null, page=null, position=null, qty_max=0, qty_min=0, das_code_dependency=null, dataModel=null, infos=null], _groups=[DASGeneric [code=Customer Service, name=Customer Service, workstation_id=null, image=null, page=0, position=0, qty_max=0, qty_min=0, das_code_dependency=null, dataModel=DASDataModel [id=72, name=groups, source=das_generic, ctrl=null, type=D, fct_name=null, type_fct=1, qty_max=-1, qty_min=-1, acquisition_methods=[], parent_id=null, child_ids={IndirectList: not instantiated}, type_select=1], infos={id=Customer Service, name=Customer Service, ean13=false}], DASGeneric [code=Employee, name=Employee, workstation_id=null, image=null, page=0, position=0, qty_max=0, qty_min=0, das_code_dependency=null, dataModel=DASDataModel [id=72, name=groups, source=das_generic, ctrl=null, type=D, fct_name=null, type_fct=1, qty_max=-1, qty_min=-1, acquisition_methods=[], parent_id=null, child_ids={IndirectList: not instantiated}, type_select=1], infos={id=Employee, name=Employee, ean13=false}], DASGeneric [code=Logistic, name=Logistic, workstation_id=null, image=null, page=0, position=0, qty_max=0, qty_min=0, das_code_dependency=null, dataModel=DASDataModel [id=72, name=groups, source=das_generic, ctrl=null, type=D, fct_name=null, type_fct=1, qty_max=-1, qty_min=-1, acquisition_methods=[], parent_id=null, child_ids={IndirectList: not instantiated}, type_select=1], infos={id=Logistic, name=Logistic, ean13=false}], DASGeneric [code=userok, name=userok, workstation_id=null, image=null, page=0, position=0, qty_max=0, qty_min=0, das_code_dependency=null, dataModel=DASDataModel [id=72, name=groups, source=das_generic, ctrl=null, type=D, fct_name=null, type_fct=1, qty_max=-1, qty_min=-1, acquisition_methods=[], parent_id=null, child_ids={IndirectList: not instantiated}, type_select=1], infos={id=userok, name=userok}]], _sequenceEnCours={_value=
+        , _sequence=2, _name=deconnexion, _childs={1={SUPERCONTEXT=_groups, _sequence=1, _name=clean, _childs={}}}, DISABLE=(_groups,=,null)}}
+DASController: ********functional_context : {_function={SUPERCONTEXT=_groups, _sequence=1, _name=clean, _childs={}}}
+DASController: ********LoopType : null
+DASController: ========================================================================================
+DASPanel: ========================
+DASPanel: ===  Screen Blocked  ===
+DASPanel: ========================
+DASController: current sequence  : deconnexionactionPositionEnCours : 2
+DASController: functionEnCours :null
+DASController: ==== Function en Cours : null ====
+DASController: Passage par functionSelecting 
+DASController: ========================================================================================
+DASController: ********function : null
+DASController: ********dataModels :{}
+DASController: ********dataModelEnCours : null
+DASController: ********dataEnCours : {}
+DASController: ********sequenceEnCours : deconnexion
+DASController: ********actionPositionEnCours : 2
+DASController: ********storeModel :[]
+DASController: ********storeModelList :[[], []]
+DASController: ********instruction : null
+DASController: ********subDataEnCours : []
+DASController: ********subDatalist : [[], []]
+DASController: ********depEnCours : [[], []]
+DASController: ********depEnCoursList : [[], []]
+DASController: ********super_context : {_workstation=DASGeneric [code=1, name=1, workstation_id=null, image=null, page=null, position=null, qty_max=0, qty_min=0, das_code_dependency=null, dataModel=null, infos=null], _sequenceEnCours={_value=
+        , _sequence=2, _name=deconnexion, _childs={1={SUPERCONTEXT=_groups, _sequence=1, _name=clean, _childs={}}}, DISABLE=(_groups,=,null)}}
+DASController: ********functional_context : {_function=null}
+DASController: ********LoopType : null
+DASController: ========================================================================================
+DASController: function == null
+DASController: else isFunctionloop != true
+DASPanel: DISPLAYDOWN
+DASPanel: DISPLAYUP
+DASPanel: Passage by setVisibleAllPanels
+DASController: Passage par resetConf
+DASPanel: ========================
+DASPanel: === Sreen Unblocked ===
+DASPanel: ========================

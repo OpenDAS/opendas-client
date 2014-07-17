@@ -1,0 +1,157 @@
+[ERREUR] DASLoader: ok WsConfDAS: Fichier de configuration:/home/opendas/workspace/opendas/client/config/das_client.conf
+DAS: Chargement du masque
+DASPanel: Passage by DASPanel
+DASPanel: {BOTTOM_NEXT_BG_GRADIENT=1, MID_BUTTONS_FONT_STYLE=PLAIN, MID_NEXT_BG_BLUE=, BOTTOM_FIELDS_FONT_NAME=Arial, TOP_BTN1_BG_RED=, TOP_MODEL_NBB_LINES=5, MID_BUTTONS_FONT_SIZE=12, BOTTOM_FIELDS_BG_RED=, TOP_BTN1_FONT_NAME=Arial, TOP_BTN4_BG_GRADIENT=1, TOP_BTN1_BG_GRADIENT=1, TOP_BTN3_BG_GRADIENT=1, BOTTOM_INACTIVE-BUTTONS_BG_RED=, TOP_BTN1_TEXT_ALIGN=CENTER, BOTTOM_NEXT_FONT_SIZE=, TOP_BTN4_TEXT_ALIGN=CENTER, TOP_BTN4_FG_RED=, TOP_BTN5_BG_BLUE=, TOP_BTN1_FG_RED=, TOP_FIELDS_FONT_NAME=Arial, TOP_FIELDS_BG_GREEN=, TOP_BTN5_FG_GREEN=, MID_INACTIVE-BUTTONS_BG_RED=, BOTTOM_FIELDS_BG_GREEN=, TOP_BTN5_BG_RED=, MID_MODEL_BG_RED=, TOP_BTN3_FONT_NAME=Arial, TOP_BTN2_BG_GREEN=, BOTTOM_FIELDS_FG_RED=, BOTTOM_MODEL_BG_GREEN=, TOP_BTN3_BG_RED=, BOTTOM_NEXT_BG_BLUE=, TOP_BTN1_BG_GREEN=, MID_BUTTONS_FONT_NAME=Arial, BOTTOM_MODEL_BG_BLUE=, TOP_BTN4_FONT_STYLE=PLAIN, BOTTOM_NEXT_BG_GREEN=, TOP_BTN3_FONT_STYLE=PLAIN, TOP_MODEL_BG_BLUE=153, TOP_FIELDS_FG_RED=, BOTTOM_BUTTONS_BG_GREEN=, BOTTOM_BUTTONS_BG_GRADIENT=1, BOTTOM_BUTTONS_FONT_NAME=, BOTTOM_NEXT_FONT_NAME=, TOP_FIELDS_TEXT_ALIGN=LEFT, MID_BUTTONS_BG_GRADIENT=1, TOP_FIELDS_FG-ERROR_GREEN=0, BOTTOM_NEXT_FG_BLUE=, MID_NEXT_FG_GREEN=, MID_BUTTONS_FG_RED=, MID_NEXT_FONT_STYLE=, BOTTOM_NEXT_FG_GREEN=, BOTTOM_BUTTONS_FG_RED=, TOP_BTN2_TEXT_ALIGN=CENTER, BOTTOM_BUTTONS_FONT_STYLE=, TOP_BTN2_FONT_SIZE=16, MID_BUTTONS_FG_BLUE=, TOP_BTN1_FONT_STYLE=PLAIN, TOP_FIELDS_FONT_SIZE=16, MID_BUTTONS_BG_BLUE=, TOP_BTN5_BG_GREEN=, BOTTOM_INACTIVE-BUTTONS_BG_BLUE=, BOTTOM_BUTTONS_FONT_SIZE=, TOP_BTN4_FONT_SIZE=16, TOP_BTN1_FONT_SIZE=16, BOTTOM_FIELDS_BG_BLUE=, TOP_BTN2_FONT_STYLE=PLAIN, TOP_BTN2_FONT_NAME=Arial, MID_MODEL_BG_BLUE=, BOTTOM_MODEL_NBB_LINES=3, TOP_BTN3_FG_RED=, TOP_BTN3_BG_BLUE=, TOP_FIELDS_FONT_STYLE=PLAIN, BOTTOM_FIELDS_FG_GREEN=, BOTTOM_BUTTONS_BG_RED=, MID_INACTIVE-BUTTONS_BG_BLUE=, MID_MODEL_BG_GREEN=, TOP_BTN1_FG_GREEN=, TOP_FIELDS_FG-ERROR_RED=255, MID_BUTTONS_FG_GREEN=, BOTTOM_NEXT_FONT_STYLE=, TOP_BTN4_BG_RED=, TOP_BTN5_FG_RED=, BOTTOM_INACTIVE-BUTTONS_BG_GREEN=, TOP_BTN2_FG_GREEN=, BOTTOM_NEXT_FG_RED=, TOP_BTN1_BG_BLUE=, MID_MODEL_NBB_COLS=7, MID_NEXT_FG_BLUE=, TOP_BTN3_FG_GREEN=, BOTTOM_MODEL_BG_RED=, BOTTOM_FIELDS_FG_BLUE=, TOP_FIELDS_FG_GREEN=, TOP_BTN4_FONT_NAME=Arial, MID_NEXT_FG_RED=, MID_MODEL_NBB_LINES=5, TOP_FIELDS_FG-ERROR_BLUE=0, MID_INACTIVE-BUTTONS_BG_GREEN=, TOP_BTN2_BG_GRADIENT=1, TOP_BTMessageSender: Messages time to live 300 ms
+DASResponseListener: getResponse search : ServerRequest [attachement=null, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getListTemplateReport, sendedDate=Mon Jun 30 18:36:16 CEST 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=[DASDataModel [id=1, name=report5, template=<?xml version="1.0" encoding="UTF-8"?>
+<jasperRe...
+DASResponseListener: response received
+MessageSender: Messages time to live 300 ms
+DASResponseListener: Sending message: ServerRequest [attachement=[], fromUrl=DAS_SERVER, sendUrl=DAS_CLIENT, title=null, sendedDate=Mon Jun 30 18:36:16 CEST 2...
+DASResponseListener: response received
+DASResponseListener: getResponse search : ServerRequest [attachement=null, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getListTemplateSupervision, sendedDate=Mon Jun 30 18:36:16 CEST 2014, previousRequest=null]
+MessageSender: Messages time to live 300 ms
+DASResponseListener: Sending message: ServerRequest [attachement=[], fromUrl=DAS_SERVER, sendUrl=DAS_CLIENT, title=null, sendedDate=Mon Jun 30 18:36:16 CEST 2...
+DASResponseListener: response received
+DASResponseListener: getResponse search : ServerRequest [attachement=null, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getListEan128, sendedDate=Mon Jun 30 18:36:16 CEST 2014, previousRequest=null]
+MessageSender: Messages time to live 300 ms
+DASResponseListener: getResponse search : ServerRequest [attachement=1, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getFctConfigsWithWsId, sendedDate=Mon Jun 30 18:36:16 CEST 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=[DASFunctionalConfig [mask=pointage, function_xml=<?xml version="1.0" encoding="UTF-8"?>
+<fu...
+DASResponseListener: response received
+8]
+DASPanel: background screen of the central screen by default : java.awt.Color[r=238,g=238,b=238]
+DASGuiParams: prefix :TOP_BUTTONS
+DASPanel: Buttons font of the top screen by default : java.awt.Font[family=Dialog,name=Times New Roman,style=bold,size=18]
+DASGuiParams: prefix :MID_BUTTONS
+DASPanel: Buttons font of the central screen by default :java.awt.Font[family=Dialog,name=Arial,style=bold,size=18]
+DASPanel: Buttons background color of the central screen by default : java.awt.Color[r=150,g=200,b=255]
+DASPanel: Buttons gradient of the central screen1
+DASPanel: Buttons font color of the central screen by default : java.awt.Color[r=0,g=0,b=0]
+DASPanel: Inactives buttons background color of the central screen by defaultjava.awt.Color[r=238,g=238,b=238]
+DASPanel: Buttons text alignment of the central screen of the central screen by default: 0
+DASPanel: Background color of the bottom screen by default: java.awt.Color[r=238,g=238,b=238]
+DASPanel: Buttons background color of the bottom screen by default : java.awt.Color[r=150,g=200,b=255]
+DASPanel: Fields background color of the bottom screen by default: java.awt.Color[r=238,g=238,b=238]
+DASPanel: Inactive buttons background color of the bottom screen by default : java.awt.Color[r=238,g=238,b=238]
+DASPanel: Buttons gradation of the bottom screen : 1
+DASGuiParams: prefix :BOTTOM_BUTTONS
+DASPanel: Buttons font of the bottom screen by default : java.awt.Font[family=Dialog,name=Arial,style=bold,size=18]
+DASGuiParams: prefix :TOP_STATE
+DASPanel: Indicator font by default : java.awt.Font[family=Dialog,name=Arial,style=bold,size=18]
+DASPanel: Buttons writing color of the bottom screen by default : java.awt.Color[r=0,g=0,b=0]
+DASPanel: Fields writing color of the bottom screen by default : java.awt.Color[r=0,g=0,b=0]
+DASGuiParams: prefix :BOTTOM_NEXT
+DASPanel: Navigation buttons font by default : java.awt.Font[family=Dialog,name=Arial,style=bold,size=28]
+DASPanel: Navigation buttons background color by default : java.awt.Color[r=255,g=200,b=100]
+DASPanel: Navigation buttons gradation : 1
+DASPanel: Navigation button font color by default : java.awt.Color[r=0,g=0,b=0]
+DASPanel: Font color of the top screen : java.awt.Color[r=153,g=153,b=153]
+DASGuiParams: prefix :TOP_FIELDS
+DASPanel: Fields font of the top screen by default : java.awt.Font[family=Dialog,name=Arial,style=bold,size=18]
+DASPanel: Fields background color of the top screen by default: java.awt.Color[r=238,g=238,b=238]
+DASPanel: Fields font color of the bottom screen by default:java.awt.Color[r=0,g=0,b=0]
+DASPanel: Fields font color of the top screen if error : java.awt.Color[r=255,g=0,b=0]
+DASPanel: Fields font color of the top screen if ok : java.awt.Color[r=0,g=128,b=0]
+DASPanel: Shortcut of button 'Connexion' : 
+DASGuiParams: prefix :TOP_BTN1
+DASPanel: Button font 'Connexion' by default : java.awt.Font[family=Dialog,name=Times New Roman,style=bold,size=18]
+DASPanel: Button writing color 'Connexion' by default: java.awt.Color[r=0,g=0,b=0]
+DASPanel: Button color 'Connexion' by default: java.awt.Color[r=150,g=200,b=255]
+DASPanel: Button text alignment 'Connexion' : center
+DASPanel: Button color'Connexion' when inactive by default : java.awt.Color[r=238,g=238,b=238]
+DASPanel: Navigation buttons gradation : 1
+DASPanel: <html><div align='center'>Connexion</div> <div align='right'></div></html>
+DASPanel: Shortcut of button 'Déconnexion' : 
+DASGuiParams: prefix :TOP_BTN2
+DASPanel: Button font 'Déconnexion' by default : java.awt.Font[family=Dialog,name=Times New Roman,style=bold,size=18]
+DASPanel: Button writing color 'Déconnexion' by default: java.awt.Color[r=0,g=0,b=0]
+DASPanel: Button color 'Déconnexion' by default: java.awt.Color[r=150,g=200,b=255]
+DASPanel: Button text alignment 'Déconnexion' : center
+DASPanel: Button color'Déconnexion' when inactive by default : java.awt.Color[r=238,g=238,b=238]
+DASPanel: Navigation buttons gradation : 1
+DASPanel: <html><div align='center'>Déconnexion</div></html>
+DASPanel: Shortcut of button 'Entrée : scénario2' : 
+DASGuiParams: prefix :TOP_BTN3
+DASPanel: Button font 'Entrée : scénario2' by default : java.awt.Font[family=Dialog,name=Times New Roman,style=bold,size=18]
+DASPanel: Button writing color 'Entrée : scénario2' by default: java.awt.Color[r=0,g=0,b=0]
+DASPanel: Button color 'Entrée : scénario2' by default: java.awt.Color[r=150,g=200,b=255]
+DASPanel: Button text alignment 'Entrée : scénario2' : center
+DASPanel: Button color'Entrée : scénario2' when inactive by default : java.awt.Color[r=238,g=238,b=238]
+DASPanel: Navigation buttons gradation : 1
+DASPanel: <html><div align='center'>Entrée : scénario2</div></html>
+DASPanel: Shortcut of button 'Entrée : scénario3' : 
+DASGuiParams: prefix :TOP_BTN4
+DASPanel: Button font 'Entrée : scénario3' by default : java.awt.Font[family=Dialog,name=Times New Roman,style=bold,size=18]
+DASPanel: Button writing color 'Entrée : scénario3' by default: java.awt.Color[r=0,g=0,b=0]
+DASPanel: Button color 'Entrée : scénario3' by default: java.awt.Color[r=150,g=200,b=255]
+DASPanel: Button text alignment 'Entrée : scénario3' : center
+DASPanel: Button color'Entrée : scénario3' when inactive by default : java.awt.Color[r=238,g=238,b=238]
+DASPanel: Navigation buttons gradation : 1
+DASPanel: <html><div align='center'>Entrée : scénario3</div></html>
+DASPanel: Shortcut of button 'Sortie : scénario2' : 
+DASGuiParams: prefix :TOP_BTN5
+DASPanel: Button font 'Sortie : scénario2' by default : java.awt.Font[family=Dialog,name=Times New Roman,style=bold,size=18]
+DASPanel: Button writing color 'Sortie : scénario2' by default: java.awt.Color[r=0,g=0,b=0]
+DASPanel: Button color 'Sortie : scénario2' by default: java.awt.Color[r=150,g=200,b=255]
+DASPanel: Button text alignment 'Sortie : scénario2' : center
+DASPanel: Button color'Sortie : scénario2' when inactive by default : java.awt.Color[r=238,g=238,b=238]
+DASPanel: Navigation buttons gradation : 1
+DASPanel: <html><div align='center'>Sortie : scénario2</div></html>
+DASPanel: Shortcut of button 'Sortie : scénario3' : 
+DASGuiParams: prefix :TOP_BTN6
+DASPanel: Button font 'Sortie : scénario3' by default : java.awt.Font[family=Dialog,name=Times New Roman,style=bold,size=18]
+DASPanel: Button writing color 'Sortie : scénario3' by default: java.awt.Color[r=0,g=0,b=0]
+DASPanel: Button color 'Sortie : scénario3' by default: java.awt.Color[r=150,g=200,b=255]
+DASPanel: Button text alignment 'Sortie : scénario3' by default : center
+DASPanel: Button color'Sortie : scénario3' when inactive by default : java.awt.Color[r=238,g=238,b=238]
+DASPanel: Navigation buttons gradation by default : 1
+DASPanel: <html><div align='center'>Sortie : scénario3</div></html>
+DASPanel: Shortcut of button 'Pointage : scénario2' : 
+DASGuiParams: prefix :TOP_BTN7
+DASPanel: Button font 'Pointage : scénario2' by default : java.awt.Font[family=Dialog,name=Times New Roman,style=bold,size=18]
+DASPanel: Button writing color 'Pointage : scénario2' by default: java.awt.Color[r=0,g=0,b=0]
+DASPanel: Button color 'Pointage : scénario2' by default: java.awt.Color[r=150,g=200,b=255]
+DASPanel: Button text alignment 'Pointage : scénario2' by default : center
+DASPanel: Button color'Pointage : scénario2' when inactive by default : java.awt.Color[r=238,g=238,b=238]
+DASPanel: Navigation buttons gradation by default : 1
+DASPanel: <html><div align='center'>Pointage : scénario2</div></html>
+DASPanel: Shortcut of button 'Pointage : scénario3' : 
+DASGuiParams: prefix :TOP_BTN8
+DASPanel: Button font 'Pointage : scénario3' by default : java.awt.Font[family=Dialog,name=Times New Roman,style=bold,size=18]
+DASPanel: Button writing color 'Pointage : scénario3' by default: java.awt.Color[r=0,g=0,b=0]
+DASPanel: Button color 'Pointage : scénario3' by default: java.awt.Color[r=150,g=200,b=255]
+DASPanel: Button text alignment 'Pointage : scénario3' by default : center
+DASPanel: Button color'Pointage : scénario3' when inactive by default : java.awt.Color[r=238,g=238,b=238]
+DASPanel: Navigation buttons gradation by default : 1
+DASPanel: <html><div align='center'>Pointage : scénario3</div></html>
+DASController: DASController constructor
+DASEquipments: Pass by recupMaterials
+DASEquipments: *****PKB*****
+DASEquipments: *****das6*****
+DASEquipments: *****ScannerDC*****
+DASEquipments: *****rj3*****
+DASEquipments: *****rj2*****
+DASEquipments: *****rj2bis*****
+DASEquipments: *****das2*****
+DASEquipments: *****rj1*****
+DASEquipments: *****rj4*****
+DASController: DASController initMaterials()
+DASController: [entree, sortie, deconnexion, pointage_scenario2, connexion, sortie_scenario2, entree_scenario3, entree_scenario2, pointage, sortie_scenario3, pointage_scenario3]
+DASController: Insert of ScannerDC in listEcouteurR:
+DASCOMMaterial: RECEPTION DATA OWNER SUR ScannerDCorg.opendas.equipment.DASCOMMaterial
+DASCOMMaterial: port:/dev/ttyUSB0codeReception:PERSOOUT;PERSOIN;PERSO
+|
+
+DASController: Insert of ScannerDC in listEcouteurR:
+DASCOMMaterial: RECEPTION DATA OWNER SUR ScannerDCorg.opendas.equipment.DASCOMMaterial
+DASCOMMaterial: port:/dev/ttyUSB0codeReception:PERSOOUT;PERSOIN;PERSO
+|
+
+ComServer: codeReception :PERSOOUT;PERSOIN;PERSO
+|
+
+DASController: functionContext on DASController :null
+ComServer: codeReception :PERSOOUT;PERSOIN;PERSO
+|
+

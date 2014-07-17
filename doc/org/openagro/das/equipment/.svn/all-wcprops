@@ -1,0 +1,161 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/openagro/das/equipment
+END
+DASCOMBalance.html
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/openagro/das/equipment/DASCOMBalance.html
+END
+DASCOMBalance.SerialReader.html
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/openagro/das/equipment/DASCOMBalance.SerialReader.html
+END
+DASGUIBalance.Etat.html
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/openagro/das/equipment/DASGUIBalance.Etat.html
+END
+DASSeuilBalance.html
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/openagro/das/equipment/DASSeuilBalance.html
+END
+DASCOMScanner.html
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/openagro/das/equipment/DASCOMScanner.html
+END
+DASTimeoutBalance.Etat.html
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/openagro/das/equipment/DASTimeoutBalance.Etat.html
+END
+DASCOMScanner.SerialReader.html
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/openagro/das/equipment/DASCOMScanner.SerialReader.html
+END
+DASACBalance.html
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/openagro/das/equipment/DASACBalance.html
+END
+DASPrinterListener.html
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/openagro/das/equipment/DASPrinterListener.html
+END
+DASGUIBalance.html
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/openagro/das/equipment/DASGUIBalance.html
+END
+DASEquipments.html
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/openagro/das/equipment/DASEquipments.html
+END
+DASBalanceListener.html
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/openagro/das/equipment/DASBalanceListener.html
+END
+package-frame.html
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/openagro/das/equipment/package-frame.html
+END
+DASBalanceListener.TypeCause.html
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/openagro/das/equipment/DASBalanceListener.TypeCause.html
+END
+DASTimeoutBalance.html
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/openagro/das/equipment/DASTimeoutBalance.html
+END
+DASACScanner.html
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/openagro/das/equipment/DASACScanner.html
+END
+package-use.html
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/openagro/das/equipment/package-use.html
+END
+DASGUIScanner.html
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/openagro/das/equipment/DASGUIScanner.html
+END
+package-summary.html
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/openagro/das/equipment/package-summary.html
+END
+DASCOMBalance.SerialWriter.html
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/openagro/das/equipment/DASCOMBalance.SerialWriter.html
+END
+DASScannerListener.html
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/openagro/das/equipment/DASScannerListener.html
+END
+package-tree.html
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/openagro/das/equipment/package-tree.html
+END
+DASCOMScanner2.html
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/openagro/das/equipment/DASCOMScanner2.html
+END
+DASCOMScanner2.SerialReader.html
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/openagro/das/equipment/DASCOMScanner2.SerialReader.html
+END
+DASTimeoutBalance.TimerBalance.html
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/openagro/das/equipment/DASTimeoutBalance.TimerBalance.html
+END
+DASPrinter.html
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/openagro/das/equipment/DASPrinter.html
+END

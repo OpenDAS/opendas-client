@@ -1,0 +1,7 @@
+MessageReceiver: Sujet = 'WS1_pointage'
+MessageReceiver: LISTENER SETTED
+MessageReceiver: Connecting receiver to URL: tcp://opendas-jnlp:61616
+MessageReceiver: Consuming queue : DAS_CLIENT
+MessageSender: Connecting sender to URL: tcp://opendas-jnlp:61616
+MessageSender: Using non-persistent messages and queue
+DASResponseListener: getResponse search : ServerRequest [attachement=1, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getWsConfig_workstationID, sendedDate=Tue Apr 22 19:05:45 CEST 2014, previousRequest=null]

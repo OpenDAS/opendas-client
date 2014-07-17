@@ -1,0 +1,4 @@
+DASLoader: TimeOut :=> 15000
+DASConnectorAMQ: Passage par Thread Receiver/Sender
+DASConnectorAMQ:  -- >[WS1_pointage]
+DASConnectorAMQ: tcp://opendas-jnlp:61616 --  -- 

@@ -1,0 +1,4 @@
+MessageReceiver: Sujet = 'WS1_pointage'
+MessageReceiver: LISTENER SETTED
+MessageReceiver: Connecting receiver to URL: tcp://opendas-jnlp:61616
+MessageReceiver: Consuming queue : DAS_CLIENT

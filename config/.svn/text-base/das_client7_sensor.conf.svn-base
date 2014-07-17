@@ -1,0 +1,27 @@
+JMSUrl: tcp://opendas-jnlp:61616
+JMSUser:
+JMSPassword:
+JMSPoolNameExt: TALEND
+JMSPoolNameServer: DAS_SERVER
+JMSPoolNameClient: DAS_CLIENT
+
+-- debugMode, the debug mode indicates numerous additional information in logs. The value 1 activates this mode. 
+debugMode: 1
+
+-- workstation_id, the identifier of the station. it must be present in the table das_workstation 
+workstation_id: 1
+
+-- mask, the mask to be used for the interface. it must be present in tables das_functional_config and das_graphical_config with the corresponding identifier of the station. 
+mask: capteur
+
+-- balance_simulation, if this property has 1 as value, the weighty request for balances is replaced by a small window allowing the manual data entry of a weight. 
+balance_simulation: 0
+
+-- scanner_simulation, if this property has 1 as value, the request of code for scanners is replaced by a small window allowing the manual data entry of a code. 
+scanner_simulation: 0
+
+-- printing, indicates if labels must be ignored (0), printed (1) or edit in the form of report pdf (2) 
+printing: 2
+
+-- timeout,indicates the maximum time for a request in milliseconds. 
+timeout: 15000

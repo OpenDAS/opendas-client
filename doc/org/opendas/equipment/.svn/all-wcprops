@@ -1,0 +1,161 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/opendas/equipment
+END
+DASCOMBalance.html
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/opendas/equipment/DASCOMBalance.html
+END
+DASCOMBalance.SerialReader.html
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/opendas/equipment/DASCOMBalance.SerialReader.html
+END
+DASGUIBalance.Etat.html
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/opendas/equipment/DASGUIBalance.Etat.html
+END
+DASSeuilBalance.html
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/opendas/equipment/DASSeuilBalance.html
+END
+DASCOMScanner.html
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/opendas/equipment/DASCOMScanner.html
+END
+DASTimeoutBalance.Etat.html
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/opendas/equipment/DASTimeoutBalance.Etat.html
+END
+DASCOMScanner.SerialReader.html
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/opendas/equipment/DASCOMScanner.SerialReader.html
+END
+DASACBalance.html
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/opendas/equipment/DASACBalance.html
+END
+DASPrinterListener.html
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/opendas/equipment/DASPrinterListener.html
+END
+DASGUIBalance.html
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/opendas/equipment/DASGUIBalance.html
+END
+DASEquipments.html
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/opendas/equipment/DASEquipments.html
+END
+DASBalanceListener.html
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/opendas/equipment/DASBalanceListener.html
+END
+package-frame.html
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/opendas/equipment/package-frame.html
+END
+DASBalanceListener.TypeCause.html
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/opendas/equipment/DASBalanceListener.TypeCause.html
+END
+DASTimeoutBalance.html
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/opendas/equipment/DASTimeoutBalance.html
+END
+DASACScanner.html
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/opendas/equipment/DASACScanner.html
+END
+package-use.html
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/opendas/equipment/package-use.html
+END
+DASGUIScanner.html
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/opendas/equipment/DASGUIScanner.html
+END
+package-summary.html
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/opendas/equipment/package-summary.html
+END
+DASCOMBalance.SerialWriter.html
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/opendas/equipment/DASCOMBalance.SerialWriter.html
+END
+DASScannerListener.html
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/opendas/equipment/DASScannerListener.html
+END
+package-tree.html
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/opendas/equipment/package-tree.html
+END
+DASCOMScanner2.html
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/opendas/equipment/DASCOMScanner2.html
+END
+DASCOMScanner2.SerialReader.html
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/opendas/equipment/DASCOMScanner2.SerialReader.html
+END
+DASTimeoutBalance.TimerBalance.html
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/opendas/equipment/DASTimeoutBalance.TimerBalance.html
+END
+DASPrinter.html
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/opendas/!svn/ver/3/client/trunk/doc/org/opendas/equipment/DASPrinter.html
+END

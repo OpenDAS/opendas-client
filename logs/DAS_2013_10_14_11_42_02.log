@@ -1,0 +1,3 @@
+DASLoader: TimeOut :=> 15000
+DASConnectorAMQ: Passage par Thread Receiver/Sender
+DASConnectorAMQ:  -- >[WS1_pointage]

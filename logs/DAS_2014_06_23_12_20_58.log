@@ -1,0 +1,78 @@
+MessageReceiver: Sujet = 'WS1_pointage'
+MessageReceiver: LISTENER SETTED
+MessageReceiver: Connecting receiver to URL: tcp://opendas-jnlp:61616
+MessageReceiver: Consuming queue : DAS_CLIENT
+MessageSender: Connecting sender to URL: tcp://opendas-jnlp:61616
+MessageSender: Using non-persistent messages and queue
+DASResponseListener: getResponse search : ServerRequest [attachement=1, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getWsConfig_workstationID, sendedDate=Mon Jun 23 12:20:58 CEST 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=WsConfig [configMaterial=[DASConfigMaterial [code=PKB, name=Keyboard1, port=null, workstation...
+DASResponseListener: response received
+DASResponseListener: getResponse search : ServerRequest [attachement=1, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getWorkstationWithId, sendedDate=Mon Jun 23 12:20:58 CEST 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=DASWorkstation [code = 1, name = das test 1, force_pdf = false, config_ids = {IndirectList: n...
+DASResponseListener: response received
+DASResponseListener: getResponse search : ServerRequest [attachement=1, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getFctConfigsWithWsId, sendedDate=Mon Jun 23 12:20:59 CEST 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=[DASFunctionalConfig [mask=pointage, function_xml=<?xml version="1.0" encoding="UTF-8"?>
+<fu...
+DASResponseListener: response received
+DASResponseListener: getResponse search : ServerRequest [attachement=1, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getGraphConfigsWithWsId, sendedDate=Mon Jun 23 12:20:59 CEST 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=[DASGraphicalConfig [mask=pointage, graphical_xml=<?xml version="1.0" encoding="UTF-8"?>
+<pa...
+DASResponseListener: response received
+DASResponseListener: getResponse search : ServerRequest [attachement=1, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getGraphConfigsWithWsId, sendedDate=Mon Jun 23 12:20:59 CEST 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=[DASGraphicalConfig [mask=pointage, graphical_xml=<?xml version="1.0" encoding="UTF-8"?>
+<pa...
+DASResponseListener: response received
+DASResponseListener: Sending message: ServerRequest [attachement=[DASDataModel [id=1, name=report5, template=<?xml version="1.0" encoding="UTF-8"?>
+<jasperRe...
+DASResponseListener: response received
+DASResponseListener: getResponse search : ServerRequest [attachement=null, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getListTemplateReport, sendedDate=Mon Jun 23 12:21:00 CEST 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=[], fromUrl=DAS_SERVER, sendUrl=DAS_CLIENT, title=null, sendedDate=Mon Jun 23 12:21:00 CEST 2...
+DASResponseListener: response received
+DASResponseListener: getResponse search : ServerRequest [attachement=null, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getListTemplateSupervision, sendedDate=Mon Jun 23 12:21:00 CEST 2014, previousRequest=null]
+DASResponseListener: getResponse search : ServerRequest [attachement=null, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getListEan128, sendedDate=Mon Jun 23 12:21:00 CEST 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=[], fromUrl=DAS_SERVER, sendUrl=DAS_CLIENT, title=null, sendedDate=Mon Jun 23 12:21:00 CEST 2...
+DASResponseListener: response received
+DASResponseListener: getResponse search : ServerRequest [attachement=1, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getFctConfigsWithWsId, sendedDate=Mon Jun 23 12:21:00 CEST 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=[DASFunctionalConfig [mask=pointage, function_xml=<?xml version="1.0" encoding="UTF-8"?>
+<fu...
+DASResponseListener: response received
+DASResponseListener: getResponse search : ServerRequest [attachement=persoin, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getDataModelWithId, sendedDate=Mon Jun 23 12:21:23 CEST 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=DASDataModel [id=75, name=Personnel, source=das_generic, ctrl=alpha, type=D, fct_name=null, t...
+DASResponseListener: response received
+DASResponseListener: getResponse search : ServerRequest [attachement={_workstation=[1], model=persoin}, fromUrl=DAS_CLIENT, sendUrl=TALEND, title=getWsGenericsExt, sendedDate=Mon Jun 23 12:21:23 CEST 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=DASError [code=0, string=OK, object=[DASGeneric [code=EMPL,1000001, name=User1, workstation_i...
+DASResponseListener: response received
+DASResponseListener: Sending message: ServerRequest [attachement=DASDataModel [id=72, name=groups, source=das_generic, ctrl=null, type=D, fct_name=null, type_...
+DASResponseListener: response received
+DASResponseListener: getResponse search : ServerRequest [attachement=groups, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getDataModelWithId, sendedDate=Mon Jun 23 12:21:24 CEST 2014, previousRequest=null]
+DASResponseListener: getResponse search : ServerRequest [attachement={_workstation=[1], model=groups, persoin=[EMPL,1000004]}, fromUrl=DAS_CLIENT, sendUrl=TALEND, title=getWsGenericsExt, sendedDate=Mon Jun 23 12:21:24 CEST 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=DASError [code=0, string=OK, object=[DASGeneric [code=Customer Service, name=Customer Service...
+DASResponseListener: response received
+DASResponseListener: getResponse search : ServerRequest [attachement=null, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getListTemplateReport, sendedDate=Mon Jun 23 12:21:25 CEST 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=[DASDataModel [id=1, name=report5, template=<?xml version="1.0" encoding="UTF-8"?>
+<jasperRe...
+DASResponseListener: response received
+DASResponseListener: Sending message: ServerRequest [attachement=[], fromUrl=DAS_SERVER, sendUrl=DAS_CLIENT, title=null, sendedDate=Mon Jun 23 12:21:25 CEST 2...
+DASResponseListener: response received
+DASResponseListener: getResponse search : ServerRequest [attachement=null, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getListTemplateSupervision, sendedDate=Mon Jun 23 12:21:25 CEST 2014, previousRequest=null]
+DASResponseListener: getResponse search : ServerRequest [attachement=null, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getListEan128, sendedDate=Mon Jun 23 12:21:25 CEST 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=[], fromUrl=DAS_SERVER, sendUrl=DAS_CLIENT, title=null, sendedDate=Mon Jun 23 12:21:25 CEST 2...
+DASResponseListener: response received
+DASResponseListener: getResponse search : ServerRequest [attachement=1, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getFctConfigsWithWsId, sendedDate=Mon Jun 23 12:21:25 CEST 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=[DASFunctionalConfig [mask=pointage, function_xml=<?xml version="1.0" encoding="UTF-8"?>
+<fu...
+DASResponseListener: response received
+DASResponseListener: Sending message: ServerRequest [attachement=[DASDataModel [id=1, name=report5, template=<?xml version="1.0" encoding="UTF-8"?>
+<jasperRe...
+DASResponseListener: response received
+DASResponseListener: getResponse search : ServerRequest [attachement=null, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getListTemplateReport, sendedDate=Mon Jun 23 12:21:25 CEST 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=[], fromUrl=DAS_SERVER, sendUrl=DAS_CLIENT, title=null, sendedDate=Mon Jun 23 12:21:25 CEST 2...
+DASResponseListener: response received
+DASResponseListener: getResponse search : ServerRequest [attachement=null, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getListTemplateSupervision, sendedDate=Mon Jun 23 12:21:25 CEST 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=[], fromUrl=DAS_SERVER, sendUrl=DAS_CLIENT, title=null, sendedDate=Mon Jun 23 12:21:25 CEST 2...
+DASResponseListener: response received
+DASResponseListener: getResponse search : ServerRequest [attachement=null, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getListEan128, sendedDate=Mon Jun 23 12:21:25 CEST 2014, previousRequest=null]
+DASResponseListener: getResponse search : ServerRequest [attachement=1, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getFctConfigsWithWsId, sendedDate=Mon Jun 23 12:21:26 CEST 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=[DASFunctionalConfig [mask=pointage, function_xml=<?xml version="1.0" encoding="UTF-8"?>
+<fu...
+DASResponseListener: response received

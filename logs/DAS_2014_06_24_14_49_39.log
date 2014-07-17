@@ -1,0 +1,21 @@
+DASLoader: ok WsConfig object
+DASLoader: ok Workstation object
+DASLoader: ok FctConfig
+DASLoader: ok GraphConfig
+DAS: Fichier de configuration:/home/opendas/workspace/opendas/client/config/das_client.conf
+DAS: Chargement du masque
+cp://opendas-jnlp:61616
+MessageSender: Using non-persistent messages and queue
+debugMode : false
+debugMode : false
+debugMode : false
+debugMode : false
+debugMode : false
+debugMode : false
+debugMode : false
+debugMode : false
+debugMode : false
+debugMode : false
+debugMode : false
+debugMode : false
+debugMode : false
