@@ -1273,8 +1273,7 @@ public class DASPanel extends JPanel implements ComponentListener
 		}
 	}
 
-	public void showSequence(String sequence)
-	{
+	public void showSequence(String sequence){
 		if (panelCenter.isVisible() && panelFooter.isVisible())
 		{
 			for (String key : dicttopButtons.keySet())
