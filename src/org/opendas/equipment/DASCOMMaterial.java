@@ -608,7 +608,7 @@ class ComServer implements Callable<Map<String, String>>
 	String				sequence;
 	String				result;
 	String 				mat;
-	boolean				fini	= true;
+	boolean				fini = true;
 	ScriptEngine		javaEngine;
 	ScriptEngineManager	mgr;
 	String				languageUsed;
@@ -888,6 +888,7 @@ class ComServer implements Callable<Map<String, String>>
 				if(control.getDataEnCours() != null && mapMater.size() > 0){
 					if(control.getSuper_context().get("mapMaterial") instanceof Map<?,?> ){
 						isValid = validData(control, tabKey, val);
+						logErr("isValid ="+ String.valueOf(isValid));
 					}
 				}else{
 					isValid = true;
