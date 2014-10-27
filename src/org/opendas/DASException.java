@@ -12,8 +12,6 @@ import javax.swing.JScrollPane;
 import javax.swing.JTabbedPane;
 import javax.swing.JTextArea;
 
-import com.sun.xml.internal.messaging.saaj.util.LogDomainConstants;
-
 public class DASException extends Exception
 {
 	private static final long	serialVersionUID	= 1L;
