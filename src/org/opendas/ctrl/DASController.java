@@ -52,7 +52,6 @@ import org.opendas.modele.DASGeneric;
 import org.opendas.modele.DASTemplateReport;
 import org.opendas.modele.DASTemplateSupervision;
 import org.opendas.modele.DASTypeTransmitProtocol;
-import org.opendas.server.ServerLog;
 import org.opendas.translate.I18n;
 
 /**
@@ -787,8 +786,7 @@ public class DASController
 		endCodeFound = true;
 		if (background == false)
 		{
-			// resetTopButton(storeDataModelList.get(storeDataModelList.size() -
-			// 1));
+			//resetTopButton(storeDataModelList.get(storeDataModelList.size() - 1));
 			panel.cleanPanelBeforeDisplay();
 		}
 		panelSelected = -1;
@@ -3416,31 +3414,6 @@ public class DASController
 		this.listEcouteurR = listEcouteurR;
 	}
 
-	/*
-	 * BLANCHET ALEXANDRE AJOUT METHODE receive pour fusionner codeReceived et
-	 * receptionPoids
-	 */
-	/*
-	 * public void receive(DASMaterial material, String code) {
-	 * logDebug("Passage par receive : " + material.toString() + "code :" +
-	 * code); if (background == false && displayKeyboard == true &&
-	 * material.getCode() != null) { panel.updateKeyboardView(code,
-	 * material.getCode()); } else if (background == false && displaySupervision
-	 * == true && material.getCode() != null) {
-	 * panel.updateSupervisionField(material.getCode(), code); } else { String
-	 * sequence = material.getProperty("SEQUENCE"); String priority =
-	 * material.getProperty("PRIORITY"); if (sequence != null) {
-	 * logDebug("Actual sequence ==> " + sequenceEnCours);
-	 * logDebug("Sequence is in background : " + background);
-	 * logDebug("Received code sequence : " + sequence); if (sequenceEnCours !=
-	 * null && (priority == null || (priority != null &&
-	 * !priority.equals("1")))) {
-	 * logDebug("Actual sequence can't be interrupt"); } else {
-	 * logDebug("ACTION BTN"); actionBtn(sequence); if (background == false) {
-	 * panel.showSequence(sequence); panel.displayGeneric(); } } } if
-	 * (sequenceEnCours != null) { logDebug("RECEIVED DATA"); receivedData(code,
-	 * -1); } } }
-	 */
 	public List<DASBaseMaterial> getAcMaterial()
 	{
 		return acMaterial;
