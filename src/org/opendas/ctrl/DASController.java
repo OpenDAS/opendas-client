@@ -1130,9 +1130,7 @@ public class DASController
 				checkResponse(response);
 				initFunction();
 				logDebug("INIT FUNCTION OK");
-				if(field != null){
-					functionSelecting(field);
-				}
+				functionSelecting(field);
 				panel.blockScreen(false);
 			}
 			else if ("store".equals(currentFunction))
