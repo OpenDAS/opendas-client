@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>  
 <project name="das_client" default="sign">
-    <path id="build.classpath">
-        <fileset dir="./bin/lib">
+	
+	<property name="version" value="1"/>
+    <property name="src.dir" value="${basedir}/src"/>
+    <property name="build.dir" value="${basedir}/bin"/>
+    <property name="build.classes.dir" value="${build.dir}"/>
+    <property name="build.jars.dir" value="${build.dir}"/>
+	<property name="build.lib.dir" value="${build.dir}/lib"/>
+    <property name="lib.dir" value="${basedir}/lib"/>
+	
+	<path id="build.classpath">
+		<fileset dir="${build.lib.dir}">
 	        <include name="barbecue-1.5-beta1.jar"/>
 	        <include name="commons-beanutils-1.8.0.jar"/>
 	        <include name="commons-collections-3.2.1.jar"/>
@@ -27,77 +36,60 @@
     </path>
 	
 	<target name="prepare">
-		<mkdir dir="./bin"/>
-        <mkdir dir="./bin/lib"/>
-		<mkdir dir="./bin/key"/>
-		<mkdir dir="./bin/logs"/>
-		<mkdir dir="./bin/META-INF"/>
-		<copy file="./key/das" todir="./bin/key"/>
-        <copy file="./lib/barbecue-1.5-beta1.jar" todir="./bin/lib"/>
-        <copy file="./lib/commons-beanutils-1.8.0.jar" todir="./bin/lib"/>
-        <copy file="./lib/commons-collections-3.2.1.jar" todir="./bin/lib"/>
-		<copy file="./lib/opendas-server.jar" todir="./bin/lib"/>
-        <copy file="./lib/commons-digester-1.7.jar" todir="./bin/lib"/>
-		<copy file="./lib/commons-codec-1.8.jar" todir="./bin/lib"/>
-		<copy file="./lib/commons-javaflow-20060411.jar" todir="./bin/lib"/>
-        <copy file="./lib/iText-2.1.0.jar" todir="./bin/lib"/>
-        <copy file="./lib/jasperreports-3.5.2.jar" todir="./bin/lib"/>
-        <copy file="./lib/jdt-compiler-3.1.1.jar" todir="./bin/lib"/>
-		<copy file="./lib/activemq-all-5.5.0.jar" todir="./bin/lib"/>
-        <copy file="./lib/activemq-core-5.5.0.jar" todir="./bin/lib"/>
-        <copy file="./lib/EAN128Parser.jar" todir="./bin/lib"/>
-        <copy file="./lib/RXTXcomm.jar" todir="./bin/lib"/>
-        <copy file="./lib/spring-core-2.5.6.jar" todir="./bin/lib"/>		
-		<copy file="./lib/toplink-essentials.jar" todir="./bin/lib"/>
-		<copy file="./lib/toplink-essentials-agent.jar" todir="./bin/lib"/>
-		<copy file="./lib/libnative_win_32.jar" todir="./bin/lib"/>
-		<copy file="./lib/libnative_win_64.jar" todir="./bin/lib"/>
-        <copy file="./lib/libnative_lin_amd64.jar" todir="./bin/lib"/>
-		<copy file="./lib/libnative_lin_i686.jar" todir="./bin/lib"/>
-        <copy file="./lib/libnative_lin_x86_64.jar" todir="./bin/lib"/>
-		<copy file="./lib/gi-1.3.jar" todir="./bin/lib"/>
-		<copy file="./lib/jfreechart-1.0.14.jar" todir="./bin/lib"/>
-		<copy file="./lib/jcommon-1.0.17.jar" todir="./bin/lib"/>
-		<copy file="./lib/slf4j-simple-1.5.4.jar" todir="./bin/lib"/>      
-		<copy file="./src/META-INF/MANIFEST.MF" todir="./bin/META-INF/MANIFEST.MF"/>
+		<mkdir dir="${build.jars.dir}"/>
+		<mkdir dir="${build.lib.dir}"/>
+		<mkdir dir="${build.dir}/META-INF"/>
+		<mkdir dir="${build.dir}/key"/>
+		<mkdir dir="${build.dir}/logs"/>
 		
-		<signjar alias="das" jar="./bin/lib/barbecue-1.5-beta1.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="./bin/lib/signed_barbecue-1.5-beta1.jar" storepass="dasdas" />
-		<signjar alias="das" jar="./bin/lib/commons-beanutils-1.8.0.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="./bin/lib/signed_commons-beanutils-1.8.0.jar" storepass="dasdas" />
-		<signjar alias="das" jar="./bin/lib/commons-collections-3.2.1.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="./bin/lib/signed_commons-collections-3.2.1.jar" storepass="dasdas" />
-		<signjar alias="das" jar="./bin/lib/opendas-server.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="./bin/lib/signed_opendas-server.jar" storepass="dasdas" />
-		<signjar alias="das" jar="./bin/lib/commons-digester-1.7.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="./bin/lib/signed_commons-digester-1.7.jar" storepass="dasdas" />
-		<signjar alias="das" jar="./bin/lib/commons-codec-1.8.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="./bin/lib/signed_commons-codec-1.8.jar" storepass="dasdas" />
-		<signjar alias="das" jar="./bin/lib/commons-javaflow-20060411.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="./bin/lib/signed_commons-javaflow-20060411.jar" storepass="dasdas" />
-		<signjar alias="das" jar="./bin/lib/iText-2.1.0.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="./bin/lib/signed_iText-2.1.0.jar" storepass="dasdas" />
-		<signjar alias="das" jar="./bin/lib/jasperreports-3.5.2.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="./bin/lib/signed_jasperreports-3.5.2.jar" storepass="dasdas" />
-		<signjar alias="das" jar="./bin/lib/jdt-compiler-3.1.1.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="./bin/lib/signed_jdt-compiler-3.1.1.jar" storepass="dasdas" />
-		<signjar alias="das" jar="./bin/lib/activemq-all-5.5.0.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="./bin/lib/signed_activemq-all-5.5.0.jar" storepass="dasdas" />
-		<signjar alias="das" jar="./bin/lib/activemq-core-5.5.0.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="./bin/lib/signed_activemq-core-5.5.0.jar" storepass="dasdas" />
-		<signjar alias="das" jar="./bin/lib/EAN128Parser.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="./bin/lib/signed_EAN128Parser.jar" storepass="dasdas" />
-		<signjar alias="das" jar="./bin/lib/spring-core-2.5.6.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="./bin/lib/signed_spring-core-2.5.6.jar" storepass="dasdas" />	
-		<signjar alias="das" jar="./bin/lib/toplink-essentials.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="./bin/lib/signed_toplink-essentials.jar" storepass="dasdas" />
-		<signjar alias="das" jar="./bin/lib/toplink-essentials-agent.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="./bin/lib/signed_toplink-essentials-agent.jar" storepass="dasdas" />	
-		<signjar alias="das" jar="./bin/lib/libnative_win_32.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="./bin/lib/signed_libnative_win_32.jar" storepass="dasdas" />
-		<signjar alias="das" jar="./bin/lib/libnative_win_64.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="./bin/lib/signed_libnative_win_32.jar" storepass="dasdas" />
-		<signjar alias="das" jar="./bin/lib/libnative_lin_amd64.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="./bin/lib/signed_libnative_lin_amd64.jar" storepass="dasdas" />
-		<signjar alias="das" jar="./bin/lib/libnative_lin_i686.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="./bin/lib/signed_libnative_lin_i686.jar" storepass="dasdas" />
-		<signjar alias="das" jar="./bin/lib/libnative_lin_x86_64.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="./bin/lib/signed_libnative_lin_x86_64.jar" storepass="dasdas" />
-		<signjar alias="das" jar="./bin/lib/gi-1.3.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="./bin/lib/signed_gi-1.3.jar" storepass="dasdas" />
-		<signjar alias="das" jar="./bin/lib/jfreechart-1.0.14.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="./bin/lib/signed_jfreechart-1.0.14.jar" storepass="dasdas" />
-		<signjar alias="das" jar="./bin/lib/jcommon-1.0.17.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="./bin/lib/signed_jcommon-1.0.17.jar" storepass="dasdas" />
-		<signjar alias="das" jar="./lib/slf4j-simple-1.5.4.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="./bin/lib/signed_slf4j-simple-1.5.4.jar" storepass="dasdas" />
-		<signjar alias="das" jar="./lib/postgresql-8.4-701.jdbc4.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="./bin/lib/signed_postgresql-8.4-701.jdbc4.jar" storepass="dasdas" />
-		<signjar alias="das" jar="./lib/RXTXcomm.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="./bin/lib/signed_RXTXcomm.jar" storepass="dasdas" />
+		<copy file="./key/das" todir="./bin/key"/>
+		<copy file="${lib.dir}/commons-codec-1.8.jar" todir="${build.lib.dir}"/>
+        <copy file="${lib.dir}/jasperreports-3.5.2.jar" todir="${build.lib.dir}"/>
+		<copy file="${lib.dir}/activemq-all-5.5.0.jar" todir="${build.lib.dir}"/>
+        <copy file="${lib.dir}/activemq-core-5.5.0.jar" todir="${build.lib.dir}"/>	
+		<copy file="${lib.dir}/toplink-essentials.jar" todir="${build.lib.dir}"/>
+		<copy file="${lib.dir}/toplink-essentials-agent.jar" todir="${build.lib.dir}"/>
+		<copy file="${lib.dir}/gi-1.3.jar" todir="${build.lib.dir}"/>
+		<copy file="${lib.dir}/jfreechart-1.0.14.jar" todir="${build.lib.dir}"/>
+		<copy file="${lib.dir}/jcommon-1.0.17.jar" todir="${build.lib.dir}"/>     
+		<copy file="${src.dir}/META-INF/MANIFEST.MF" todir="${build.dir}/META-INF/"/>
+
+		<signjar alias="das" jar="${lib.dir}/barbecue-1.5-beta1.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="${build.lib.dir}/signed_barbecue-1.5-beta1.jar" storepass="dasdas" />
+		<signjar alias="das" jar="${lib.dir}/commons-beanutils-1.8.0.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="${build.lib.dir}/signed_commons-beanutils-1.8.0.jar" storepass="dasdas" />
+		<signjar alias="das" jar="${lib.dir}/commons-collections-3.2.1.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="${build.lib.dir}/signed_commons-collections-3.2.1.jar" storepass="dasdas" />
+		<signjar alias="das" jar="${lib.dir}/opendas-server.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="${build.lib.dir}/signed_opendas-server.jar" storepass="dasdas" />
+		<signjar alias="das" jar="${lib.dir}/commons-digester-1.7.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="${build.lib.dir}/signed_commons-digester-1.7.jar" storepass="dasdas" />
+		<signjar alias="das" jar="${lib.dir}/commons-codec-1.8.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="${build.lib.dir}/signed_commons-codec-1.8.jar" storepass="dasdas" />
+		<signjar alias="das" jar="${lib.dir}/commons-javaflow-20060411.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="${build.lib.dir}/signed_commons-javaflow-20060411.jar" storepass="dasdas" />
+		<signjar alias="das" jar="${lib.dir}/iText-2.1.0.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="${build.lib.dir}/signed_iText-2.1.0.jar" storepass="dasdas" />
+		<signjar alias="das" jar="${lib.dir}/jasperreports-3.5.2.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="${build.lib.dir}/signed_jasperreports-3.5.2.jar" storepass="dasdas" />
+		<signjar alias="das" jar="${lib.dir}/jdt-compiler-3.1.1.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="${build.lib.dir}/signed_jdt-compiler-3.1.1.jar" storepass="dasdas" />
+		<signjar alias="das" jar="${lib.dir}/activemq-all-5.5.0.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="${build.lib.dir}/signed_activemq-all-5.5.0.jar" storepass="dasdas" />
+		<signjar alias="das" jar="${lib.dir}/activemq-core-5.5.0.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="${build.lib.dir}/signed_activemq-core-5.5.0.jar" storepass="dasdas" />
+		<signjar alias="das" jar="${lib.dir}/EAN128Parser.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="${build.lib.dir}/signed_EAN128Parser.jar" storepass="dasdas" />
+		<signjar alias="das" jar="${lib.dir}/spring-core-2.5.6.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="${build.lib.dir}/signed_spring-core-2.5.6.jar" storepass="dasdas" />	
+		<signjar alias="das" jar="${lib.dir}/toplink-essentials.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="${build.lib.dir}/signed_toplink-essentials.jar" storepass="dasdas" />
+		<signjar alias="das" jar="${lib.dir}/toplink-essentials-agent.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="${build.lib.dir}/signed_toplink-essentials-agent.jar" storepass="dasdas" />	
+		<signjar alias="das" jar="${lib.dir}/libnative_win_32.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="${build.lib.dir}/signed_libnative_win_32.jar" storepass="dasdas" />
+		<signjar alias="das" jar="${lib.dir}/libnative_win_64.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="${build.lib.dir}/signed_libnative_win_32.jar" storepass="dasdas" />
+		<signjar alias="das" jar="${lib.dir}/libnative_lin_amd64.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="${build.lib.dir}/signed_libnative_lin_amd64.jar" storepass="dasdas" />
+		<signjar alias="das" jar="${lib.dir}/libnative_lin_i686.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="${build.lib.dir}/signed_libnative_lin_i686.jar" storepass="dasdas" />
+		<signjar alias="das" jar="${lib.dir}/libnative_lin_x86_64.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="${build.lib.dir}/signed_libnative_lin_x86_64.jar" storepass="dasdas" />
+		<signjar alias="das" jar="${lib.dir}/gi-1.3.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="${build.lib.dir}/signed_gi-1.3.jar" storepass="dasdas" />
+		<signjar alias="das" jar="${lib.dir}/jfreechart-1.0.14.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="${build.lib.dir}/signed_jfreechart-1.0.14.jar" storepass="dasdas" />
+		<signjar alias="das" jar="${lib.dir}/slf4j-simple-1.5.4.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="${build.lib.dir}/signed_slf4j-simple-1.5.4.jar" storepass="dasdas" />
+		<signjar alias="das" jar="${lib.dir}/postgresql-8.4-701.jdbc4.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="${build.lib.dir}/signed_postgresql-8.4-701.jdbc4.jar" storepass="dasdas" />
+		<signjar alias="das" jar="${lib.dir}/RXTXcomm.jar" keypass="dasdas" keystore="./bin/key/das" signedjar="${build.lib.dir}/signed_RXTXcomm.jar" storepass="dasdas" />
 	</target>
 		
     <target name="compile" depends="prepare">
-        <mkdir dir="./bin"/>
-    	<javac srcdir="./src" destdir="./bin" classpathref="build.classpath" debug="true" source="5" includeantruntime="false" target="5"/>
+        <mkdir dir="${build.dir}"/>
+    	<javac srcdir="${src.dir}" destdir="${build.classes.dir}" classpathref="build.classpath" debug="true" source="5" includeantruntime="false" target="5"/>
     </target>
 	
     <target name="jars" depends="compile">
-        <jar jarfile="./bin/opendas-client.jar">
-            <fileset dir="./bin">
+        <jar jarfile="${build.dir}/opendas-client.jar">
+            <fileset dir="${build.dir}">
                 <include name="**/*.class"/>
             </fileset>
 	    <fileset dir="./ressources"/>
