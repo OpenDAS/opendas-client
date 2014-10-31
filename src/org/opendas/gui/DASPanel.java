@@ -360,8 +360,9 @@ public class DASPanel extends JPanel implements ComponentListener
 					topPanelLittle = guiParams.get("TOP_MODEL_STYLE_TYPE");
 					logDebug("Menu style : " + topPanelLittle);
 				}
-				else
+				else{
 					logDebug("Menu style by default : " + topPanelLittle);
+				}
 			}catch (NumberFormatException e){
 				logDebug("Menu style by default : " + topPanelLittle);
 			}
@@ -694,33 +695,14 @@ public class DASPanel extends JPanel implements ComponentListener
 
 		};
 
-		if (DIMENSION_FRAME != null)
-			frame.setSize(DIMENSION_FRAME);
-		// Tri on _sequence key
+		if (DIMENSION_FRAME != null){
+			frame.setSize(DIMENSION_FRAME);			
+		}
+
 		DASParserXmlFcts parserXmlBtnsTop = new DASParserXmlFcts(DASLoader.getBtnsXml());
 		xmltopbuttons = parserXmlBtnsTop.getParameters();
 		List<Entry<String, Object>> entries = new ArrayList<Entry<String, Object>>(xmltopbuttons.entrySet());
-		Collections.sort(entries, new Comparator<Entry<String, Object>>() {
-			public int compare(Entry<String, Object> e1, Entry<String, Object> e2)
-			{
-				Object val1 = e1.getValue();
-				Object val2 = e2.getValue();
-				DASFunctions fun1 = null;
-				DASFunctions fun2 = null;
-				if (val1 instanceof DASFunctions)
-					fun1 = (DASFunctions) val1;
-				if (val2 instanceof DASFunctions)
-					fun2 = (DASFunctions) val2;
-				Integer seq1 = new Integer(0);
-				Integer seq2 = new Integer(0);
-				if (fun1 != null)
-					seq1 = (Integer) fun1.get("_sequence");
-				if (fun2 != null)
-					seq2 = (Integer) fun2.get("_sequence");
-				return (seq1 > seq2) ? 1 : 0;
-			}
-		});
-
+		
 		for (Entry<String, Object> currentEntry : entries)
 		{
 			if (currentEntry.getValue() instanceof DASFunctions)
@@ -974,26 +956,6 @@ public class DASPanel extends JPanel implements ComponentListener
 		DASParserXmlFcts parserXmlBtnsBottom = new DASParserXmlFcts(DASLoader.getBtnsbottomXml());
 		xmlbottombuttons = parserXmlBtnsBottom.getParameters();
 		entries = new ArrayList<Entry<String, Object>>(xmlbottombuttons.entrySet());
-		Collections.sort(entries, new Comparator<Entry<String, Object>>() {
-			public int compare(Entry<String, Object> e1, Entry<String, Object> e2)
-			{
-				Object val1 = e1.getValue();
-				Object val2 = e2.getValue();
-				DASFunctions fun1 = null;
-				DASFunctions fun2 = null;
-				if (val1 instanceof DASFunctions)
-					fun1 = (DASFunctions) val1;
-				if (val2 instanceof DASFunctions)
-					fun2 = (DASFunctions) val2;
-				Integer seq1 = new Integer(0);
-				Integer seq2 = new Integer(0);
-				if (fun1 != null)
-					seq1 = (Integer) fun1.get("_sequence");
-				if (fun2 != null)
-					seq2 = (Integer) fun2.get("_sequence");
-				return (seq1 > seq2) ? 1 : 0;
-			}
-		});
 		for (Entry<String, Object> currentEntry : entries)
 		{
 			if (currentEntry.getValue() instanceof DASFunctions)
@@ -1682,10 +1644,12 @@ public class DASPanel extends JPanel implements ComponentListener
 		for (int i = 0; i < topButtons.size(); ++i)
 		{
 			DASGradientJButton button = null;
-			if (topButtons.get(i) instanceof DASGradientJButton)
+			if (topButtons.get(i) instanceof DASGradientJButton){
 				button = (DASGradientJButton)(topButtons.get(i));
-			if (button != null && (button.isEnabled() == true || (button.isErasable() == false && button.isEnabled() == false)))
+			}
+			if (button != null && (button.isEnabled() == true || (button.isErasable() == false && button.isEnabled() == false))){
 				topBtnToKeep.add(button);
+			}
 		}
 
 		for (int i = 0; i < topBtnToKeep.size(); ++i)

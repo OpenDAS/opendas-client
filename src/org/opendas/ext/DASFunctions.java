@@ -1,12 +1,12 @@
 package org.opendas.ext;
 
-import java.util.HashMap;
 import java.util.Iterator;
+import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 
-public class DASFunctions extends HashMap<String, Object>
+public class DASFunctions extends LinkedHashMap<String, Object>
 {
 	public DASFunctions()
 	{
