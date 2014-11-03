@@ -11,6 +11,7 @@ import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -205,7 +206,7 @@ public class DASController
 		tmp.setName(DASLoader.getWorkstationCode());
 		superContext.put("_workstation", tmp);
 		sequenceList = fctParams.getFctSequenceList();
-		initMaterials();			
+		initMaterials();
 		logDebug("functionContext on DASController :" + functional_context);
 		//functional_context.put("mapMaterial",new HashMap<String,Object>());
 	}
@@ -213,7 +214,6 @@ public class DASController
 	// Initialize materials defined in functional config
 	public void initMaterials() throws NoSuchPortException
 	{
-		logDebug("DASController initMaterials()");
 		String matCode = null;
 		String priCode = null;
 		// record count for a same material in the mask
@@ -243,8 +243,7 @@ public class DASController
 								JOptionPane.showMessageDialog(null,I18n._("A button can't associated with a background function"), "Warning", JOptionPane.WARNING_MESSAGE);
 							}
 						}
-							
-						
+
 						sequenceListSorted.add(seque);
 					}
 					else
@@ -1084,7 +1083,7 @@ public class DASController
 			}
 			if (background == false)
 			{
-				//panel.showInstruction(instruction);
+				panel.showInstruction(instruction);
 				panel.correctButton(true);
 			}
 			if (currentFunction == null || ((String) currentFunction).isEmpty())
@@ -1755,7 +1754,7 @@ public class DASController
 		for (DASGeneric i : generics)
 		{
 			org.opendas.calendar.Event ev = new org.opendas.calendar.Event();
-			if (i.getCode().contains(","))
+			if(i.getCode().contains(","))
 			{
 				ev.setId(Integer.parseInt(i.getCode().split(",")[1]));
 			}
@@ -2593,6 +2592,17 @@ public class DASController
 					calendarData.put("pageEnCours", 0);
 				}
 			}
+			DASFunctions instruction = ((DASFunctions) functional_context.get("_function")).get_child("instruction");
+			String name = (String) ((Map<String, Object>) functional_context.get("_function")).get("NAME");
+			if (instruction != null) { 
+				if (instruction.containsKey("_value")) { 
+					logDebug((String) instruction.get("_value"));
+					setInstruction((String) instruction.get("_value")); 
+				} 
+			}else{
+				setInstruction(""); 
+			}
+
 			DASFunctions supervision = ((DASFunctions) functional_context.get("_function")).get_child("supervision");
 			if (supervision != null)
 			{
