@@ -171,16 +171,6 @@ public class DASController
 		this.panel = panel;
 		background = this.panel == null ? true : false;
 		acMaterial = this.equipments.recupMaterials();
-		if (background == false)
-		{
-			for (DASBaseMaterial material : acMaterial)
-			{
-				if (material != null)
-				{
-					/* material.addMaterialListener(this); */
-				}
-			}
-		}
 		
 		try
 		{
@@ -207,8 +197,6 @@ public class DASController
 		superContext.put("_workstation", tmp);
 		sequenceList = fctParams.getFctSequenceList();
 		initMaterials();
-		logDebug("functionContext on DASController :" + functional_context);
-		//functional_context.put("mapMaterial",new HashMap<String,Object>());
 	}
 
 	// Initialize materials defined in functional config
