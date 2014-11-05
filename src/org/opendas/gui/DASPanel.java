@@ -1330,6 +1330,7 @@ public class DASPanel extends JPanel implements ComponentListener
 	 */
 
 	public JPanel buildPaneHeader() {
+		
 		this.setLayout(new BorderLayout());
 		panelTop = new JPanel(new GridBagLayout());
 		panelTop.setBackground(BG_TOP_COLOR);
@@ -1342,7 +1343,6 @@ public class DASPanel extends JPanel implements ComponentListener
 		instructions.setFont(LARGE_FIELDS_FONT);
 		instructions.setFocusable(false);
 		//instructions.setPreferredSize(DIMENSION_LARGE_FIELDS);
-
 		cleanTopPanel();
 
 		this.addComponentListener(this);
@@ -1623,14 +1623,16 @@ public class DASPanel extends JPanel implements ComponentListener
 				}
 			}
 		}
-		if (clean == true)
+		if (clean == true){
 			cleanTopPanel();
+		}		
 	}
 
 	public void cleanTopPanel()
 	{
 		if (panelTop == null)
 			return ;
+
 		panelTop.removeAll();
 		GridBagConstraints c = new GridBagConstraints();
 		c.fill = GridBagConstraints.BOTH;
@@ -1772,6 +1774,11 @@ public class DASPanel extends JPanel implements ComponentListener
 		}
 		
 		controller.setInitialize(true);
+
+		if(controller.isInstructionsAlreadyDefined() == false){
+			instructions.setText("");
+		}	
+		
 		cleanEndFunction();
 
 	}
@@ -1783,12 +1790,12 @@ public class DASPanel extends JPanel implements ComponentListener
 	/**
 	 * Erase panel at the end of function
 	 */
+
 	public void cleanEndFunction(){
 		// Disbale keyboard
 		controller.setDKB(false);
 		controller.setVKB(false);
 		controller.setPKB(false);
-
 		//chargeGraphParams();
 		pageEnCours = 0;
 		genericsButtonsList = new LinkedList<List<DASGeneric>>();
@@ -1801,6 +1808,7 @@ public class DASPanel extends JPanel implements ComponentListener
 		cleanTopPanel(); //for little panel
 		cleanHeadPanel();
 		cleanBottomPanel();
+		
 		setVisibleAllPanels(false);
 		if(DASLoader.isLoading_configuration_on_start()){
 			controller.resetConf();
@@ -2885,12 +2893,9 @@ public class DASPanel extends JPanel implements ComponentListener
 	 * @param text
 	 *            l'instruction a afficher
 	 */
-	public void showInstruction(String text) {
+	public void showInstruction(String text) 
+	{		
 		instructions.setForeground(FG_TOP_FIELD_COLOR);
-		
-		
-		logDebug("TEXT :"+ text);
-		
 		instructions.setText(text);
 	}
 

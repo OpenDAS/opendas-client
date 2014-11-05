@@ -167,7 +167,6 @@ public class DASLoader
 		}
 	}
 
-	@SuppressWarnings("unchecked")
 	public static void getFctConfig() throws TimeoutException
 	{
 		List<DASFunctionalConfig> fcs = (List<DASFunctionalConfig>) conn.getFromServer("getFctConfigsWithWsId", workstation_code);
@@ -181,7 +180,6 @@ public class DASLoader
 		}
 	}
 
-	@SuppressWarnings("unchecked")
 	public static void getGraphConfig() throws TimeoutException
 	{
 		List<DASGraphicalConfig> gcs = (List<DASGraphicalConfig>) conn.getFromServer("getGraphConfigsWithWsId", workstation_code);

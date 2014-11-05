@@ -164,6 +164,8 @@ public class DASController
 	public static DASParserXmlFcts						parserXmlFcts					= null;
 	// loading of properties file
 	static PropertiesAccess pa = new PropertiesAccess("./config/das_client.conf");
+	//If text instruction has been already defined or not ( messages conflict)
+	private boolean instructionsAlreadyDefined = false;
 
 	public DASController(DASPanel panel) throws NoSuchPortException
 	{
@@ -1035,11 +1037,12 @@ public class DASController
 			{
 				logDebug("else isFunctionloop != true");
 				initialize = true;
-				if (background == false)
+				if (background == false){
 					panel.cancelFunction();
-				else
+				}else{
 					logDebug("Avant resetConf dans functionSelecting");
 					//resetConf();
+				}
 			}
 		}
 		else
@@ -1071,8 +1074,10 @@ public class DASController
 			}
 			if (background == false)
 			{
-				panel.showInstruction(instruction);
-				panel.correctButton(true);
+				if(this.instructionsAlreadyDefined == false){
+					panel.showInstruction(instruction);
+					panel.correctButton(true);
+				}
 			}
 			if (currentFunction == null || ((String) currentFunction).isEmpty())
 			{
@@ -1112,13 +1117,17 @@ public class DASController
 					return false;
 				}
 				if (background == false){
+
 					panel.cleanEndFunction();
 				}
 				checkResponse(response);
+				
 				initFunction();
 				logDebug("INIT FUNCTION OK");
 				functionSelecting(field);
 				panel.blockScreen(false);
+				instructionsAlreadyDefined = false;
+
 			}
 			else if ("store".equals(currentFunction))
 			{
@@ -1399,18 +1408,17 @@ public class DASController
 
 	private int checkResponse(DASError response)
 	{
+		
 		if (response.getCode().equals(0))
 		{
 			panel.showResponse(response.getString());
+			this.instructionsAlreadyDefined = true;
 			if (background == false)
 			{
-				//panel.showResponse(response.getString());
-				// if (DASLoader.debugMode){
-				// JOptionPane.showMessageDialog(null, response.getString() ,
-				// "Ack Response", JOptionPane.DEFAULT_OPTION);
-				// }
+				if (DASLoader.debugMode){
+					JOptionPane.showMessageDialog(null, response.getString() ,"Ack Response", JOptionPane.DEFAULT_OPTION); 
+				}
 			}
-			//logDebug(response.getString());
 		}
 		else if (response.getCode().equals(1))
 		{
@@ -2495,6 +2503,8 @@ public class DASController
 	 */
 	public void initFunction()
 	{
+		System.out.println("Instruction : "+ instruction);
+
 		if (background == false)
 		{
 			panel.blockScreen(true);
@@ -2523,6 +2533,11 @@ public class DASController
 		
 		currentFunction = function;
 		logDebug("==== Function en Cours : " + currentFunction + " ====");
+		
+		
+		System.out.println("Instruction already defined :"+ this.instructionsAlreadyDefined);
+		
+		
 		if (((DASFunctions) functional_context.get("_function")) != null)
 		{
 			/* TODO transformer pour nouveau parser */
@@ -2580,17 +2595,20 @@ public class DASController
 					calendarData.put("pageEnCours", 0);
 				}
 			}
-			DASFunctions instruction = ((DASFunctions) functional_context.get("_function")).get_child("instruction");
+		
 			String name = (String) ((Map<String, Object>) functional_context.get("_function")).get("NAME");
-			if (instruction != null) { 
-				if (instruction.containsKey("_value")) { 
-					logDebug((String) instruction.get("_value"));
-					setInstruction((String) instruction.get("_value")); 
-				} 
-			}else{
-				setInstruction(""); 
-			}
 
+			if(this.instructionsAlreadyDefined == false){
+				DASFunctions instruction = ((DASFunctions) functional_context.get("_function")).get_child("instruction");
+				if (instruction != null) { 
+					if (instruction.containsKey("_value") && !((String)instruction.get("_value")).equals("")) { 
+						setInstruction((String) instruction.get("_value"));
+					} 
+				}else{
+					setInstruction("");
+				}		
+			}
+	
 			DASFunctions supervision = ((DASFunctions) functional_context.get("_function")).get_child("supervision");
 			if (supervision != null)
 			{
@@ -3418,6 +3436,14 @@ public class DASController
 	public void setAcMaterial(List<DASBaseMaterial> acMaterial)
 	{
 		this.acMaterial = acMaterial;
+	}
+
+	public boolean isInstructionsAlreadyDefined() {
+		return instructionsAlreadyDefined;
+	}
+
+	public void setInstructionsAlreadyDefined(boolean instructionsAlreadyDefined) {
+		this.instructionsAlreadyDefined = instructionsAlreadyDefined;
 	}
 }
 
