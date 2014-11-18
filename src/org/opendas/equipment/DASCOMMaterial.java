@@ -128,20 +128,6 @@ public class DASCOMMaterial extends DASBaseMaterial
 		this.flowcontrol = flowcontrol;
 	}
 
-	/*
-	 * public void setDialog(List<DASDialog> dialog) { if (dialog != null) {
-	 * List<DASDialog> tmpD = new LinkedList<DASDialog>(); tmpD.addAll(dialog);
-	 * int priority = 0; while (tmpD.size() > 0) { priority++; for (DASDialog
-	 * dia : dialog) { if (dia.getPriority() == priority) { if
-	 * (dialogSorted.containsKey(dia.getName())) {
-	 * dialogSorted.get(dia.getName()).add(dia); tmpD.remove(dia); } else {
-	 * List<DASDialog> tmpDialogList = new LinkedList<DASDialog>();
-	 * tmpDialogList.add(dia); dialogSorted.put(dia.getName(), tmpDialogList);
-	 * tmpD.remove(dia); } } } } } } public void setAskDialog(String name) {
-	 * logDebug("Passage par setAskDialog"); if (dialogSorted != null &&
-	 * dialogSorted.containsKey(name)) { for (DASDialog dialog :
-	 * dialogSorted.get(name)) { break; } } }
-	 */
 	public Map<String, String> send(String materialCode, List<org.opendas.modele.DASTypeTransmitProtocol> listtypetransmit) throws InterruptedException, ExecutionException
 	{
 		logDebug("Passing by send com");
@@ -521,7 +507,6 @@ public class DASCOMMaterial extends DASBaseMaterial
 					// if result launch keyboardPanel to display received value
 					if (background.equals("0"))
 					{
-						System.out.println("reception resul :" + future.get().toString());
 						control.actionBtn(sequence);
 						control.getPanel().showSequence(sequence);
 						Map<String, String> map = future.get();

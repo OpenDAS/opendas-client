@@ -43,6 +43,7 @@
 		<mkdir dir="${build.dir}/logs"/>
 		
 		<copy file="./key/das" todir="./bin/key"/>
+		<copy file="${lib.dir}/opendas-server.jar" todir="${build.lib.dir}"/>
 		<copy file="${lib.dir}/commons-codec-1.8.jar" todir="${build.lib.dir}"/>
         <copy file="${lib.dir}/jasperreports-3.5.2.jar" todir="${build.lib.dir}"/>
 		<copy file="${lib.dir}/activemq-all-5.5.0.jar" todir="${build.lib.dir}"/>
@@ -83,13 +84,13 @@
 	</target>
 		
     <target name="compile" depends="prepare">
-        <mkdir dir="${build.dir}"/>
+        <mkdir dir="${build.classes.dir}"/>
     	<javac srcdir="${src.dir}" destdir="${build.classes.dir}" classpathref="build.classpath" debug="true" source="5" includeantruntime="false" target="5"/>
     </target>
 	
     <target name="jars" depends="compile">
-        <jar jarfile="${build.dir}/opendas-client.jar">
-            <fileset dir="${build.dir}">
+        <jar jarfile="${build.jars.dir}/opendas-client.jar">
+            <fileset dir="${build.classes.dir}">
                 <include name="**/*.class"/>
             </fileset>
 	    <fileset dir="./ressources"/>

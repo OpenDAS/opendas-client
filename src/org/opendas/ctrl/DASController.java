@@ -156,7 +156,7 @@ public class DASController
 	private final String								PANELOLD						= "PANELOLD";
 	private int											panelSelected					= -1;
 	private String										supervionBackgroundImagePath	= "";
-	private boolean										displaySupervision				= false;
+	private boolean										displaySupervision				= true;
 	private List<DASTemplateSupervision>				templateSupervisionList			= new LinkedList<DASTemplateSupervision>();
 	private DASTemplateSupervision						templateSupervisionEnCours		= new DASTemplateSupervision();
 	private List<DASBaseMaterial>						listEcouteurER					= new ArrayList<DASBaseMaterial>();
@@ -366,16 +366,20 @@ public class DASController
 	public void resetConf()
 	{
 		logDebug("Passage par resetConf");
-		
-		DASParserXmlFcts parserXmlFcts = null;
+
 		try
 		{
 			templateReportList = (List<DASTemplateReport>) dataAccess.getFromServer("getListTemplateReport", null);
 			templateSupervisionList = (List<DASTemplateSupervision>) dataAccess.getFromServer("getListTemplateSupervision", null);
 			ean128List = (List<DASEan128>) dataAccess.getFromServer("getListEan128", null);
 			parserEAN = new Parser(ean128List);
-			parserXmlFcts = new DASParserXmlFcts(DASLoader.getFctsXml());
-			fctParams = parserXmlFcts.getParameters();
+			
+			if(!DASLoader.isLoading_configuration_on_start()){
+				DASParserXmlFcts parserXmlFcts = null;
+				parserXmlFcts = new DASParserXmlFcts(DASLoader.getFctsXml());
+				fctParams = parserXmlFcts.getParameters();
+			}
+
 		}
 		catch (TimeoutException e)
 		{
@@ -1460,7 +1464,10 @@ public class DASController
 		{
 			if (background == false)
 			{
-				return JOptionPane.showConfirmDialog(null, response.getString(), "Ack Response", JOptionPane.YES_NO_OPTION);
+				if (DASLoader.debugMode)
+				{
+					return JOptionPane.showConfirmDialog(null, response.getString(), "Ack Response", JOptionPane.YES_NO_OPTION);
+				}
 			}
 			logDebug(response.getString());
 		}

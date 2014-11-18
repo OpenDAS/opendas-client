@@ -679,7 +679,7 @@ public class DASSupervisionGraph extends JFrame
 					}
 				}
 
-				else if (item != 0 && itemVisible && (isDiscretWithLine || isContinue)) {
+				else if (item != 0 && itemVisible && (isDiscretWithLine || isContinue)){
 					// get the previous data point...
 					double x0 = dataset.getXValue(series, item - 1);
 					double y0 = dataset.getYValue(series, item - 1);
