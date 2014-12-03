@@ -49,139 +49,148 @@ public class DASSupervisionPanel extends JPanel
 	String											pathplan			= "";
 	public Image									image;
 	DASPanel										panelDAS;
-	int												caseSizeY			= 1;
-	int												caseSizeX			= 1;
-	int												caseNBY				= 1;
-	int												caseNBX				= 1;
-	int												partXValue			= 0;
-	int												partYValue			= 0;
+	int												caseHeightY			= 1;
+	int												caseWidthX			= 1;
+	int												caseCountY			= 1;
+	int												caseCountX			= 1;
+	int												currentGridWidthX   = 0;
+	int												currentGridHeightY  = 0;
 	int												imgPositionX		= 0;
 	int												imgPositionY		= 0;
-	int												partHauteurNb		= 0;
-	int												partHauteurEnCours	= 0;
-	int												partLargeurNb		= 0;
+	int												scaleHeightY		= 0;
+	int												currentScaleHeightY	= 0;
+	int												currentScaleWidthX	= 0;
 	int												partLargeurEnCours	= 0;
 
-	@SuppressWarnings("unchecked")
-	public
-	DASSupervisionPanel(DASTemplateSupervision ts, List<DASDialog> dialogList, DASPanel dasPanel){
+	public DASSupervisionPanel(DASTemplateSupervision ts, List<DASDialog> dialogList, DASPanel dasPanel){
 		this.panelDAS = dasPanel;
 		this.setLayout(null);
 		this.setDialog(dialogList);
 		//BACKGROUND IMAGE
+
 		try{
 			//TODO TEST
-			//pathplan = System.getProperty("user.dir")+"/ressources/"+ts.getName()+"_2.jpg";
-			//image = ImageIO.read(new File(pathplan));
+			pathplan = System.getProperty("user.dir")+"/ressources/"+ ts.getImage()+"";
+			DASLog.logErr("Path:","Ressources :"+ pathplan);
+			//pathplan = System.getProperty("user.dir")+"/ressources/archi1.jpg";
+			image = ImageIO.read(new File(pathplan));
 
-			image = new ImageIcon(ts.getImage()).getImage();
+			//image = new ImageIcon(ts.getImage()).getImage();
 			
 		}catch(Exception e){}
 
-		caseSizeY = 1;
-		caseSizeX = 1;
+		caseHeightY = 1;
+		caseWidthX = 1;
 
-		//GRID
+		//GET CASE SIZE AND GRID SIZE
 		if(ts.getHeight_case() != null && ts.getWidth_case() != null){
-			caseSizeY = ts.getHeight_case();
-			caseSizeX = ts.getWidth_case();
+			caseHeightY = ts.getHeight_case();
+			caseWidthX = ts.getWidth_case();
 		}
 
 		if(ts.getNb_case_y() != null && ts.getNb_case_x() != null){
-			caseNBY = ts.getNb_case_y();
-			caseNBX = ts.getNb_case_x();
+			caseCountY = ts.getNb_case_y();
+			caseCountX = ts.getNb_case_x();
 		}
 
-		// AUTO-PART-SCREEN
-		int tmpX = (caseNBX*caseSizeX);
-		if((caseNBX*caseSizeX) > Toolkit.getDefaultToolkit().getScreenSize().getWidth()){
-			partXValue = (caseNBX*caseSizeX);
-			while(partXValue > Toolkit.getDefaultToolkit().getScreenSize().getWidth()){
-				partXValue = partXValue - caseSizeX;
-				partLargeurNb = Math.round((tmpX/partXValue));
+		// AUTO RESIZE GRID FROM SCREEN DIMENSIONS
+		int gridWidthX = (caseCountX*caseWidthX);
+		if((caseCountX*caseWidthX) > Toolkit.getDefaultToolkit().getScreenSize().getWidth()){
+			currentGridWidthX = (caseCountX*caseWidthX);
+			
+			// While the grid width is so long, we retire the last case to resize
+			while(currentGridWidthX > Toolkit.getDefaultToolkit().getScreenSize().getWidth()){
+				currentGridWidthX = currentGridWidthX - caseWidthX;
+				currentScaleWidthX = Math.round((gridWidthX/currentGridWidthX));
 			}
 		}
-
-		int tmpY = (caseNBY*caseSizeY);
-		if((caseNBY*caseSizeY) > Toolkit.getDefaultToolkit().getScreenSize().getHeight()-250){
-			partYValue = (caseNBY*caseSizeY);
-			while(partYValue > Toolkit.getDefaultToolkit().getScreenSize().getHeight()-250){
-				partYValue = partYValue - caseSizeY;
-				partHauteurNb = Math.round((tmpY/partYValue));
+		int gridHeightY = (caseCountY*caseHeightY);
+		if((caseCountY*caseHeightY) > Toolkit.getDefaultToolkit().getScreenSize().getHeight()-250){
+			currentGridHeightY = (caseCountY*caseHeightY);
+			
+			// While the grid height is so long, we retire the last case to resize
+			while(currentGridHeightY > Toolkit.getDefaultToolkit().getScreenSize().getHeight()-250){
+				currentGridHeightY = currentGridHeightY - caseHeightY;
+				scaleHeightY = Math.round((gridHeightY/currentGridHeightY));
 			}
 		}
 		
-		if(image != null){
+		
+		// AUTO RESIZE GRID FROM SCREEN DIMENSIONS AND IMAGE SIZE
+		
+		/*if(image != null){
 			int tmpImgX = 0;
 			tmpImgX = image.getWidth(null);
 			if(tmpImgX > Toolkit.getDefaultToolkit().getScreenSize().getWidth()){
-				partXValue = tmpImgX;
-				while(partXValue > Toolkit.getDefaultToolkit().getScreenSize().getWidth()){
-					partXValue = partXValue - caseSizeX;
-					partLargeurNb = Math.round((tmpImgX/partXValue));
+				currentGridWidthX = tmpImgX;
+				while(currentGridWidthX > Toolkit.getDefaultToolkit().getScreenSize().getWidth()){
+					currentGridWidthX = currentGridWidthX - caseWidthX;
+					currentScaleWidthX = Math.round((tmpImgX/currentGridWidthX));
 				}
 			}
 			
 			int tmpImgY = image.getHeight(null);
 			if(tmpImgY > Toolkit.getDefaultToolkit().getScreenSize().getHeight()-250){
-				partYValue = tmpImgY;
-				while(partYValue > Toolkit.getDefaultToolkit().getScreenSize().getHeight()-250){
-					partYValue = partYValue - caseSizeY;
-					partHauteurNb = Math.round((tmpImgY/partYValue));
+				currentGridHeightY = tmpImgY;
+				while(currentGridHeightY > Toolkit.getDefaultToolkit().getScreenSize().getHeight()-250){
+					currentGridHeightY = currentGridHeightY - caseHeightY;
+					scaleHeightY = Math.round((tmpImgY/currentGridHeightY));
 				}
 			}
-		}
+		}*/
 
 		checkButtonsUpDown();
 		checkButtonsPrevNext();
 
-		//ELEMENT
+		//INITIALIZE DIMENSIONS FOR EACH SUPERVISION SHAPE
 		List<Entry<String, Object>> entries = new ArrayList<Entry<String, Object>>(new DASParserXmlFcts(ts.getMapping()).getParameters().entrySet());
 		for(Entry<String, Object> en : entries){			
 			if(en.getValue() instanceof DASFunctions){
-
-				int widthShape = caseSizeX;
+				
+				//INITIALIZE SHAPE WIDTH
+				int widthShape = caseWidthX;
 				if(((DASFunctions) en.getValue()).get_child("sizeW") != null){
 					if(((String) ((DASFunctions) en.getValue()).get_child("sizeW").get("_value")).contains(".") || ((String) ((DASFunctions) en.getValue()).get_child("sizeW").get("_value")).contains(",")){
-						widthShape = (int) (caseSizeX*Double.parseDouble((String) ((DASFunctions) en.getValue()).get_child("sizeW").get("_value")));
+						widthShape = (int) (caseWidthX*Double.parseDouble((String) ((DASFunctions) en.getValue()).get_child("sizeW").get("_value")));
 					}else{
-						widthShape = caseSizeX*Integer.parseInt((String) ((DASFunctions) en.getValue()).get_child("sizeW").get("_value"));
+						widthShape = caseWidthX*Integer.parseInt((String) ((DASFunctions) en.getValue()).get_child("sizeW").get("_value"));
 					}
 				}
 
-				int heightShape = caseSizeY;
+				//INITIALIZE SHAPE HEIGHT
+				int heightShape = caseHeightY;
 				if(((DASFunctions) en.getValue()).get_child("sizeH") != null){
 					if(((String) ((DASFunctions) en.getValue()).get_child("sizeH").get("_value")).contains(".") || ((String) ((DASFunctions) en.getValue()).get_child("sizeH").get("_value")).contains(",")){
-						heightShape = (int) (caseSizeY*Double.parseDouble((String) ((DASFunctions) en.getValue()).get_child("sizeH").get("_value")));
+						heightShape = (int) (caseHeightY*Double.parseDouble((String) ((DASFunctions) en.getValue()).get_child("sizeH").get("_value")));
 					}else{
-						heightShape = caseSizeY*Integer.parseInt((String) ((DASFunctions) en.getValue()).get_child("sizeH").get("_value"));
+						heightShape = caseHeightY*Integer.parseInt((String) ((DASFunctions) en.getValue()).get_child("sizeH").get("_value"));
 					}
 				}
 
+				//INITIALIZE SHAPE POSITION X
 				int positionShapeX = 0;
 				if(((DASFunctions) en.getValue()).get_child("positionX") != null){
 					if(((String) ((DASFunctions) en.getValue()).get_child("positionX").get("_value")).contains(".") || ((String) ((DASFunctions) en.getValue()).get_child("positionX").get("_value")).contains(",")){
-						positionShapeX = (int) (caseSizeX*Double.parseDouble(((String) ((DASFunctions) en.getValue()).get_child("positionX").get("_value"))));
+						positionShapeX = (int) (caseWidthX*Double.parseDouble(((String) ((DASFunctions) en.getValue()).get_child("positionX").get("_value"))));
 					}else{
-						positionShapeX = caseSizeX*Integer.parseInt(((String) ((DASFunctions) en.getValue()).get_child("positionX").get("_value")));
+						positionShapeX = caseWidthX*Integer.parseInt(((String) ((DASFunctions) en.getValue()).get_child("positionX").get("_value")));
 					}
 				}
+				
+				//INITIALIZE SHAPE POSITION Y
 				int positionShapeY = 0;
 				if(((DASFunctions) en.getValue()).get_child("positionY") != null){
 					if(((String) ((DASFunctions) en.getValue()).get_child("positionY").get("_value")).contains(".") || ((String) ((DASFunctions) en.getValue()).get_child("positionY").get("_value")).contains(",")){
-						positionShapeY = (int) (caseSizeY*Double.parseDouble(((String) ((DASFunctions) en.getValue()).get_child("positionY").get("_value"))));
+						positionShapeY = (int) (caseHeightY*Double.parseDouble(((String) ((DASFunctions) en.getValue()).get_child("positionY").get("_value"))));
 					}else{
-						positionShapeY = caseSizeY*Integer.parseInt(((String) ((DASFunctions) en.getValue()).get_child("positionY").get("_value")));
+						positionShapeY = caseHeightY*Integer.parseInt(((String) ((DASFunctions) en.getValue()).get_child("positionY").get("_value")));
 					}
 				}
+				
+				//BUILD THE SHAPE				
+				DASShape shape = new DASShape(positionShapeX,positionShapeY,widthShape,heightShape);
 
-				//SHAPE				
-				DASShape shape = new DASShape(
-						positionShapeX, 
-						positionShapeY, 
-						widthShape, 
-						heightShape);
-
+				//ADD OPTIONS
 				if(((DASFunctions) en.getValue()).get_child("orientation") != null){
 					shape.setOrientation((String) ((DASFunctions) en.getValue()).get_child("orientation").get("_value"));
 				}
@@ -202,17 +211,16 @@ public class DASSupervisionPanel extends JPanel
 					shape.setLinkedFrom(Integer.parseInt(((String) ((DASFunctions) en.getValue()).get_child("linkedfrom").get("_value"))));
 				}
 
+				
+				
+				
+				
+				
 				//If shape is supervisor = authorize a shape to have the same color interaction than a supervisor
 				//If we don't display a value, the data is not save to historic and the shape is not clickable
 				if(((DASFunctions) en.getValue()).get("_name").equals("sup")){
 
-					DASSupervisor sup = new DASSupervisor(
-							shape, 
-							"", 
-							"",
-							this
-							);
-
+					DASSupervisor sup = new DASSupervisor(shape,"","",this);
 
 					if(((DASFunctions) en.getValue()).get_child("savedata") != null){
 						if(((String) ((DASFunctions) en.getValue()).get_child("savedata").get("_value")).equals("1")){
@@ -245,6 +253,8 @@ public class DASSupervisionPanel extends JPanel
 						}
 					}
 
+					//SAVE AND CREATE TOPIC LISTENER TO RECEPTION MESSAGES FROM MATERIALS
+					
 					if(((DASFunctions) en.getValue()).get_child("listentopic") != null){
 						String tmpTopicName = (String) ((DASFunctions) en.getValue()).get_child("listentopic").get("_value");
 						if(topicListenerList.containsKey(tmpTopicName)){
@@ -255,11 +265,14 @@ public class DASSupervisionPanel extends JPanel
 						}else{
 
 							DASDialog dialog = null;
-							if(dialogSorted.containsKey(tmpTopicName))
-								dialog = getDialog(tmpTopicName);
-							else{
+							if(dialogSorted != null){
+								if(dialogSorted.containsKey(tmpTopicName)){
+									dialog = getDialog(tmpTopicName);					
+								}				
+							}else{
 								dialog = getDialog("supervision_default");	
 							}
+							
 							DASSupervisionTopicListener dtl = DASLoader.addTopicListener(tmpTopicName,dialog,sup);
 
 							topicListenerList.put(tmpTopicName, dtl);
@@ -268,6 +281,8 @@ public class DASSupervisionPanel extends JPanel
 						}
 					}
 
+					//CREATE 
+					
 					if(((DASFunctions) en.getValue()).get_child("sendtopic") != null){
 						String tmpTopicName = (String) ((DASFunctions) en.getValue()).get_child("sendtopic").get("_value");
 						if(topicProducerList.containsKey(tmpTopicName)){
@@ -298,8 +313,6 @@ public class DASSupervisionPanel extends JPanel
 					if(((DASFunctions) en.getValue()).get_child("variable") != null){
 						sup.setSourceVariable((String) ((DASFunctions) en.getValue()).get_child("variable").get("_value"));
 					}
-
-
 
 					List<Entry<String, Object>> entriesList = new ArrayList<Entry<String, Object>>(((DASFunctions) en.getValue()).get_childs().entrySet());
 					for(Entry<String, Object> enL : entriesList)
@@ -333,7 +346,6 @@ public class DASSupervisionPanel extends JPanel
 							sup.setColorMethod("liste");
 
 						}
-
 
 						if(((DASFunctions) enL.getValue()).get("_name").equals("inputGenerator")){
 
@@ -627,19 +639,19 @@ public class DASSupervisionPanel extends JPanel
 
 	public void checkButtonsUpDown(){
 
-		if(partHauteurNb == 0){
+		if(scaleHeightY == 0){
 
 			panelDAS.displayCalendarButton(false);
 
 		}else{
 
-			if((partHauteurEnCours) < (partHauteurNb)){
+			if((currentScaleHeightY) < (scaleHeightY)){
 				panelDAS.enableDownButton(true);
 			}else{
 				panelDAS.enableDownButton(false);
 			}
 
-			if((partHauteurEnCours) > 0){
+			if((currentScaleHeightY) > 0){
 				panelDAS.enableUpButton(true);
 			}else{
 				panelDAS.enableUpButton(false);
@@ -649,7 +661,7 @@ public class DASSupervisionPanel extends JPanel
 
 	public void checkButtonsPrevNext(){
 
-		if((partLargeurEnCours) < (partLargeurNb)){
+		if((partLargeurEnCours) < (currentScaleWidthX)){
 			panelDAS.enableNextButton(true, "");
 		}else{
 			panelDAS.enableNextButton(false, "");
@@ -664,13 +676,13 @@ public class DASSupervisionPanel extends JPanel
 
 	public void moveUp(){
 
-		imgPositionY = imgPositionY+partYValue;
+		imgPositionY = imgPositionY+currentGridHeightY;
 
 		for(DASShape sup1 : staticElementList){
-			sup1.moveUp(partYValue);
+			sup1.moveUp(currentGridHeightY);
 		}
 
-		partHauteurEnCours = partHauteurEnCours - 1;
+		currentScaleHeightY = currentScaleHeightY - 1;
 		checkButtonsUpDown();
 
 		this.repaint();
@@ -679,13 +691,13 @@ public class DASSupervisionPanel extends JPanel
 
 	public void moveDown(){
 
-		imgPositionY = imgPositionY-partYValue;
+		imgPositionY = imgPositionY-currentGridHeightY;
 
 		for(DASShape sup1 : staticElementList){
-			sup1.moveDown(partYValue);
+			sup1.moveDown(currentGridHeightY);
 		}
 
-		partHauteurEnCours = partHauteurEnCours + 1;
+		currentScaleHeightY = currentScaleHeightY + 1;
 		checkButtonsUpDown();
 
 		this.repaint();
@@ -694,10 +706,10 @@ public class DASSupervisionPanel extends JPanel
 
 	public void movePrev(){
 
-		imgPositionX = imgPositionX+partXValue;
+		imgPositionX = imgPositionX+currentGridWidthX;
 
 		for(DASShape sup1 : staticElementList){
-			sup1.movePrev(partXValue);
+			sup1.movePrev(currentGridWidthX);
 			sup1.repaint();
 		}
 
@@ -710,10 +722,10 @@ public class DASSupervisionPanel extends JPanel
 
 	public void moveNext(){
 
-		imgPositionX = imgPositionX-partXValue;
+		imgPositionX = imgPositionX-currentGridWidthX;
 
 		for(DASShape sup1 : staticElementList){
-			sup1.moveNext(partXValue);
+			sup1.moveNext(currentGridWidthX);
 			sup1.repaint();
 		}
 
@@ -1407,7 +1419,7 @@ public class DASSupervisionPanel extends JPanel
 		@Override
 		public String toString()
 		{
-			return "DASSupervisor [code=" + code + ", colorList=" + colorList + ", colorMethod=" + colorMethod + ", colorNum=" + colorNum + ", displayValue=" + displayValue + ", graphLine=" + graphLine + ", graphSup=" + graphSup + ", graphTime=" + graphTime + ", graphType=" + graphType + ", historiqueValue=" + historiqueValue + ", nbsavedata=" + nbsavedata + ", refcode=" + refcode + ", saveData=" + saveData + ", shape=" + shape + ", sourceMaterial=" + sourceMaterial + ", sourceVariable=" + sourceVariable + ", supPanel=" + supPanel + ", topicListener=" + topicListener + ", topicProducer=" + topicProducer + ", value=" + value + "]";
+			return "DASSupervisor [code=" + code + ", colorList=" + colorList + ", colorMethod=" + colorMethod + ", colorNum=" + colorNum + ", displayValue=" + displayValue + ", graphLine=" + graphLine + ", graphSup=" + graphSup + ", graphTime=" + graphTime + ", graphType=" + graphType + ", historiqueValue=" + historicValue + ", nbsavedata=" + nbsavedata + ", refcode=" + refcode + ", saveData=" + saveData + ", shape=" + shape + ", sourceMaterial=" + sourceMaterial + ", sourceVariable=" + sourceVariable + ", supPanel=" + supPanel + ", topicListener=" + topicListener + ", topicProducer=" + topicProducer + ", value=" + value + "]";
 		}
 
 		private int code = -1;
@@ -1423,7 +1435,7 @@ public class DASSupervisionPanel extends JPanel
 		private String colorMethod;
 		private boolean displayValue = false;
 		private boolean saveData = false;
-		private HashMap<Date, String> historiqueValue = new HashMap<Date, String>();
+		private HashMap<Date, String> historicValue = new HashMap<Date, String>();
 		private DASSupervisionTopicListener topicListener = null;
 		private DASSupervisionTopicProducer topicProducer = null;
 		private DASSupervisionPanel supPanel;
@@ -1450,15 +1462,15 @@ public class DASSupervisionPanel extends JPanel
 
 			if(this.saveData){
 
-				if(this.historiqueValue.size() >= nbsavedata){
-					while(this.historiqueValue.size() >= nbsavedata){
-						TreeMap<Date,String> m1 = new TreeMap<Date,String>(historiqueValue);
-						this.historiqueValue.remove(m1.firstEntry().getKey());
+				if(this.historicValue.size() >= nbsavedata){
+					while(this.historicValue.size() >= nbsavedata){
+						TreeMap<Date,String> m1 = new TreeMap<Date,String>(historicValue);
+						this.historicValue.remove(m1.firstEntry().getKey());
 						graphSup.removeGraphFirstDate();
 					}
 				}
 
-				this.historiqueValue.put(new Date(),value);
+				this.historicValue.put(new Date(),value);
 
 				if(graphSup != null){
 					graphSup.upGraphValue(value);
@@ -1699,18 +1711,14 @@ public class DASSupervisionPanel extends JPanel
 
 		public HashMap<Date, String> getHistoriqueValue()
 		{
-			return historiqueValue;
+			return historicValue;
 		}
 
-		public void setHistoriqueValue(HashMap<Date, String> historiqueValue)
+		public void setHistoriqueValue(HashMap<Date, String> historicValue)
 		{
-			this.historiqueValue = historiqueValue;
+			this.historicValue = historicValue;
 		}
 
-		private void logDebug(String log)
-		{
-			DASLog.logDebug(getClass().getSimpleName(), log);
-		}
 	}
 
 }

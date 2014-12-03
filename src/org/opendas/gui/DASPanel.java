@@ -2140,39 +2140,53 @@ public class DASPanel extends JPanel implements ComponentListener
 	}
 
 	public void enablePrevButton(boolean display, String prevPage){
-		DASGradientJButton prevButton = ((DASGradientJButton) dictbottomButtons.get("BEFORE"));
-		if(display){
-			prevButton.setText(prevPage+" ←");
-			prevButton.setSelected(false);
-			prevButton.setEnabled(true);
+		
+		if(dictbottomButtons.containsKey("BEFORE")){
+			DASGradientJButton prevButton = ((DASGradientJButton) dictbottomButtons.get("BEFORE"));
+			if(display){
+				prevButton.setText(prevPage+" ←");
+				prevButton.setSelected(false);
+				prevButton.setEnabled(true);
+			}else{
+				prevButton.setText(prevPage+" ←");
+				prevButton.setSelected(false);
+				prevButton.setEnabled(false);	
+			}
 		}else{
-			prevButton.setText(prevPage+" ←");
-			prevButton.setSelected(false);
-			prevButton.setEnabled(false);	
+			DASLog.logErr(this.getClass().getSimpleName(),"ERROR : AFTER Button not defined in functional configuration");
 		}
 	}
 
 	public void enableNextButton(boolean display, String nextPage){
-		DASGradientJButton nextButton = ((DASGradientJButton) dictbottomButtons.get("AFTER"));
-		if(display){
-			nextButton.setText("→ "+nextPage);
-			nextButton.setSelected(false);
-			nextButton.setEnabled(true);
+		
+		if(dictbottomButtons.containsKey("AFTER")){
+			DASGradientJButton nextButton = ((DASGradientJButton) dictbottomButtons.get("AFTER"));
+			if(display){
+				nextButton.setText("→ "+nextPage);
+				nextButton.setSelected(false);
+				nextButton.setEnabled(true);
+			}else{
+				nextButton.setText("→ "+nextPage);
+				nextButton.setSelected(false);
+				nextButton.setEnabled(false);	
+			}
 		}else{
-			nextButton.setText("→ "+nextPage);
-			nextButton.setSelected(false);
-			nextButton.setEnabled(false);	
+			DASLog.logErr(this.getClass().getSimpleName(),"ERROR : AFTER Button not defined in functional configuration");
 		}
 	}
 
 	public void enableSwitchButton(boolean display){
-		DASGradientJButton switchButton = ((DASGradientJButton) dictbottomButtons.get("SWITCH"));
-		if(display){
-			switchButton.setSelected(false);
-			switchButton.setEnabled(true);
+		if(dictbottomButtons.containsKey("AFTER")){
+			DASGradientJButton switchButton = ((DASGradientJButton) dictbottomButtons.get("SWITCH"));
+			if(display){
+				switchButton.setSelected(false);
+				switchButton.setEnabled(true);
+			}else{
+				switchButton.setSelected(false);
+				switchButton.setEnabled(false);
+			}
 		}else{
-			switchButton.setSelected(false);
-			switchButton.setEnabled(false);
+			DASLog.logErr(this.getClass().getSimpleName(),"ERROR : AFTER Button not defined in functional configuration");
 		}
 	}
 
@@ -2953,14 +2967,23 @@ public class DASPanel extends JPanel implements ComponentListener
 
 	private void displayUpButton()
 	{
-		DASGradientJButton upButton = ((DASGradientJButton) dictbottomButtons.get("UP"));	
-		upButton.setVisible(true);
+		if(dictbottomButtons.containsKey("UP")){
+			DASGradientJButton upButton = ((DASGradientJButton) dictbottomButtons.get("UP"));	
+			upButton.setVisible(true);
+		}else{
+			DASLog.logErr(this.getClass().getSimpleName(),"ERROR : UP Button not defined in functional configuration");
+		}
 	}
 
 	private void displayDownButton()
 	{
-		DASGradientJButton upButton = ((DASGradientJButton) dictbottomButtons.get("DOWN"));	
-		upButton.setVisible(true);
+		if(dictbottomButtons.containsKey("DOWN")){
+			DASGradientJButton upButton = ((DASGradientJButton) dictbottomButtons.get("DOWN"));	
+			upButton.setVisible(true);
+		}else{
+			DASLog.logErr(this.getClass().getSimpleName(),"ERROR : DOWN Button not defined in functional configuration");
+		}
+		
 	}
 
 	public void updateSupervisionField(String material, String value)

@@ -2615,14 +2615,16 @@ public class DASController
 					setInstruction("");
 				}		
 			}
-	
+
+			Object functions = functional_context.get("_function");
+			
 			DASFunctions supervision = ((DASFunctions) functional_context.get("_function")).get_child("supervision");
 			if (supervision != null)
 			{
 				logDebug("------SUPERVISION-------");
 				if (supervision.containsKey("NAME"))
 				{
-					logDebug("-- NAME -- " + supervision.get("NAME"));
+					logErr("-- NAME -- " + supervision.get("NAME"));
 					setTemplateSupervisionEnCours((String) supervision.get("NAME"));
 				}
 			}
@@ -3398,8 +3400,10 @@ public class DASController
 
 	public void setTemplateSupervisionEnCours(String name)
 	{
+		
 		for (DASTemplateSupervision ts : templateSupervisionList)
 		{
+			DASLog.logErr(this.getClass().getSimpleName(),"ERROR Picture:" + ts.getImage()+" Name:"+ ts.getName() );
 			if (ts.getName().equals(name))
 			{
 				templateSupervisionEnCours = ts;

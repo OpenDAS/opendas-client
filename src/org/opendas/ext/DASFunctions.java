@@ -6,6 +6,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 
+import org.opendas.DASLog;
+
 public class DASFunctions extends LinkedHashMap<String, Object>
 {
 	public DASFunctions()
