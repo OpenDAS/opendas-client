@@ -203,13 +203,13 @@ public class DASSupervisionPanel extends JPanel
 					shape.setShape((String) ((DASFunctions) en.getValue()).get_child("shape").get("_value"));
 				}
 
-				if(((DASFunctions) en.getValue()).get_child("linkedto") != null){
+				/*if(((DASFunctions) en.getValue()).get_child("linkedto") != null){
 					shape.setLinkedTo(Integer.parseInt(((String) ((DASFunctions) en.getValue()).get_child("linkedto").get("_value"))));
 				}
 
 				if(((DASFunctions) en.getValue()).get_child("linkedfrom") != null){
 					shape.setLinkedFrom(Integer.parseInt(((String) ((DASFunctions) en.getValue()).get_child("linkedfrom").get("_value"))));
-				}
+				}*/
 
 				//If shape is supervisor = authorize a shape to have the same color interaction than a supervisor
 				//If we don't display a value, the data is not save to historic and the shape is not clickable
@@ -382,7 +382,7 @@ public class DASSupervisionPanel extends JPanel
 			}
 		}
 
-		//Calcul lines position for material liaison
+		//TODO Calcul lines position for material liaison
 		/*for(DASShape elem : staticElementList){
 
 			if(elem.getLinkedTo() != -1 && elem.getLinkedFrom() != -1){
