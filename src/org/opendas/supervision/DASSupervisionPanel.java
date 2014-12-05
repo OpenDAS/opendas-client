@@ -211,11 +211,6 @@ public class DASSupervisionPanel extends JPanel
 					shape.setLinkedFrom(Integer.parseInt(((String) ((DASFunctions) en.getValue()).get_child("linkedfrom").get("_value"))));
 				}
 
-				
-				
-				
-				
-				
 				//If shape is supervisor = authorize a shape to have the same color interaction than a supervisor
 				//If we don't display a value, the data is not save to historic and the shape is not clickable
 				if(((DASFunctions) en.getValue()).get("_name").equals("sup")){
@@ -281,7 +276,7 @@ public class DASSupervisionPanel extends JPanel
 						}
 					}
 
-					//CREATE 
+					//SAVE MATERIAL QUEUE NAMES
 					
 					if(((DASFunctions) en.getValue()).get_child("sendtopic") != null){
 						String tmpTopicName = (String) ((DASFunctions) en.getValue()).get_child("sendtopic").get("_value");
@@ -314,6 +309,8 @@ public class DASSupervisionPanel extends JPanel
 						sup.setSourceVariable((String) ((DASFunctions) en.getValue()).get_child("variable").get("_value"));
 					}
 
+					// CUSTOMIZE COLOR FOR MATERIAL VALUE MIN MAX
+					
 					List<Entry<String, Object>> entriesList = new ArrayList<Entry<String, Object>>(((DASFunctions) en.getValue()).get_childs().entrySet());
 					for(Entry<String, Object> enL : entriesList)
 					{
@@ -349,6 +346,7 @@ public class DASSupervisionPanel extends JPanel
 
 						if(((DASFunctions) enL.getValue()).get("_name").equals("inputGenerator")){
 
+							//Simule a material input with loop							
 							DASInputGenerator ig = new DASInputGenerator(sup);
 
 							if(((DASFunctions) enL.getValue()).get("MIN") != null){
@@ -384,14 +382,16 @@ public class DASSupervisionPanel extends JPanel
 			}
 		}
 
-		for(DASShape elem : staticElementList){
+		//Calcul lines position for material liaison
+		/*for(DASShape elem : staticElementList){
 
 			if(elem.getLinkedTo() != -1 && elem.getLinkedFrom() != -1){
 
 				doublelistproc: for(DASSupervisor sup1 : supervisorList){
 
 					if(sup1.getCode() != -1 && sup1.getCode() == elem.getLinkedFrom()){
-
+						
+						//Calcul of the shape middle position sup 1
 						int midxsup1 = sup1.getShape().x+(sup1.getShape().w/2);
 						int midysup1 = sup1.getShape().y+(sup1.getShape().h/2);
 						int midxsup2 = -1;
@@ -401,6 +401,7 @@ public class DASSupervisionPanel extends JPanel
 
 							if(sup2.getCode() != -1 && sup2.getCode() == elem.getLinkedTo()){
 
+								//Calcul of the shape middle position sup 2
 								midxsup2 = sup2.getShape().x+(sup2.getShape().w/2);
 								midysup2 = sup2.getShape().y+(sup2.getShape().h/2);
 
@@ -483,7 +484,7 @@ public class DASSupervisionPanel extends JPanel
 					} 
 				}
 			}
-		}
+		}*/
 
 		// RUN TOPIC LISTENER & PRODUCER
 		for(Entry ent : topicListenerList.entrySet()){
@@ -1332,7 +1333,6 @@ public class DASSupervisionPanel extends JPanel
 			}
 		}
 
-
 		public int getLinkedTo()
 		{
 			return linkedTo;
@@ -1377,7 +1377,6 @@ public class DASSupervisionPanel extends JPanel
 			this.component = comp;
 		}
 
-		@Override
 		public void mouseClicked(MouseEvent arg0)
 		{
 			DASShape tmpShape = ((DASShape) component);
@@ -1394,13 +1393,11 @@ public class DASSupervisionPanel extends JPanel
 
 		}
 
-		@Override
 		public void mouseEntered(MouseEvent arg0)
 		{
 
 		}
 
-		@Override
 		public void mouseExited(MouseEvent arg0)
 		{
 
