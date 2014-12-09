@@ -523,8 +523,10 @@ public class DASKeyboardPanel extends JPanel
 				//Browse list of material E/R initialized
 				for(DASBaseMaterial mat : controller.getAcMaterial()){
 					if(confm.getCode().equals(mat.getCode())){
+						System.out.println("Mat parcouru :"+mat.getCode());
 						if(i.getTypeMaterial() != null){
 							//If type material lied at acquisition method is type material of material then
+							System.out.println("i Name :"+i.getTypeMaterial().getName()+" comparé à typemat Name :"+material.getModelMaterial().getTypeMaterial().getName());
 							if(material.getModelMaterial().getTypeMaterial().getName().equals(i.getTypeMaterial().getName()))
 							{	
 								codes.add(mat.getCode());

@@ -515,11 +515,12 @@ public class DASRJ45Material extends DASBaseMaterial
 						{	
 							//if result launch keyboardPanel to display received value
 							if(background.equals("0")){
-								System.out.println("reception result :" + future.get().toString());						
+								System.out.println("reception result :" + future.get().toString()+" dataModelEnCours:"+control.getDataModelEnCours().getCode().toUpperCase());						
 								control.actionBtn(sequence);
 								control.getPanel().showSequence(sequence);
 								if(future.get().containsKey(control.getDataModelEnCours().getCode().toUpperCase())){
-									control.getPanel().updateKeyboardView(future.get().get(control.getDataModelEnCours().getCode().toUpperCase()),mat);
+									control.getPanel().updateKeyboardView(future.get().get(control.getDataModelEnCours().getCode().toUpperCase()),mat);		
+									control.getPanel().updateSupervisionField(mat, future.get().get(control.getDataModelEnCours().getCode().toUpperCase()));
 								}
 							}
 						}
