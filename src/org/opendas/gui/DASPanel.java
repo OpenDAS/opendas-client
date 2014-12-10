@@ -584,10 +584,8 @@ public class DASPanel extends JPanel implements ComponentListener
 				LARGE_FIELDS_FONT = outils.getFont(guiParams, "TOP_STATE");
 				logDebug("Indicator font : " + LARGE_FIELDS_FONT.toString());
 			} catch (NumberFormatException e) {
-				e.printStackTrace();
 				logDebug("Indicator font : " + LARGE_FIELDS_FONT.toString());
 			} catch (DASFontException e) {
-				e.printStackTrace();
 				logDebug("Indicator font by default : " + LARGE_FIELDS_FONT.toString());
 			}
 			
