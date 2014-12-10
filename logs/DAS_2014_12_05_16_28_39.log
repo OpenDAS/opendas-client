@@ -1,0 +1,209 @@
+[ERREUR] DASLoader: ok WsConfDAS: Default configuration file:./config/opendas-client7_sensor.conf
+DAS: Mask load
+DASPanel: Passage by DASPanel
+DASPanel: {BOTTOM_NEXT_BG_GRADIENT=1, MID_BUTTONS_FONT_STYLE=PLAIN, MID_NEXT_BG_BLUE=, BOTTOM_FIELDS_FONT_NAME=Arial, TOP_BTN1_BG_RED=, TOP_MODEL_NBB_LINES=5, MID_BUTTONS_FONT_SIZE=12, BOTTOM_FIELDS_BG_RED=, TOP_BTN1_FONT_NAME=Arial, TOP_BTN4_BG_GRADIENT=1, TOP_BTN1_BG_GRADIENT=1, TOP_BTN3_BG_GRADIENT=1, BOTTOM_INACTIVE-BUTTONS_BG_RED=, TOP_BTN1_TEXT_ALIGN=CENTER, BOTTOM_NEXT_FONT_SIZE=, TOP_BTN4_TEXT_ALIGN=CENTER, TOP_BTN4_FG_RED=, TOP_BTN5_BG_BLUE=, TOP_BTN1_FG_RED=, TOP_FIELDS_FONT_NAME=Arial, TOP_FIELDS_BG_GREEN=, TOP_BTN5_FG_GREEN=, MID_INACTIVE-BUTTONS_BG_RED=, BOTTOM_FIELDS_BG_GREEN=, TOP_BTN5_BG_RED=, MID_MODEL_BG_RED=, TOP_BTN3_FONT_NAME=Arial, TOP_BTN2_BG_GREEN=, BOTTOM_FIELDS_FG_RED=, BOTTOM_MODEL_BG_GREEN=, TOP_BTN3_BG_RED=, BOTTOM_NEXT_BG_BLUE=, TOP_BTN1_BG_GREEN=, MID_BUTTONS_FONT_NAME=Arial, BOTTOM_MODEL_BG_BLUE=, TOP_BTN4_FONT_STYLE=PLAIN, BOTTOM_NEXT_BG_GREEN=, TOP_BTN3_FONT_STYLE=PLAIN, TOP_MODEL_BG_BLUE=255, TOP_FIELDS_FG_RED=, BOTTOM_BUTTONS_BG_GREEN=, BOTTOM_BUTTONS_BG_GRADIENT=1, BOTTOM_BUTTONS_FONT_NAME=, BOTTOM_NEXT_FONT_NAME=, TOP_FIELDS_TEXT_ALIGN=LEFT, MID_BUTTONS_BG_GRADIENT=1, TOP_FIELDS_FG-ERROR_GREEN=0, BOTTOM_NEXT_FG_BLUE=, MID_NEXT_FG_GREEN=, MID_BUTTONS_FG_RED=, MID_NEXT_FONT_STYLE=, BOTTOM_NEXT_FG_GREEN=, BOTTOM_BUTTONS_FG_RED=, TOP_BTN2_TEXT_ALIGN=CENTER, BOTTOM_BUTTONS_FONT_STYLE=, TOP_BTN2_FONT_SIZE=16, MID_BUTTONS_FG_BLUE=, TOP_BTN1_FONT_STYLE=PLAIN, TOP_FIELDS_FONT_SIZE=16, MID_BUTTONS_BG_BLUE=, TOP_BTN5_BG_GREEN=, BOTTOM_INACTIVE-BUTTONS_BG_BLUE=, BOTTOM_BUTTONS_FONT_SIZE=, TOP_BTN4_FONT_SIZE=16, TOP_BTN1_FONT_SIZE=16, BOTTOM_FIELDS_BG_BLUE=, TOP_BTN2_FONT_STYLE=PLAIN, TOP_BTN2_FONT_NAME=Arial, MID_MODEL_BG_BLUE=, BOTTOM_MODEL_NBB_LINES=3, TOP_BTN3_FG_RED=, TOP_BTN3_BG_BLUE=, TOP_FIELDS_FONT_STYLE=PLAIN, BOTTOM_FIELDS_FG_GREEN=, BOTTOM_BUTTONS_BG_RED=, MID_INACTIVE-BUTTONS_BG_BLUE=, MID_MODEL_BG_GREEN=, TOP_BTN1_FG_GREEN=, TOP_FIELDS_FG-ERROR_RED=255, MID_BUTTONS_FG_GREEN=, BOTTOM_NEXT_FONT_STYLE=, TOP_BTN4_BG_RED=, TOP_BTN5_FG_RED=, BOTTOM_INACTIVE-BUTTONS_BG_GREEN=, TOP_BTN2_FG_GREEN=, BOTTOM_NEXT_FG_RED=, TOP_BTN1_BG_BLUE=, MID_MODEL_NBB_COLS=7, MID_NEXT_FG_BLUE=, TOP_BTN3_FG_GREEN=, BOTTOM_MODEL_BG_RED=, BOTTOM_FIELDS_FG_BLUE=, TOP_FIELDS_FG_GREEN=, TOP_BTN4_FONT_NAME=Arial, MID_NEXT_FG_RED=, MID_MODEL_NBB_LINES=5, TOP_FIELDS_FG-ERROR_BLUE=0, MID_INACTIVE-BUTTONS_BG_GREEN=, TOP_BTN2_BG_GRADIENT=1, TOP_BTN2_FG_RED=, TOP_MODEL_BG_REDMessageSender: Messages time to live 300 ms
+DASResponseListener: getResponse search : ServerRequest [attachement=null, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getListTemplateReport, sendedDate=Fri Dec 05 16:28:41 CET 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=[DASDataModel [id=1, name=report5, template=<?xml version="1.0" encoding="UTF-8"?>
+<jasperRep...
+DASResponseListener: response received
+MessageSender: Messages time to live 300 ms
+DASResponseListener: getResponse search : ServerRequest [attachement=null, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getListTemplateSupervision, sendedDate=Fri Dec 05 16:28:41 CET 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=[DASTemplateSupervision [id=1, mapping=<?xml version="1.0" encoding="UTF-8"?>
+<case>  
+      ...
+DASResponseListener: response received
+MessageSender: Messages time to live 300 ms
+DASResponseListener: getResponse search : ServerRequest [attachement=null, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getListEan128, sendedDate=Fri Dec 05 16:28:42 CET 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=[], fromUrl=DAS_SERVER, sendUrl=DAS_CLIENT, title=null, sendedDate=Fri Dec 05 16:28:42 CET 20...
+DASResponseListener: response received
+MessageSender: Messages time to live 300 ms
+DASResponseListener: getResponse search : ServerRequest [attachement=1, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getFctConfigsWithWsId, sendedDate=Fri Dec 05 16:28:42 CET 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=[DASFunctionalConfig [mask=production, function_xml=<?xml version="1.0" encoding="UTF-8"?>
+<f...
+DASResponseListener: response received
+MessageSender: Messages time to live 300 ms
+DASResponseListener: getResponse search : ServerRequest [attachement=poids, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getDataModelWithId, sendedDate=Fri Dec 05 16:28:43 CET 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=DASDataModel [id=7, name=Poids, source=null, ctrl=alpha, type=D, fct_name=null, type_fct=2, q...
+DASResponseListener: response received
+MessageSender: Messages time to live 300 ms
+DASResponseListener: getResponse search : ServerRequest [attachement=poids, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getDataModelWithId, sendedDate=Fri Dec 05 16:28:45 CET 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=DASDataModel [id=7, name=Poids, source=null, ctrl=alpha, type=D, fct_name=null, type_fct=2, q...
+DASResponseListener: response received
+MessageSender: Messages time to live 300 ms
+DASResponseListener: getResponse search : ServerRequest [attachement=poids, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getDataModelWithId, sendedDate=Fri Dec 05 16:28:48 CET 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=DASDataModel [id=7, name=Poids, source=null, ctrl=alpha, type=D, fct_name=null, type_fct=2, q...
+DASResponseListener: response received
+ns font of the bottom screen by default : java.awt.Font[family=Dialog,name=Arial,style=bold,size=18]
+DASGuiParams: prefix :TOP_STATE
+DASPanel: Indicator font by default : java.awt.Font[family=Dialog,name=Arial,style=bold,size=18]
+DASPanel: Buttons writing color of the bottom screen by default : java.awt.Color[r=0,g=0,b=0]
+DASPanel: Fields writing color of the bottom screen by default : java.awt.Color[r=0,g=0,b=0]
+DASGuiParams: prefix :BOTTOM_NEXT
+DASPanel: Navigation buttons font by default : java.awt.Font[family=Dialog,name=Arial,style=bold,size=28]
+DASPanel: Navigation buttons background color by default : java.awt.Color[r=255,g=200,b=100]
+DASPanel: Navigation buttons gradation : 1
+DASPanel: Navigation button font color by default : java.awt.Color[r=0,g=0,b=0]
+DASPanel: Font color of the top screen : java.awt.Color[r=255,g=255,b=255]
+DASGuiParams: prefix :TOP_FIELDS
+DASPanel: Fields font of the top screen by default : java.awt.Font[family=Dialog,name=Arial,style=bold,size=18]
+DASPanel: Fields background color of the top screen by default: java.awt.Color[r=238,g=238,b=238]
+DASPanel: Fields font color of the bottom screen by default:java.awt.Color[r=0,g=0,b=0]
+DASPanel: Fields font color of the top screen if error : java.awt.Color[r=255,g=0,b=0]
+DASPanel: Fields font color of the top screen if ok : java.awt.Color[r=0,g=128,b=0]
+DASPanel: Shortcut of button 'Balances01' : 
+DASGuiParams: prefix :TOP_BTN1
+DASPanel: Button font 'Balances01' by default : java.awt.Font[family=Dialog,name=Times New Roman,style=bold,size=18]
+DASPanel: Button writing color 'Balances01' by default: java.awt.Color[r=0,g=0,b=0]
+DASPanel: Button color 'Balances01' by default: java.awt.Color[r=150,g=200,b=255]
+DASPanel: Button text alignment 'Balances01' : center
+DASPanel: Button color'Balances01' when inactive by default : java.awt.Color[r=238,g=238,b=238]
+DASPanel: Navigation buttons gradation : 1
+DASPanel: <html><div align='center'>Balances01</div> <div align='right'></div></html>
+DASPanel: Shortcut of button 'Balances02' : 
+DASGuiParams: prefix :TOP_BTN2
+DASPanel: Button font 'Balances02' by default : java.awt.Font[family=Dialog,name=Times New Roman,style=bold,size=18]
+DASPanel: Button writing color 'Balances02' by default: java.awt.Color[r=0,g=0,b=0]
+DASPanel: Button color 'Balances02' by default: java.awt.Color[r=150,g=200,b=255]
+DASPanel: Button text alignment 'Balances02' : center
+DASPanel: Button color'Balances02' when inactive by default : java.awt.Color[r=238,g=238,b=238]
+DASPanel: Navigation buttons gradation : 1
+DASPanel: <html><div align='center'>Balances02</div></html>
+DASPanel: Shortcut of button 'Balances03' : 
+DASGuiParams: prefix :TOP_BTN3
+DASPanel: Button font 'Balances03' by default : java.awt.Font[family=Dialog,name=Times New Roman,style=bold,size=18]
+DASPanel: Button writing color 'Balances03' by default: java.awt.Color[r=0,g=0,b=0]
+DASPanel: Button color 'Balances03' by default: java.awt.Color[r=150,g=200,b=255]
+DASPanel: Button text alignment 'Balances03' : center
+DASPanel: Button color'Balances03' when inactive by default : java.awt.Color[r=238,g=238,b=238]
+DASPanel: Navigation buttons gradation : 1
+DASPanel: <html><div align='center'>Balances03</div></html>
+DASController: DASController constructor
+DASEquipments: Pass by recupMaterials
+DASEquipments: *****das2*****
+DASEquipments: *****rj2*****
+DASEquipments: *****rj3*****
+DASEquipments: *****rj4*****
+DASEquipments: *****rj2bis*****
+DASEquipments: *****PKB*****
+DASEquipments: *****rj1*****
+DASController: [poids03, poids01, poids02, poids04, poids05, poids06, poids07]
+DASController: Insert of rj4in listEcouteurER:
+DASController: Insert of rj2in listEcouteurER:
+DASController: Insert of rj3in listEcouteurER:
+DASController: Insert of rj2bisin listEcouteurER:
+DASController: Insert of PKBin listEcouteurER:
+DASController: Insert of das2in listEcouteurER:
+DASController: Passing by initActionBtn
+DASPanel: Passage by cleanPanelBeforeDisplay
+DASPanel: Passage by setVisibleAllPanels
+DASController: checkFunctionLoop : 0
+DASController: Passage par nextActionBtn
+DASPanel: ========================
+DASPanel: ===  Screen Blocked  ===
+DASPanel: ========================
+DASController: current sequence  : poids02 current actionPosition : 1
+DASController: functionEnCours :poids
+DASController: ==== Function en Cours : poids ====
+DASController: EAN128GETTER : poids021_EAN128
+DASController: EAN128GETTER : null
+DASController: Passage par functionSelecting 
+DASController: ========================================================================================
+DASController: ********function : poids
+DASController: ********dataModels :{}
+DASController: ********currentDataModel : null
+DASController: ********dataEnCours : {}
+DASController: ********currentSequence : poids02
+DASController: ********currentActionPosition : 1
+DASController: ********storeModel :[]
+DASController: ********storeModelList :[[]]
+DASController: ********instruction : Sélectionnez le materiel concernée
+DASController: ********subDataEnCours : []
+DASController: ********subDatalist : [[]]
+DASController: ********depEnCours : [[]]
+DASController: ********depEnCoursList : [[]]
+DASController: ********super_context : {_workstation=DASGeneric [code=1, name=1, workstation_id=null, image=null, page=null, position=null, qty_max=0, qty_min=0, das_code_dependency=null, dataModel=null, infos=null], _sequenceEnCours={_sequence=2, MATERIAL=rj3, _childs={1={_sequence=1, _childs={1={_sequence=1, _childs={}, _value=Sélectionnez le materiel concernée, _name=instruction}}, _value=
+        , _name=poids}, 2={_sequence=2, _childs={}, _name=ack}}, _value=
+    , _name=poids02}}
+DASController: ********functional_context : {_function={_sequence=1, _childs={1={_sequence=1, _childs={}, _value=Sélectionnez le materiel concernée, _name=instruction}}, _value=
+        , _name=poids}}
+DASController: ********LoopType : null
+DASController: ========================================================================================
+DASPanel: DISPLAYDOWN
+DASPanel: DISPLAYUP
+DASPanel: Passage by setVisibleAllPanels
+DASController: Passing by initActionBtn
+DASPanel: Passage by cleanPanelBeforeDisplay
+DASPanel: Passage by setVisibleAllPanels
+DASController: checkFunctionLoop : 0
+DASController: Passage par nextActionBtn
+DASPanel: ========================
+DASPanel: ===  Screen Blocked  ===
+DASPanel: ========================
+DASController: current sequence  : poids01 current actionPosition : 1
+DASController: functionEnCours :poids
+DASController: ==== Function en Cours : poids ====
+DASController: EAN128GETTER : poids011_EAN128
+DASController: EAN128GETTER : null
+DASController: Passage par functionSelecting 
+DASController: ========================================================================================
+DASController: ********function : poids
+DASController: ********dataModels :{}
+DASController: ********currentDataModel : null
+DASController: ********dataEnCours : {}
+DASController: ********currentSequence : poids01
+DASController: ********currentActionPosition : 1
+DASController: ********storeModel :[]
+DASController: ********storeModelList :[[]]
+DASController: ********instruction : Sélectionnez le materiel concernée
+DASController: ********subDataEnCours : []
+DASController: ********subDatalist : [[]]
+DASController: ********depEnCours : [[]]
+DASController: ********depEnCoursList : [[]]
+DASController: ********super_context : {_workstation=DASGeneric [code=1, name=1, workstation_id=null, image=null, page=null, position=null, qty_max=0, qty_min=0, das_code_dependency=null, dataModel=null, infos=null], _sequenceEnCours={_sequence=1, MATERIAL=rj2, _childs={1={_sequence=1, _childs={1={_sequence=1, _childs={}, _value=Sélectionnez le materiel concernée, _name=instruction}}, _value=
+        , _name=poids}, 2={_sequence=2, _childs={}, _name=ack}}, _value=
+    , _name=poids01}}
+DASController: ********functional_context : {_function={_sequence=1, _childs={1={_sequence=1, _childs={}, _value=Sélectionnez le materiel concernée, _name=instruction}}, _value=
+        , _name=poids}}
+DASController: ********LoopType : null
+DASController: ========================================================================================
+DASPanel: DISPLAYDOWN
+DASPanel: DISPLAYUP
+DASPanel: Passage by setVisibleAllPanels
+DASController: Passing by initActionBtn
+DASPanel: Passage by cleanPanelBeforeDisplay
+DASPanel: Passage by setVisibleAllPanels
+DASController: checkFunctionLoop : 0
+DASController: Passage par nextActionBtn
+DASPanel: ========================
+DASPanel: ===  Screen Blocked  ===
+DASPanel: ========================
+DASController: current sequence  : poids03 current actionPosition : 1
+DASController: functionEnCours :poids
+DASController: ==== Function en Cours : poids ====
+DASController: EAN128GETTER : poids031_EAN128
+DASController: EAN128GETTER : null
+DASController: Passage par functionSelecting 
+DASController: ========================================================================================
+DASController: ********function : poids
+DASController: ********dataModels :{}
+DASController: ********currentDataModel : null
+DASController: ********dataEnCours : {}
+DASController: ********currentSequence : poids03
+DASController: ********currentActionPosition : 1
+DASController: ********storeModel :[]
+DASController: ********storeModelList :[[]]
+DASController: ********instruction : Sélectionnez le materiel concernée
+DASController: ********subDataEnCours : []
+DASController: ********subDatalist : [[]]
+DASController: ********depEnCours : [[]]
+DASController: ********depEnCoursList : [[]]
+DASController: ********super_context : {_workstation=DASGeneric [code=1, name=1, workstation_id=null, image=null, page=null, position=null, qty_max=0, qty_min=0, das_code_dependency=null, dataModel=null, infos=null], _sequenceEnCours={_sequence=3, BACKGROUND=1, MATERIAL=rj4, _childs={1={_sequence=1, _childs={1={_sequence=1, _childs={}, _value=Sélectionnez le materiel concernée, _name=instruction}}, _value=
+        , _name=poids}, 2={_sequence=2, _childs={}, _name=ack}}, _value=
+    , _name=poids03}}
+DASController: ********functional_context : {_function={_sequence=1, _childs={1={_sequence=1, _childs={}, _value=Sélectionnez le materiel concernée, _name=instruction}}, _value=
+        , _name=poids}}
+DASController: ********LoopType : null
+DASController: ========================================================================================
+DASPanel: DISPLAYDOWN
+DASPanel: DISPLAYUP
+DASPanel: Passage by setVisibleAllPanels

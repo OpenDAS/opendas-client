@@ -1,0 +1,56 @@
+[ERREUR] DASLoader: ok WsConfDAS: Fichier de configuration par défaut:./config/opendas-client.conf
+DAS: Chargement du masque
+DASController: -- NAME -- supervision_1
+DASController: ERROR Picture:archi1.jpg Name:supervision_1
+URL: tcp://opendas-jnlp:61616
+MessageSender: Using non-persistent messages and queue
+MessageSender: Messages time to live 300 ms
+DASResponseListener: getResponse search : ServerRequest [attachement=1, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getWsConfig_workstationID, sendedDate=Thu Dec 04 09:10:02 CET 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=WsConfig [configMaterial=[]], fromUrl=DAS_SERVER, sendUrl=DAS_CLIENT, title=null, sendedDate=...
+DASResponseListener: response received
+MessageSender: Messages time to live 300 ms
+DASResponseListener: getResponse search : ServerRequest [attachement=1, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getWorkstationWithId, sendedDate=Thu Dec 04 09:10:03 CET 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=DASWorkstation [code = 1, name = das test 1, force_pdf = false, config_ids = {IndirectList: n...
+DASResponseListener: response received
+DASLoader: valeur de printing dans ./config/opendas-client.conf incorrecte et remplacée par 0
+MessageSender: Messages time to live 300 ms
+DASResponseListener: getResponse search : ServerRequest [attachement=1, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getFctConfigsWithWsId, sendedDate=Thu Dec 04 09:10:03 CET 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=[DASFunctionalConfig [mask=production, function_xml=<?xml version="1.0" encoding="UTF-8"?>
+<f...
+DASResponseListener: response received
+MessageSender: Messages time to live 300 ms
+DASResponseListener: getResponse search : ServerRequest [attachement=1, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getGraphConfigsWithWsId, sendedDate=Thu Dec 04 09:10:04 CET 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=[DASGraphicalConfig [mask=production, graphical_xml=<?xml version="1.0" encoding="UTF-8"?>
+<p...
+DASResponseListener: response received
+MessageSender: Messages time to live 300 ms
+DASResponseListener: getResponse search : ServerRequest [attachement=1, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getGraphConfigsWithWsId, sendedDate=Thu Dec 04 09:10:06 CET 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=[DASGraphicalConfig [mask=production, graphical_xml=<?xml version="1.0" encoding="UTF-8"?>
+<p...
+DASResponseListener: response received
+MessageSender: Messages time to live 300 ms
+DASResponseListener: getResponse search : ServerRequest [attachement=null, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getListTemplateReport, sendedDate=Thu Dec 04 09:10:11 CET 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=[DASDataModel [id=1, name=report5, template=<?xml version="1.0" encoding="UTF-8"?>
+<jasperRep...
+DASResponseListener: response received
+MessageSender: Messages time to live 300 ms
+DASResponseListener: getResponse search : ServerRequest [attachement=null, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getListTemplateSupervision, sendedDate=Thu Dec 04 09:10:12 CET 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=[DASTemplateSupervision [id=1, mapping=<?xml version="1.0" encoding="UTF-8"?>
+<case>  
+      ...
+DASResponseListener: response received
+MessageSender: Messages time to live 300 ms
+DASResponseListener: getResponse search : ServerRequest [attachement=null, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getListEan128, sendedDate=Thu Dec 04 09:10:12 CET 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=[], fromUrl=DAS_SERVER, sendUrl=DAS_CLIENT, title=null, sendedDate=Thu Dec 04 09:10:12 CET 20...
+DASResponseListener: response received
+MessageSender: Messages time to live 300 ms
+DASResponseListener: getResponse search : ServerRequest [attachement=1, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getFctConfigsWithWsId, sendedDate=Thu Dec 04 09:10:12 CET 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=[DASFunctionalConfig [mask=production, function_xml=<?xml version="1.0" encoding="UTF-8"?>
+<f...
+DASResponseListener: response received
+MessageSender: Messages time to live 300 ms
+DASResponseListener: getResponse search : ServerRequest [attachement=supervision, fromUrl=DAS_CLIENT, sendUrl=DAS_SERVER, title=getDataModelWithId, sendedDate=Thu Dec 04 09:10:18 CET 2014, previousRequest=null]
+DASResponseListener: Sending message: ServerRequest [attachement=DASDataModel [id=93, name=supervision, source=null, ctrl=alpha, type=D, fct_name=null, type_f...
+DASResponseListener: response received
+DASResponseListener: Sending message: ServerRequest [attachement=WsConfig [configMaterial=[]], fromUrl=DAS_SERVER, sendUrl=DAS_CLIENT, title=null, sendedDate=...
+DASResponseListener: response received

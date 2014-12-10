@@ -1376,6 +1376,8 @@ public class DASController
 							// Browse list of material E/R initialized
 							for (DASBaseMaterial mat : listEcouteurER)
 							{
+								System.out.println("Passage ");
+								System.out.println("confm code :"+ confm.getCode()+ " mat code :"+ mat.getCode());
 								if (confm.getCode().equals(mat.getCode()))
 								{
 									if (i.getTypeMaterial() != null)
@@ -2225,6 +2227,8 @@ public class DASController
 				{
 					try
 					{
+						System.out.println("matcode parcouru :"+matcode);
+						
 						// If material has transmission protocol types
 						if (!matcode.equals("vkb") && material.getType().getType_transmit_protocols() != null)
 						{
@@ -2304,6 +2308,8 @@ public class DASController
 									{
 										logErr("None typetransmitprotocol calcul type");
 									}
+									
+									System.out.println("Code upperCase :"+this.getDataModelEnCours().getCode().toUpperCase());
 									if (mapMaterial.containsKey(this.getDataModelEnCours().getCode().toUpperCase()))
 									{
 										panel.updateKeyboardView(mapMaterial.get(this.getDataModelEnCours().getCode().toUpperCase()), matcode);

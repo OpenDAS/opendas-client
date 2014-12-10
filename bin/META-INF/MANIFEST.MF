@@ -1,3 +1,19 @@
+Application-Name: OpenDAS Client 
 Manifest-Version: 1.0
-Class-Path: 
+Ant-Version: Apache Ant 1.9.2
+Class-Path: . lib/signed_barbecue-1.5-beta1.jar lib/signed_commons-bea
+ nutils-1.8.0.jar lib/signed_commons-collections-3.2.1.jar lib/signed_
+ commons-digester-1.7.jar lib/signed_commons-codec-1.8.jar lib/signed_
+ commons-javaflow-20060411.jar lib/signed_iText-2.1.0.jar lib/signed_j
+ asperreports-3.5.2.jar lib/signed_jdt-compiler-3.1.1.jar lib/signed_a
+ ctivemq-all-5.5.0.jar lib/signed_activemq-core-5.5.0.jar lib/signed_E
+ AN128Parser.jar lib/signed_spring-core-2.5.6.jar lib/signed_toplink-e
+ ssentials lib/signed_toplink-essentials-agent lib/signed_libnative_wi
+ n_32.jar lib/signed_libnative_win_64.jar lib/signed_libnative_lin_amd
+ 64.jar lib/signed_libnative_lin_i686.jar lib/signed_libnative_lin_x86
+ _64.jar lib/signed_opendas-server.jar lib/signed_gi-1.3.jar lib/signe
+ d_jfreechart-1.0.14.jar lib/signed_jcommon-1.0.17.jar lib/signed_slf4
+ j-simple-1.5.4.jar
+Created-By: 1.7.0_65-b32 (Oracle Corporation)
+Main-Class: org.opendas.DAS
 
