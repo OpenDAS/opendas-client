@@ -486,18 +486,18 @@ public class DASCOMMaterial extends DASBaseMaterial
 
 		public void run()
 		{
-			System.out.println("Pass by run :");
+			System.out.println("Pass by run COM:");
 			try
 			{
 				// Thread en attente
 				if (serialPort == null)
 				{
-						try{
-							serialPort = (SerialPort) ident.open("test", 1000);
-							serialPort.setFlowControlMode(serialParams[0]);
-							serialPort.setSerialPortParams(serialParams[1], serialParams[2], serialParams[3], serialParams[4]);
-						}catch(NullPointerException ne){
-						}
+					try{
+						serialPort = (SerialPort) ident.open("test", 1000);
+						serialPort.setFlowControlMode(serialParams[0]);
+						serialPort.setSerialPortParams(serialParams[1], serialParams[2], serialParams[3], serialParams[4]);
+					}catch(NullPointerException ne){
+					}
 				}
 				ExecutorService executor = Executors.newSingleThreadExecutor();
 				FutureTask<Map<String, String>> future = new FutureTask<Map<String, String>>(new ComServer(serialPort, codeReception, background, languageUsed, control, sequence,mat));
@@ -543,6 +543,8 @@ public class DASCOMMaterial extends DASBaseMaterial
 									mat_inputs.put(mat, data.getValue());
 								}
 							}
+							System.out.println("MAT :"+mat+" DATAENCOURS:"+ control.getDataModelEnCours().getCode());
+							control.getPanel().updateSupervisionField(mat, future.get().get(control.getDataModelEnCours().getCode().toUpperCase()));
 						}
 					}
 				}

@@ -577,7 +577,7 @@ public class DASController
 							while (itCol2.hasNext())
 							{
 								List<String> tmpList = (List<String>) itCol2.next();
-								codeAndValuesList.add("poste" + "_" + codeEntier + "_" + tmpList.get(0));
+								codeAndValuesList.add("job" + "_" + codeEntier + "_" + tmpList.get(0));
 								codeAndValuesList.add(tmpList.get(1));
 							}
 						}
@@ -1376,8 +1376,6 @@ public class DASController
 							// Browse list of material E/R initialized
 							for (DASBaseMaterial mat : listEcouteurER)
 							{
-								System.out.println("Passage ");
-								System.out.println("confm code :"+ confm.getCode()+ " mat code :"+ mat.getCode());
 								if (confm.getCode().equals(mat.getCode()))
 								{
 									if (i.getTypeMaterial() != null)
@@ -3277,10 +3275,10 @@ public class DASController
 		LoopEnd = end;
 	}
 
-	@SuppressWarnings("unchecked")
 	public boolean getButtonAccess(String sequence)
 	{
 		boolean result = false;
+		logErr("SEQUENCE NOT FOUND :"+ sequence);
 		DASFunctions tmp = fctParams.fctParams_get2(sequence);
 		if (tmp.containsKey("GROUPS"))
 		{
