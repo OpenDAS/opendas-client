@@ -584,10 +584,8 @@ public class DASPanel extends JPanel implements ComponentListener
 				LARGE_FIELDS_FONT = outils.getFont(guiParams, "TOP_STATE");
 				logDebug("Indicator font : " + LARGE_FIELDS_FONT.toString());
 			} catch (NumberFormatException e) {
-				e.printStackTrace();
 				logDebug("Indicator font : " + LARGE_FIELDS_FONT.toString());
 			} catch (DASFontException e) {
-				e.printStackTrace();
 				logDebug("Indicator font by default : " + LARGE_FIELDS_FONT.toString());
 			}
 			
@@ -853,7 +851,6 @@ public class DASPanel extends JPanel implements ComponentListener
 					
 					final String btni = Integer.toString(sequence);
 					jbutton.addActionListener(new ActionListener() {
-						@Override
 						public void actionPerformed(ActionEvent e)
 						{
 							controller.actionBtn((String) function.get("_value"));
@@ -987,7 +984,6 @@ public class DASPanel extends JPanel implements ComponentListener
 						if (((String) function.get("_value")).toString().equals("VALID"))
 						{
 							listener = new AbstractAction() {
-								@Override
 								public void actionPerformed(ActionEvent e)
 								{
 									DASGradientJButton bouton = (DASGradientJButton) e.getSource();
@@ -1012,7 +1008,6 @@ public class DASPanel extends JPanel implements ComponentListener
 						} else if (((String) function.get("_value")).toString().equals("CORRECT"))
 						{
 							listener = new AbstractAction() {
-								@Override
 								public void actionPerformed(ActionEvent e)
 								{
 									LINES_MID_BUTTONS = LINES_MID_BUTTONS_DEFAULT+1;
@@ -1025,7 +1020,6 @@ public class DASPanel extends JPanel implements ComponentListener
 						} else if (((String) function.get("_value")).toString().equals("CANCEL"))
 						{
 							listener = new AbstractAction() {
-								@Override
 								public void actionPerformed(ActionEvent e)
 								{
 									cancelFunction();
@@ -1058,7 +1052,6 @@ public class DASPanel extends JPanel implements ComponentListener
 						} else if (((String) function.get("_value")).toString().equals("AFTER"))
 						{
 							listener = new AbstractAction() {
-								@Override
 								public void actionPerformed(ActionEvent e)
 								{
 									if (isCalendar)
@@ -1082,7 +1075,6 @@ public class DASPanel extends JPanel implements ComponentListener
 						} else if (((String) function.get("_value")).toString().equals("BEFORE"))
 						{
 							listener = new AbstractAction() {
-								@Override
 								public void actionPerformed(ActionEvent e)
 								{
 									if (isCalendar)
@@ -1106,7 +1098,6 @@ public class DASPanel extends JPanel implements ComponentListener
 						} else if (((String) function.get("_value")).toString().equals("DAY"))
 						{
 							listener = new AbstractAction() {
-								@Override
 								public void actionPerformed(ActionEvent e)
 								{
 									if (isCalendar)
@@ -1118,7 +1109,6 @@ public class DASPanel extends JPanel implements ComponentListener
 						} else if (((String) function.get("_value")).toString().equals("WEEK"))
 						{
 							listener = new AbstractAction() {
-								@Override
 								public void actionPerformed(ActionEvent e)
 								{
 									if (isCalendar)
@@ -1130,7 +1120,6 @@ public class DASPanel extends JPanel implements ComponentListener
 						} else if (((String) function.get("_value")).toString().equals("MONTH"))
 						{
 							listener = new AbstractAction() {
-								@Override
 								public void actionPerformed(ActionEvent e)
 								{
 									if (isCalendar)
@@ -1142,7 +1131,6 @@ public class DASPanel extends JPanel implements ComponentListener
 						} else if (((String) function.get("_value")).toString().equals("UP"))
 						{
 							listener = new AbstractAction() {
-								@Override
 								public void actionPerformed(ActionEvent e)
 								{
 									if (isCalendar)
@@ -1159,7 +1147,6 @@ public class DASPanel extends JPanel implements ComponentListener
 						} else if (((String) function.get("_value")).toString().equals("DOWN"))
 						{
 							listener = new AbstractAction() {
-								@Override
 								public void actionPerformed(ActionEvent e)
 								{
 									if (isCalendar)
@@ -3300,22 +3287,18 @@ public class DASPanel extends JPanel implements ComponentListener
 	// }
 	// }
 
-	@Override
 	public void componentShown(ComponentEvent arg0)
 	{
 		// this.requestFocus();
 		this.requestFocusInWindow();
 	}
 
-	@Override
 	public void componentHidden(ComponentEvent arg0) {
 	}
 
-	@Override
 	public void componentMoved(ComponentEvent arg0) {
 	}
 
-	@Override
 	public void componentResized(ComponentEvent arg0) {
 	}
 
