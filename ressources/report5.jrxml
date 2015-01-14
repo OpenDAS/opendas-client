@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
-	<parameter name="NOM_MORCEAU" class="java.lang.String"/>
+	<parameter name="NAME_PART" class="java.lang.String"/>
 	<parameter name="NUM_SSCC" class="java.lang.String"/>
 	<parameter name="NUM_ARTICLE" class="java.lang.Integer"/>
 	<parameter name="NUM_LOT" class="java.lang.String"/>
@@ -56,7 +56,7 @@
 				<textElement textAlignment="Center">
 					<font size="14" isBold="true"/>
 				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA[$P{NOM_MORCEAU}]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{NAME_PART}]]></textFieldExpression>
 			</textField>
 			<componentElement>
 				<reportElement mode="Opaque" x="117" y="116" width="396" height="49"/>

@@ -11,7 +11,6 @@ import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -870,7 +869,6 @@ public class DASController
 		superContextList.add(tmp_super_context);
 	};
 
-	@SuppressWarnings("unchecked")
 	public void print()
 	{
 		logDebug("IMPRESSION");
@@ -893,6 +891,11 @@ public class DASController
 		if (((Map<String, Object>) functional_context.get("_function")).containsKey("PRINT") && ((Map<String, Object>) functional_context.get("_function")).get("PRINT") != null)
 			print = (String) ((Map<String, Object>) functional_context.get("_function")).get("PRINT");
 		Map<String, Object> data = null;
+		data = new HashMap<String,Object>();
+		data.put("NUM_ARTICLE","20");
+		data.put("NAME_PART","Epaule");
+		data.put("NUM_SSCC","P78D8D");
+		data.put("NUM_LOT","431");
 		if (functional_context.containsKey(name) && functional_context.get(name) != null)
 			data = ((DASGeneric) functional_context.get(name)).getInfos();
 		else
