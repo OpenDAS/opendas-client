@@ -891,11 +891,7 @@ public class DASController
 		if (((Map<String, Object>) functional_context.get("_function")).containsKey("PRINT") && ((Map<String, Object>) functional_context.get("_function")).get("PRINT") != null)
 			print = (String) ((Map<String, Object>) functional_context.get("_function")).get("PRINT");
 		Map<String, Object> data = null;
-		data = new HashMap<String,Object>();
-		data.put("NUM_ARTICLE","20");
-		data.put("NAME_PART","Epaule");
-		data.put("NUM_SSCC","P78D8D");
-		data.put("NUM_LOT","431");
+
 		if (functional_context.containsKey(name) && functional_context.get(name) != null)
 			data = ((DASGeneric) functional_context.get(name)).getInfos();
 		else
@@ -3281,7 +3277,6 @@ public class DASController
 	public boolean getButtonAccess(String sequence)
 	{
 		boolean result = false;
-		logErr("SEQUENCE NOT FOUND :"+ sequence);
 		DASFunctions tmp = fctParams.fctParams_get2(sequence);
 		if (tmp.containsKey("GROUPS"))
 		{

@@ -12,7 +12,6 @@ import java.io.FileWriter;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.regex.Matcher;
@@ -125,12 +124,10 @@ public class DASEtiquette /* implements DASIEtiquettes */
 		{
 			if (parameters.containsKey(type))
 			{
-				if (((LinkedList) parameters.get(type)).size() > 0)
-				{
-					this.pdf = (String) ((LinkedList) parameters.get(type)).get(0);
+				if(parameters.get(type) instanceof String){
+					this.pdf = parameters.get(type).toString();
 				}
 			}
-
 		}
 	}
 
