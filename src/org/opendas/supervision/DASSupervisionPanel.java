@@ -237,6 +237,11 @@ public class DASSupervisionPanel extends JPanel
 					if(((DASFunctions) en.getValue()).get_child("graphtype") != null){
 						sup.setGraphType((String) ((DASFunctions) en.getValue()).get_child("graphtype").get("_value"));
 					}
+					
+					if(((DASFunctions) en.getValue()).get_child("valuetype") != null){
+						sup.setGraphType((String) ((DASFunctions) en.getValue()).get_child("valuetype").get("_value"));
+					}
+					
 
 					if(((DASFunctions) en.getValue()).get_child("graphtime") != null){
 						sup.setGraphTime((String) ((DASFunctions) en.getValue()).get_child("graphtime").get("_value"));
@@ -1437,6 +1442,7 @@ public class DASSupervisionPanel extends JPanel
 		private DASSupervisionTopicProducer topicProducer = null;
 		private DASSupervisionPanel supPanel;
 		private String graphType = "discrete";
+		private String valueType = "Temp"; //Axis value type ex : temp, pressure
 		private String graphTime = "1h";
 		private boolean graphLine = false;
 		private int nbsavedata = 200;
@@ -1599,6 +1605,16 @@ public class DASSupervisionPanel extends JPanel
 		public void setGraphType(String graphType)
 		{
 			this.graphType = graphType;
+		}
+		
+		public String getValueType()
+		{
+			return valueType;
+		}
+
+		public void setValueType(String valueType)
+		{
+			this.valueType = valueType;
 		}
 
 		public boolean isGraphLine()

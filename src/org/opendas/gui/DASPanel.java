@@ -20,8 +20,6 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -153,8 +151,8 @@ public class DASPanel extends JPanel implements ComponentListener
 	private static int								MID_LEN							= 15;
 	private static Font								BOTTOM_FONT						= new Font("Arial", Font.BOLD, 18);
 	private static Font								BOTTOM_FIELD_FONT				= new Font("Arial", Font.PLAIN, 18);
-	private static Font								NEXT_FONT						= new Font("Arial", Font.BOLD, 28);
-	private static Font								LARGE_FIELDS_FONT				= new Font("Arial", Font.BOLD, 18);
+	private static Font								NEXT_FONT						= new Font("Arial", Font.BOLD, 18);
+	private static Font								LARGE_FIELDS_FONT				= new Font("Arial", Font.BOLD, 15);
 	
 	/** font color of the top panel */
 	private static Color BG_TOP_COLOR = new Color(238,238,238);

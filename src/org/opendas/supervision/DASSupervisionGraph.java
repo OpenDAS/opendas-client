@@ -337,7 +337,8 @@ public class DASSupervisionGraph extends JFrame
 		dateAxis = new DateAxis("Temps");
 
 		NumberAxis valueAxis = new NumberAxis();
-
+		valueAxis.setLabel(sup.getValueType());
+		valueAxis.setVisible(true);
 		TimeSeriesCollection dataset = createTimeDataset(hl, dateAxis);
 
 		DASStandardXYItemRenderer renderer = new DASStandardXYItemRenderer(StandardXYItemRenderer.SHAPES_AND_LINES, cn);

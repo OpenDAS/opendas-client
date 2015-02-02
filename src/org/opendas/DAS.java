@@ -23,8 +23,8 @@ public class DAS
 			log(I18n._("Configuration file:") + args[0]);
 		} else
 		{
-			DASLoader.getInstance("./config/opendas-client3.conf");
-			log(I18n._("Default configuration file:")+ "./config/opendas-client3.conf");
+			DASLoader.getInstance("./config/opendas-client.conf");
+			log(I18n._("Default configuration file:")+ "./config/opendas-client.conf");
 		}
 		// Start graphical interface
 		String mask = DASLoader.getMask().toUpperCase();
