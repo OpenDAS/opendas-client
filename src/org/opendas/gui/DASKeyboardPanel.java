@@ -54,13 +54,14 @@ public class DASKeyboardPanel extends JPanel
 	private List<DASGradientJButton>	buttons						= new ArrayList<DASGradientJButton>();
 	private Map<String, String>			params;
 	private List<String>				completeABC 				= new LinkedList<String>();
+	private List<String>				complete123 				= new LinkedList<String>();
 	private List<String>				displayedABC				= new LinkedList<String>();
 	private List<String>				displayed123				= new LinkedList<String>();
 	private List<String>				options;
 	private int							lines_buttons				= 6;
 	private int							columns_buttons				= 7;
 	/*private Dimension					information_dimension		= new Dimension(500, 30);*/
-	private Font						instructions_font			= new Font("Arial", Font.PLAIN, 20);													// INSTRUCTIONS_POLICE
+	private Font						instructions_font			= new Font("Arial", Font.PLAIN, 12);													// INSTRUCTIONS_POLICE
 	private Font						inputs_font					= new Font("Arial", Font.PLAIN ,15);
 	private Font						mid_font					= new Font("Arial", Font.PLAIN, 50);													// police_clavier
 	private Font						next_font					= new Font("Arial", Font.PLAIN, 26);													// police_options
@@ -130,15 +131,29 @@ public class DASKeyboardPanel extends JPanel
 		if (mode == null)
 			return ;
 		initABC(mode);
+		init123(mode);
 		initOptions(mode);
 	}
 
 	private void initABC(String mode)
 	{
-		if (mode.equals("num"))
+		System.out.println(displayedABC.toString());
+		
+		if (mode.equals("num") || mode.equals("int") || mode.equals("barre") || mode.equals("ean13") || mode.equals("ean128"))
 		{
 			removeFromCompleteABC(displayedABC);
 			displayedABC.clear();
+		}
+	}
+	
+	private void init123(String mode)
+	{
+		System.out.println(displayed123.toString());
+		
+		if (mode.equals("barre") || mode.equals("ean13") || mode.equals("ean128"))
+		{
+			removeFromComplete123(displayed123);
+			displayed123.clear();
 		}
 	}
 
@@ -148,12 +163,23 @@ public class DASKeyboardPanel extends JPanel
 			completeABC.remove(c);
 	}
 
+	private void removeFromComplete123(List<String> list)
+	{
+		for (String c : list)
+			complete123.remove(c);
+	}
+	
+
 	private void initOptions(String mode)
 	{
-		options = new ArrayList<String>();
-		options.add(correctionMsg);
-		//options.add(cancellationMsg);
-		options.add(validationMsg);
+		options = new ArrayList<String>();		
+		
+		if (!mode.equals("barre")){
+			options.add(correctionMsg);
+			//options.add(cancellationMsg);
+			options.add(validationMsg);
+		}
+
 		if (mode.equals("alphaMin") || mode.equals("alpha"))
 		{
 			options.add(caseMsg);
@@ -971,7 +997,7 @@ public class DASKeyboardPanel extends JPanel
 		for (int i = 0; i < tab123.length; i++)
 		{
 			displayed123.add(tab123[i]);
-			completeABC.add(tab123[i]);
+			complete123.add(tab123[i]);
 		}
 	}
 
