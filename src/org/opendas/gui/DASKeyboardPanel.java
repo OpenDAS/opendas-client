@@ -65,7 +65,7 @@ public class DASKeyboardPanel extends JPanel
 	private Font						inputs_font					= new Font("Arial", Font.PLAIN ,15);
 	private Font						mid_font					= new Font("Arial", Font.PLAIN, 50);													// police_clavier
 	private Font						next_font					= new Font("Arial", Font.PLAIN, 26);													// police_options
-	private Font						top_field_font				= new Font("Arial", Font.PLAIN, 20);													// police_saisie
+	private Font						top_field_font				= new Font("Arial", Font.PLAIN,12);													// police_saisie
 	private int							maxLengthInput				= 255;
 	private String						inputRequestMsg				= "Please make your input";
 	private String						completeInputMsg			= "Your input is complete. You can correct, cancel or validate it ";
@@ -632,6 +632,7 @@ public class DASKeyboardPanel extends JPanel
 			DASGradientJButton buton = new DASGradientJButton(bg_next_gradient, bg_next_color, bg_mid_inact_button_color);
 			buton.setBackground(bg_next_color);
 			buton.setFocusable(false);
+			buton.setBorder(null);
 			buton.setText(CODE_VALID_BTN);
 			buton.setName(entry.getKey());
 			buton.addActionListener(new ActionListener() {
