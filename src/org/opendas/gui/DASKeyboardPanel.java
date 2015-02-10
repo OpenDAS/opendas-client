@@ -141,6 +141,7 @@ public class DASKeyboardPanel extends JPanel
 		
 		if (mode.equals("num") || mode.equals("int") || mode.equals("barre") || mode.equals("ean13") || mode.equals("ean128"))
 		{
+			
 			removeFromCompleteABC(displayedABC);
 			displayedABC.clear();
 		}
@@ -422,8 +423,10 @@ public class DASKeyboardPanel extends JPanel
 		boolean isAllowed = false;
 		
 		for(DASBaseMaterial mat : controller.getAcMaterial()){
+			System.out.println("mat :"+ mat.getType().getIscumulative());
 			if(mat.getType().getIscumulative().equals("true")){
 				input = inputs.get(mat.getCode());
+				isAllowed = true;
 			}
 		}	
 		
