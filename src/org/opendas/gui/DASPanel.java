@@ -3178,6 +3178,10 @@ public class DASPanel extends JPanel implements ComponentListener
 		//TODO change that
 		int mode = 2;
 		String kbInput = "-1";
+		
+		if(keyboardPanel.getSaisie() != null){
+			kbInput = keyboardPanel.getSaisie();
+		}
 		logDebug("Keyboard input: " + kbInput);
 		if (kbInput != null && !kbInput.equals(""))
 		{
