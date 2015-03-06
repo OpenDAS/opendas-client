@@ -1,5 +1,6 @@
 package org.opendas;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -169,14 +170,13 @@ public class DASLoader
 
 	public static void getFctConfig() throws TimeoutException
 	{
-		List<DASFunctionalConfig> fcs = (List<DASFunctionalConfig>) conn.getFromServer("getFctConfigsWithWsId", workstation_code);
-		for (DASFunctionalConfig fc : fcs)
+		List<String> parameters = new ArrayList<String>();
+		parameters.add(workstation_code);
+		parameters.add(mask);
+		DASFunctionalConfig fc = (DASFunctionalConfig) conn.getFromServer("getFctConfigsWithWsId", (Serializable)parameters);
+		if (fc.getMask().equals(mask))
 		{
-			if (fc.getMask().equals(mask))
-			{
-				fctConfig = fc;
-				break;
-			}
+			fctConfig = fc;
 		}
 	}
 
