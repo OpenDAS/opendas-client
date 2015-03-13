@@ -74,7 +74,7 @@ public class DateLook extends JFrame {
 			noPlacedEvent.addAll(listEv);
 
 			// New Template listEv
-			for (Event i : noPlacedEvent) {	
+			for (Event i : noPlacedEvent){	
 				numBtns++;	
 				eventLeft--;
 				ListButton.add(new Event());

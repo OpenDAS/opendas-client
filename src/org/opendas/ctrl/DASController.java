@@ -1746,7 +1746,7 @@ public class DASController
 		listEvent = new ArrayList<org.opendas.calendar.Event>();
 		HashMap<Integer, Color> colorSchema = new HashMap<Integer, Color>();
 		int num_ligne = 0;
-		Long date_deb_gen = null;
+		Long date_start_gen = null;
 		Long date_end_gen = null;
 		// int taille_interface = X;
 		// boolean compress = false;
@@ -1766,19 +1766,15 @@ public class DASController
 			}
 			ev.set_summary("" + i.getName());
 			ev.setCode(i.getCode());
-			// CALENDAR TEST
-			// date_deb_gen = Converter.dtstart2UTC("20110609T000000Z");
-			// date_end_gen = Converter.dtstart2UTC("20110715T180000Z");
-			date_deb_gen = Converter.dtstart2UTC(parseDateFromErp("" + i.getInfos().get("min_date")));
-			/* BLANCHET ALEXANDRE MODIFICATION 15/03/13 */
-			date_end_gen = Converter.dtstart2UTC(parseDateFromErp("" + i.getInfos().get("date")));
-			/* FIN MODIFICATION */
-			logDebug(String.valueOf(date_deb_gen));
-			logDebug(String.valueOf(date_end_gen));
-			ev.set_begin_UTC_ms(date_deb_gen);
+
+			// Get date from ERP
+			date_start_gen = Converter.dtstart2UTC(parseDateFromErp("" + i.getInfos().get("date_start")));
+			date_end_gen = Converter.dtstart2UTC(parseDateFromErp("" + i.getInfos().get("date_planned")));
+			
+			ev.set_begin_UTC_ms(date_start_gen);
 			ev.set_end_UTC_ms(date_end_gen);
 			// Save of originale Date and Name
-			ev.setInit_begin_UTC_ms(date_deb_gen);
+			ev.setInit_begin_UTC_ms(date_start_gen);
 			ev.setInit_end_UTC_ms(date_end_gen);
 			ev.setInit_name("" + i.getName());
 			// if(compress){

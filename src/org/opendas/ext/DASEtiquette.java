@@ -57,7 +57,7 @@ public class DASEtiquette /* implements DASIEtiquettes */
 		this.path = path;
 		if (path == null)
 		{
-			this.path = System.getProperty("java.io.tmpdir") + System.getProperty("file.separator") + "report.pdf";
+			this.path = System.getProperty("java.io.tmpdir") + System.getProperty("file.separator") + name +".pdf";
 		}
 		this.type = type;
 		if (type.equals("jasper"))
