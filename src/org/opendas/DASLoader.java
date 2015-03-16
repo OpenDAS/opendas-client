@@ -182,14 +182,13 @@ public class DASLoader
 
 	public static void getGraphConfig() throws TimeoutException
 	{
-		List<DASGraphicalConfig> gcs = (List<DASGraphicalConfig>) conn.getFromServer("getGraphConfigsWithWsId", workstation_code);
-		for (DASGraphicalConfig gc : gcs)
+		List<String> parameters = new ArrayList<String>();
+		parameters.add(workstation_code);
+		parameters.add(mask);
+		DASGraphicalConfig gc = (DASGraphicalConfig) conn.getFromServer("getGraphConfigsWithWsId", (Serializable)parameters);	
+		if (gc.getMask().equals(mask))
 		{
-			if (gc.getMask().equals(mask))
-			{
-				graphConfig = gc;
-				break;
-			}
+			graphConfig = gc;
 		}
 	}
 
