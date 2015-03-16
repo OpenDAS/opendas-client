@@ -57,7 +57,7 @@ public class EditorFrame extends JFrame
 		this.dateLookInstance = mf;
 		enableEvents(AWTEvent.WINDOW_EVENT_MASK);
 		this.setSize(600, 340);
-		this.setTitle(I18n._("Valid Changes"));
+		this.setTitle(I18n._("Change Validation"));
 		this.setVisible(false);
 		this.setAlwaysOnTop(true);
 		this.setResizable(false);
