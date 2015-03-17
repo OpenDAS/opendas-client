@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.concurrent.TimeoutException;
 
@@ -36,6 +37,9 @@ public class DASLoader
 	private static DASLoader			instance			= new DASLoader();
 	public static boolean				debugMode;
 	private static String				workstation_code;
+	private static String				language;
+	private static String				country;
+	private static String				os;
 	private static boolean 				loading_configuration_on_start;
 	private static boolean 				warnings_on_material_on_start;
 	private static boolean 				warnings_on_material_disconnect;
@@ -83,6 +87,12 @@ public class DASLoader
 		warnings_on_button_background = "1".equals(pa.get("warnings_on_button_background"));
 		warnings_on_material_on_start = "1".equals(pa.get("warnings_on_material_on_start"));
 		warnings_on_material_disconnect = "1".equals(pa.get("warnings_on_material_disconnect"));
+		// locale configuration
+		language = pa.get("language");
+		country = pa.get("country");
+		os = pa.get("os");
+		Locale.setDefault(new Locale(language,country,os));
+		
 		timeout = Integer.parseInt(pa.get("timeout"));
 		DASLog.log(getClass().getSimpleName(),"TimeOut :=> " + timeout);
 		// mask used
