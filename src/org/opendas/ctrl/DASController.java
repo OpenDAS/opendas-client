@@ -1495,7 +1495,7 @@ public class DASController
 			default :
 				if (background == false)
 					panel.cleanCenterPanel();
-				backActionBtn(getEtapeList().get(getEtapeList().size() - 2), null, logMessage);
+				backActionBtn(getEtapeList().get(getEtapeList().size() - 1), null, logMessage);
 				break;
 		}
 	}
@@ -1768,8 +1768,8 @@ public class DASController
 			ev.setCode(i.getCode());
 
 			// Get date from ERP
-			date_start_gen = Converter.dtstart2UTC(parseDateFromErp("" + i.getInfos().get("date_start")));
-			date_end_gen = Converter.dtstart2UTC(parseDateFromErp("" + i.getInfos().get("date_planned")));
+			date_start_gen = Converter.dtstart2UTC(parseDateFromErp("" + i.getInfos().get("min_date")));
+			date_end_gen = Converter.dtstart2UTC(parseDateFromErp("" + i.getInfos().get("max_date")));
 			
 			ev.set_begin_UTC_ms(date_start_gen);
 			ev.set_end_UTC_ms(date_end_gen);
@@ -1943,8 +1943,14 @@ public class DASController
 			String keyEventId = "id";
 			Object elemEventId = event.getId();
 			params.put(keyModel, elemModel);
-			params.put(keyEventOverride, false);
-			params.put(keyEventDelete, delete);
+			if(delete){
+				params.put(keyEventDelete, true);
+				params.put(keyEventOverride, false);
+			}else{
+				params.put(keyEventDelete, false);
+				params.put(keyEventOverride, true);
+			}
+			
 			params.put(keyMinDate, elemMinDate);
 			params.put(keyMaxDate, elemMaxDate);
 			params.put(keyInitMinDateFull, elemInitMinDateFull);
@@ -1987,9 +1993,9 @@ public class DASController
 		catch (TimeoutException e)
 		{
 			logErr(e.getMessage());
-			correctFunction("Time out.");
-			if (background == false)
+			if (background == false){
 				panel.showError("Time out.");
+			}
 		}
 		// Refresh after synchro
 		generics = null;
