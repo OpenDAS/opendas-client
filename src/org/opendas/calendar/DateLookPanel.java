@@ -17,7 +17,9 @@ import java.util.ArrayList;
 import java.util.GregorianCalendar;
 
 import javax.swing.JPopupMenu;
+
 import org.opendas.DASLog;
+import org.opendas.gui.DASPanel;
 
 /*
  *  Title:        DateLook
@@ -415,6 +417,9 @@ public class DateLookPanel extends RPanel implements Printable {
 	}
 
 	public void mouseClicked(MouseEvent e) {
+		
+		System.out.println("Passage par mouseClicked");
+		
 		int x = e.getX();
 		int y = e.getY();
 		if((e.getClickCount() == 2)){
@@ -423,6 +428,7 @@ public class DateLookPanel extends RPanel implements Printable {
 					if (((EventRenderer) visible_event_renderer_list.get(i)).clicked(x, y)) {
 						// meet an event
 						if (((EventRenderer) visible_event_renderer_list.get(i)).get_event().get_my_editor_frame() != null) {
+							
 							return;
 							// meet event is still edited
 						}
@@ -447,6 +453,9 @@ public class DateLookPanel extends RPanel implements Printable {
 	 * @param  e  mouse event
 	 */
 	public void mousePressed(MouseEvent e) {
+		
+		System.out.println("Passage par mousePressed");
+		
 		ts = e.getWhen();
 		jPopupMenu_switch_deltaT.setVisible(false);
 		this.set_font_antialiasing (false);
@@ -518,6 +527,7 @@ public class DateLookPanel extends RPanel implements Printable {
 	 * @param  e  mouse event
 	 */
 	public void mouseMoved(MouseEvent e) {
+
 		mouse_x = e.getX();
 		mouse_y = e.getY();
 
@@ -663,16 +673,17 @@ public class DateLookPanel extends RPanel implements Printable {
 					if (dragging_event_is_new) {
 						// dragging of new event
 					}
-					else if ((e.getModifiers() & InputEvent.CTRL_MASK) != 0) {
-
+					else if ((e.getModifiers() & InputEvent.CTRL_MASK) != 0) {						
 					}
 					else {
 						// only shift of old event
 						setEd(new EditorFrame(dragging_event, dragging_event_before_dragging, this.mf));
 						dragging_event.set_my_editor_frame(getEd()); 
-						getEd().setLocation(((this.getWidth()/2)-350), ((this.getHeight()/2)));
-						getEd().setVisible(true);
+						getEd().setLocation(((this.getWidth()/2)-350), ((this.getHeight()/2)));						
+						getEd().setVisible(true);												
+						
 						this.mf.eventMemory.purge_event(dragging_event_before_dragging);
+						
 					}
 					dragging_event.changed();
 					rebuilt_visible_event_renderer_list = true;
