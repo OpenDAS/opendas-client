@@ -8,6 +8,8 @@ import java.awt.geom.Rectangle2D;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
+import org.opendas.translate.I18n;
+
 public class CalendarRendererDay extends CalendarRendererWeek{
 	  // main colors
 	  private float red_begin = 80;
@@ -92,7 +94,7 @@ public class CalendarRendererDay extends CalendarRendererWeek{
    
 	      // week of the year
 		  g2.setColor(Color.black);
-	      dayText = "(Semaine "+(gc.get(GregorianCalendar.WEEK_OF_YEAR))+")";     
+	      dayText = "(" +I18n._("Week") +" "+(gc.get(GregorianCalendar.WEEK_OF_YEAR))+")";     
 	      g2.drawString(dayText, x_pos + (panel.getWidth() - (panel.getWidth()/8)), csh / 2 + font_ascent / 2);
  
 	    }
