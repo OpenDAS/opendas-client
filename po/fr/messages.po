@@ -46,8 +46,12 @@ msgstr "Le serveur ACTIVEMQ ne répond pas"
 msgid "The DAS server not responding"
 msgstr "Le serveur DAS ne répond pas"
 
+#: src/org/opendas/calendar/CalendarRendererDay.java:97
+msgid "Week"
+msgstr "Semaine"
+
 #: src/org/opendas/calendar/EditorFrame.java:60
-msgid "Valid Changes"
+msgid "Change Validation"
 msgstr "Valider les changements"
 
 #: src/org/opendas/calendar/EditorFrame.java:73

@@ -43,6 +43,10 @@
 		<mkdir dir="${build.dir}/logs"/>
 		
 		<copy file="./key/das.store" todir="./bin/key"/>
+		<copy file="./i18n/Messages_fr.class" todir="./bin/"/>
+		<copy file="./i18n/Messages_fr$1.class" todir="./bin/"/>
+		<copy file="./i18n/Messages_en.class" todir="./bin/"/>
+		<copy file="./i18n/Messages_en$1.class" todir="./bin/"/>
 		<copy file="${lib.dir}/opendas-server.jar" todir="${build.lib.dir}"/>
 		<copy file="${lib.dir}/commons-codec-1.8.jar" todir="${build.lib.dir}"/>
         <copy file="${lib.dir}/jasperreports-3.5.2.jar" todir="${build.lib.dir}"/>

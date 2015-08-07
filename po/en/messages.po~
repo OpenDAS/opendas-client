@@ -19,95 +19,95 @@ msgstr ""
 
 #: src/org/opendas/DAS.java:23
 msgid "Configuration file:"
-msgstr "Fichier de configuration:"
+msgstr "Configuration file:"
 
 #: src/org/opendas/DAS.java:26
 msgid "Default configuration file:"
-msgstr "Fichier de configuration par défaut:"
+msgstr "Default configuration file:"
 
 #: src/org/opendas/DAS.java:34
 msgid "Mask '%s' is unknown"
-msgstr "Masque '%s' est inconnu"
+msgstr "Mask '%s' is unknown"
 
 #: src/org/opendas/DAS.java:37
 msgid "No mask defined for workstation '%s'"
-msgstr "Aucun masque définit pour la station '%s'"
+msgstr "No mask defined for workstation '%s'"
 
 #: src/org/opendas/DAS.java:49
 msgid "Mask load"
-msgstr "Chargement du masque"
+msgid "Mask load"
 
 #: src/org/opendas/DASLoader.java:96
 msgid "The ACTIVEMQ server not responding"
-msgstr "Le serveur ACTIVEMQ ne répond pas"
+msgstr "The ACTIVEMQ server not responding"
 
 #: src/org/opendas/DASLoader.java:106 src/org/opendas/DASLoader.java:118
 #: src/org/opendas/DASLoader.java:141 src/org/opendas/DASLoader.java:156
 msgid "The DAS server not responding"
-msgstr "Le serveur DAS ne répond pas"
+msgstr "The DAS server not responding"
 
 #: src/org/opendas/calendar/CalendarRendererDay.java:97
 msgid "Week"
-msgstr "Semaine"
+msgstr "Week"
 
 #: src/org/opendas/calendar/EditorFrame.java:60
 msgid "Valid Changes"
-msgstr "Valider les changements"
+msgstr "Valid Changes"
 
 #: src/org/opendas/calendar/EditorFrame.java:73
 msgid "Start :"
-msgstr "Début :"
+msgstr "Start :"
 
 #: src/org/opendas/calendar/EditorFrame.java:130
 msgid "End :"
-msgstr "Fin :"
+msgstr "End :"
 
 #: src/org/opendas/calendar/EditorFrame.java:201
 #: src/org/opendas/gui/DASPanel.java:2946
 msgid "Save"
-msgstr "Enregistrer"
+msgstr "Save"
 
 #: src/org/opendas/calendar/EditorFrame.java:213
 msgid "Delete"
-msgstr "Supprimer"
+msgstr "Delete"
 
 #: src/org/opendas/calendar/EditorFrame.java:225
 msgid "Cancel"
-msgstr "Annuler"
+msgstr "Cancel"
 
 #: src/org/opendas/ctrl/DASController.java:124
 msgid "Physical keyboard"
-msgstr "Clavier physique"
+msgstr "Physical keyboard"
 
 #: src/org/opendas/ctrl/DASController.java:252
 msgid "A button can't associated with a background function"
-msgstr "Un bouton ne peut être associé avec une fonction en arrière plan"
+msgstr "A button can't associated with a background function"
 
 #: src/org/opendas/ctrl/DASController.java:345
 msgid "Error : Material present in many functions"
-msgstr "Erreur : Material présent dans plusieurs fonctions"
+msgstr "Error : Material present in many functions"
 
 #: src/org/opendas/ctrl/DASController.java:1299
 msgid "Inputs view"
-msgstr "Vue des entrées"
+msgstr "Inputs view"
 
 #: src/org/opendas/ctrl/DASController.java:1301
 msgid "Keyboard view"
-msgstr "Vue clavier"
+msgstr "Keyboard view"
 
 #: src/org/opendas/ctrl/DASController.java:1634
 #: src/org/opendas/ctrl/DASController.java:1637
 #: src/org/opendas/ctrl/DASController.java:1998
 #: src/org/opendas/ctrl/DASController.java:2000
 msgid "Time out."
-msgstr "Délai dépassé"
+msgstr "Time out."
 
 #: src/org/opendas/ctrl/DASController.java:1321
 #: src/org/opendas/ctrl/DASController.java:1356
 #: src/org/opendas/gui/DASPanel.java:1084
 #: src/org/opendas/gui/DASPanel.java:3037
 msgid "Generics view"
-msgstr "Vue Générique"
+msgstr "Generics view"
 
 #: src/org/opendas/ctrl/DASController.java:1625
 #: src/org/opendas/ctrl/DASController.java:1628
