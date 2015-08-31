@@ -116,7 +116,7 @@ public class DASLoader
 		try
 		{
 			config = conn.getWsConfig(workstation_code);
-			ServerLog.logErr(getClass().getSimpleName(),"ok WsConfig object");
+			ServerLog.logErr(getClass().getSimpleName(),"ok MaterialConfig object");
 		} catch (TimeoutException e1)
 		{
 			JOptionPane.showMessageDialog(null, I18n._("The DAS server not responding"), "Fatal Error", JOptionPane.WARNING_MESSAGE);
